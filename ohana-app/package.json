@@ -1,0 +1,19 @@
+{
+  "name": "ohana-app",
+  "version": "1.0.0",
+  "description": "Ohana — a field service management app for junk removal crews (a Jobber-style clone).",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0"
+  }
+}

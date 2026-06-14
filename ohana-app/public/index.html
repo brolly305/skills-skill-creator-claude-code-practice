@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ohana — Junk Removal Manager</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌺</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">🌺</span>
+        <div>
+          <div class="brand-name">Ohana</div>
+          <div class="brand-sub">Junk Removal Manager</div>
+        </div>
+      </div>
+      <nav id="nav">
+        <a href="#/dashboard" data-route="dashboard"><span>📊</span> Dashboard</a>
+        <a href="#/schedule" data-route="schedule"><span>🗓️</span> Schedule</a>
+        <a href="#/clients" data-route="clients"><span>👥</span> Clients</a>
+        <a href="#/jobs" data-route="jobs"><span>🚛</span> Jobs</a>
+        <a href="#/quotes" data-route="quotes"><span>📝</span> Quotes</a>
+        <a href="#/invoices" data-route="invoices"><span>💵</span> Invoices</a>
+      </nav>
+      <div class="sidebar-foot">Standalone build · v1.0</div>
+    </aside>
+    <main id="view"><!-- rendered by app.js --></main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
