@@ -147,6 +147,21 @@ Before finalizing any output, run one more adversarial pass:
 
 ---
 
+## Phase 5: Implementation Sequencing (Critical Path)
+
+A finished *design* is not a finished *system* — it still has to be built and launched inside the sub-account, and the order matters. Use the Critical Path Method to sequence the rollout whenever the user asks "how do I implement this?", "what do I do first?", or "what can be implemented immediately?".
+
+The key insight to transmit: the visible build work (writing copy, building workflows) is almost never the bottleneck — it has the most slack. The real critical path is the *waiting tasks* with long lead times you can't speed up by working harder:
+
+- **A2P 10DLC registration** (SMS compliance) — ~7–14 day carrier approval; blocks every SMS workflow
+- **Email domain warming** — ~10–21 days of graduated sending; blast a cold domain and every email lands in spam
+
+These clocks have zero predecessors and the longest durations, so "implement immediately" means **starting these on Day 0**, before building a single workflow. The build work then fits neatly inside the warm-up window.
+
+When sequencing a rollout, read `references/implementation-critical-path.md` and produce: (1) the critical path in one sentence, (2) the Day-0 actions to start now, flagged ⚡, (3) reassurance that the floated build work fits in the wait window, and (4) a dated day-by-day schedule sized to the account.
+
+---
+
 ## Output Formatting
 
 - Lead with the most actionable insight first — the single highest-leverage change or decision
@@ -165,5 +180,6 @@ For deeper framework application:
 - `references/frameworks.md` — Detailed playbooks for each of the 8 frameworks in GHL context
 - `references/ghl-patterns.md` — Proven automation templates and trigger/action combinations
 - `references/analysis-checklist.md` — Full 50-point audit checklist for ANALYZE mode
+- `references/implementation-critical-path.md` — Critical Path Method for sequencing the rollout/launch
 
 Read the relevant reference file when the user's request requires deeper expertise than the SKILL.md summary provides. For example: read `references/ghl-patterns.md` when building a specific type of automation from scratch, or `references/analysis-checklist.md` when doing a full audit.
