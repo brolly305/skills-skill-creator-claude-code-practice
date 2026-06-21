@@ -181,5 +181,6 @@ For deeper framework application:
 - `references/ghl-patterns.md` — Proven automation templates and trigger/action combinations
 - `references/analysis-checklist.md` — Full 50-point audit checklist for ANALYZE mode
 - `references/implementation-critical-path.md` — Critical Path Method for sequencing the rollout/launch
+- `references/content-engine-integration.md` — How to connect BabyLoveGrowth (SEO) and Munch (video) into GHL: UTM attribution, Zapier wiring, tag conventions, and the feeder model
 
-Read the relevant reference file when the user's request requires deeper expertise than the SKILL.md summary provides. For example: read `references/ghl-patterns.md` when building a specific type of automation from scratch, or `references/analysis-checklist.md` when doing a full audit.
+Read the relevant reference file when the user's request requires deeper expertise than the SKILL.md summary provides. For example: read `references/ghl-patterns.md` when building a specific type of automation from scratch, `references/analysis-checklist.md` when doing a full audit, or `references/content-engine-integration.md` when the user asks about connecting SEO/content tools, BabyLoveGrowth, Munch, or tracking where leads come from.
