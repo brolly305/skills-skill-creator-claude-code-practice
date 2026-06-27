@@ -1,0 +1,23 @@
+{
+  "skill_name": "pd-business-idea-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm a nurse with 8 years of experience and I'm burned out. I want to start something on the side that uses my healthcare knowledge but doesn't involve bedside care. I have maybe $2k saved and can put in 10 hours a week.",
+      "expected_output": "3-5 specific business ideas tailored to healthcare knowledge, with concrete first steps, honest risks, and revenue models. Ideas should be achievable with $2k budget and 10hrs/week.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "what business should i start? i'm 24, just graduated with a marketing degree, no money really like maybe $500, and i want to work for myself",
+      "expected_output": "Skill-based ideas appropriate for a recent marketing grad with minimal capital. Should acknowledge the constraint honestly and suggest low/no-cost starting paths.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I've been a software engineer for 12 years and I'm thinking about starting something. I have some savings (~$50k) and could go full time on this. I'm interested in productivity tools and I hate how scattered remote teams are.",
+      "expected_output": "Ideas that leverage engineering skills, address the remote team coordination problem, and are appropriate for a funded full-time pursuit. Should include at least one SaaS or software product idea.",
+      "files": []
+    }
+  ]
+}
