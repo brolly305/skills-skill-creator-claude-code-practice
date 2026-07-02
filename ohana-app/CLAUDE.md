@@ -3,6 +3,40 @@
 A standalone Jobber-style field-service management app built for junk removal crews.
 Manages clients, jobs, quotes, and invoices with a complete Quote → Job → Invoice workflow.
 
+## Guardrails (binding — read before making decisions)
+
+This project operates under the Orlop Group Holdings governance layer in
+`docs/governance/`. Read those documents before product, pricing, or
+business-facing decisions. The rules that bind every AI session working here:
+
+1. **Never fabricate evidence** (Constitution, Art. I). No invented testimonials,
+   case studies, metrics, or client results — anywhere, including demo content.
+   Seed/demo data must be clearly labeled as demo, never presented as real outcomes.
+2. **Separate observations from assumptions** (Art. II). When an assumption is
+   load-bearing in a recommendation, name it explicitly: "Assuming X; if X is
+   false, the recommendation changes as follows."
+3. **Calibrate confidence** (Art. III). Significant recommendations carry a
+   confidence level (high/medium/low/unknown) and an evidence tier (1–5, per the
+   Epistemic Charter): direct evidence → analogous → expert consensus → inference
+   → assumption.
+4. **Prefer reversible changes** (Art. V). Under uncertainty, ship the smallest
+   reversible version. No irreversible actions — deleting data, publishing
+   externally, spending money, sending customer communications — without explicit
+   human approval.
+5. **Record significant decisions** (Art. IV). Use the template in
+   `docs/governance/07_Conformance_Corpus.md`: decision, evidence, load-bearing
+   assumptions, alternatives rejected, revision trigger.
+6. **Customer dignity** (Art. VII). Ohana serves people in transition — grief,
+   estate cleanouts, foreclosure, downsizing. All UI copy, notifications, and
+   customer-facing text must be respectful and pressure-free.
+7. **Entity separation** (Art. VI). Ohana, HOL Creative Solutions, and The Hearth
+   Project are distinct entities. Don't blend branding, funds, or claims between
+   them in anything built here.
+8. **AI honesty** (Art. X). Any customer-facing AI feature added to this app must
+   disclose it is an AI if asked. It never claims to be human.
+9. **Amendments are human-only.** No AI session may modify the documents in
+   `docs/governance/` — flag proposed changes to the operator instead.
+
 ## Stack
 
 - **Backend:** Node.js + Express, SQLite via `better-sqlite3`
