@@ -519,7 +519,7 @@ async function openQuoteModal(quoteId = null, presetClient = null) {
         <button class="btn" data-save>${quote ? 'Save changes' : 'Create quote'}</button>
       </div>`,
   });
-  const editor = lineItemsEditor(m.querySelector('#li-editor'), q.line_items || [], { taxRate: q.tax_rate ?? 4.712 });
+  const editor = lineItemsEditor(m.querySelector('#li-editor'), q.line_items || [], { taxRate: q.tax_rate ?? 0 });
   (m.querySelector('[data-cancel]') || {}).onclick = closeModal;
   m.querySelector('[data-save]').onclick = async () => {
     const f = document.getElementById('quote-form');
@@ -573,7 +573,7 @@ async function openInvoiceModal(invoiceId = null, presetClient = null) {
         <button class="btn" data-save>${invoice ? 'Save changes' : 'Create invoice'}</button>
       </div>`,
   });
-  const editor = lineItemsEditor(m.querySelector('#li-editor'), iv.line_items || [], { taxRate: iv.tax_rate ?? 4.712 });
+  const editor = lineItemsEditor(m.querySelector('#li-editor'), iv.line_items || [], { taxRate: iv.tax_rate ?? 0 });
   (m.querySelector('[data-cancel]') || {}).onclick = closeModal;
   m.querySelector('[data-save]').onclick = async () => {
     const f = document.getElementById('invoice-form');
