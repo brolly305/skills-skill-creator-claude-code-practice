@@ -7,6 +7,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// SEED_ON_START=1 loads demo data on boot, but only into an empty database —
+// existing data is never wiped. Lets hosted deploys (Railway) seed without shell access.
+if (process.env.SEED_ON_START === '1') {
+  const { n } = db.prepare('SELECT COUNT(*) n FROM clients').get();
+  if (n === 0) await import('./seed.js');
+}
+
 app.use(express.json());
 app.use(express.static(join(__dirname, '..', 'public')));
 

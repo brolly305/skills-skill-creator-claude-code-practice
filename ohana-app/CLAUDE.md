@@ -91,11 +91,12 @@ ohana-app/
 
 1. Push this repo to GitHub
 2. Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub repo
-3. Set **Root Directory** to `ohana-app`
+3. Set **Root Directory** to `ohana-app`, and under Settings → Source make sure
+   the deploy **branch** is the one containing `ohana-app/`
 4. Add a **Volume** mounted at `/data`
-5. Set env var: `OHANA_DB=/data/ohana.sqlite`
+5. Set env vars: `OHANA_DB=/data/ohana.sqlite`, and optionally `SEED_ON_START=1`
+   to load demo data on first boot (seeds only an empty database — never wipes)
 6. Generate a public domain under Settings → Networking
-7. (Optional) Open the Railway shell and run `npm run seed` to load demo data
 
 ## Key design decisions
 
