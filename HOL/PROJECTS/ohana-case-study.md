@@ -1,54 +1,117 @@
-# Project: Ohana Case Study (Blueprint Model)
+# Ohana Case Study
 
-This is Client Zero. Ohana Property & Transition Services LLC is the business where the HOL system was built and tested. Every HOL prospect gets shown this.
+**Business:** Ohana Property & Transition Services LLC
+**Type:** Property cleanout and transition services
+**Location:** Lafayette, Indiana
+**Role:** Client Zero — the blueprint model HOL's system was built and tested on
 
 ---
 
-## Business Profile
-- **Name:** Ohana Property & Transition Services LLC
-- **Type:** Property cleanout and transition services
-- **Location:** Lafayette, Indiana
-- **Years operating:** Active and community-trusted
-- **Pre-HOL digital presence:** Minimal
+## Goal
+Prove that HOL's Local Growth System can generate measurable business improvement for a local service company.
+
+---
+
+## Scoreboard
+
+| Metric | Baseline | 30 Days | 60 Days |
+|---|---|---|---|
+| Review count | | | |
+| Google Business Profile views / month | | | |
+| Search appearances / month | | | |
+| Calls generated from Google | | | |
+| Booked estimates from Google | | | |
+| Jobs closed from Google | | | |
+| Revenue attributed to Google | | | |
+| Time-to-result (days from launch) | | | |
+| Cost-to-deliver (Hansel's hours + tool cost) | | | |
+
+*Record baseline BEFORE any changes are made. Screenshot everything.*
 
 ---
 
 ## What Was Implemented
-- [ ] Google Business Profile claimed and fully optimized
+
+- [ ] Google Business Profile claimed and verified
+- [ ] All profile fields completed (description, services, hours, photos, Q&A)
 - [ ] Business description rewritten with AI
-- [ ] Review request system set up (post-job text to customers)
+- [ ] Review request text system set up (post-job trigger)
 - [ ] 30 days of Google posts scheduled
-- [ ] AI auto-response drafted for inquiries
+- [ ] AI auto-response drafted for Google messages / missed inquiries
 
-*(Update checkboxes as each is completed)*
-
----
-
-## Results Tracker
-
-| Metric | Before | After 30 Days | After 60 Days |
-|---|---|---|---|
-| Google reviews | | | |
-| Profile views / month | | | |
-| Search appearances | | | |
-| Calls from Google | | | |
-| New customers citing Google | | | |
-
-*(Fill this in as data comes in — this table is your sales pitch)*
+*Document date completed for each action.*
 
 ---
 
-## The Story (Draft — Update With Real Numbers)
+## Current Evidence
 
-> "I run Ohana Property & Transition Services in Lafayette. We'd been operating for years and had loyal customers, but if you Googled us, you'd find almost nothing. We weren't getting calls from new customers — just the same referral circle.
+**Directly observed:**
+- *(Record only what you have seen with your own eyes — screenshots, call logs, messages)*
+
+**Inferred:**
+- *(What the data suggests but hasn't been confirmed)*
+
+**Still assumed:**
+- *(What you're operating on but haven't verified yet)*
+
+---
+
+## Finish Line
+
+Case study is considered complete when:
+- [ ] Baseline metrics are recorded
+- [ ] Campaign actions are documented with dates
+- [ ] Post-campaign metrics are recorded (30 and/or 60 days)
+- [ ] Result can be honestly summarized in plain language
+- [ ] Testimonial or review asset is collected — or marked unavailable
+
+---
+
+## Hard Ceiling
+
+Do not claim:
+- Guaranteed rankings
+- Guaranteed revenue
+- Fake client results
+- Unverified ROI
+- Any metric not actually observed
+
+If a number didn't happen, it doesn't go in the case study.
+
+---
+
+## Human Approval Required
+
+Before any of the following is published or shared:
+- [ ] Public case study
+- [ ] Testimonial language
+- [ ] Revenue claims
+- [ ] Screenshots
+- [ ] Client-facing proposal excerpts
+
+Hansel must review and approve. No exceptions.
+
+---
+
+## The Story (Draft — Replace Brackets With Real Numbers)
+
+> "I run Ohana Property & Transition Services in Lafayette. We'd been operating for years, had loyal customers — but if you Googled us, you'd find almost nothing. All our business came from the same referral circle.
 >
-> I built HOL's system on Ohana first. Within 30 days, [X reviews added], [Y profile views], [Z new inquiries]. One of those turned into a [dollar amount] job from someone who found us on Google and had never heard of us before.
+> I built HOL's system on Ohana first. Within [X] days: [Y] new reviews, [Z] profile views, [N] calls from people who'd never heard of us. One turned into a [$] job — from a Google search.
 >
-> That's what I bring to other businesses. Not theory — the same system, already proven."
+> That's what I bring to other businesses. Not theory. The same system, already proven on my own company."
+
+*Do not publish this until every bracket is replaced with a verified number.*
 
 ---
 
-## Notes
-- Use real numbers as they come in. Specifics close deals.
-- Take before/after screenshots of the Google profile and review count.
-- Document the first customer who comes in specifically from Google.
+## Lessons Learned
+
+**What worked:**
+- *(Fill in after 30 days)*
+
+**What did not work:**
+- *(Fill in after 30 days)*
+
+**What changes before the next HOL client:**
+- *(Fill in after 30 days)*
