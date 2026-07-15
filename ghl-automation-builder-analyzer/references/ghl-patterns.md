@@ -38,14 +38,14 @@ IMMEDIATE (0 min):
   - Voicemail drop (if enabled)
 ↓
 DAY 1, 9AM (if no reply):
-  - SMS: Third touch — offer/value angle
+  - SMS: Third touch, offer/value angle
   - Email: Case study or social proof
 ↓
 DAY 2, 9AM (if no reply):
   - SMS: Consequence question (NEPQ Stage 4)
 ↓
 DAY 3, 9AM (if no reply):
-  - SMS: Final ask — "Still interested?" one-liner
+  - SMS: Final ask, "Still interested?" one-liner
   - Email: Last chance + direct CTA
 ↓
 DAY 7 (if no reply):
@@ -64,23 +64,23 @@ EXIT CONDITIONS:
 **Copy Templates:**
 
 SMS Day 0 (Connection):
-> "Hey [FirstName] — saw your info come through about [topic]. Quick question before anything else — are you looking to [solve X] in the next 30 days, or more just exploring options right now? — [RepName]"
+> "Hey [FirstName], saw your info come through about [topic]. Quick question before anything else: are you looking to [solve X] in the next 30 days, or more just exploring options right now? [RepName]"
 
 SMS Day 0, 1 hour:
-> "[FirstName] — just want to make sure my last message went through. No pressure either way, just want to point you to the right resource. — [RepName]"
+> "[FirstName], just want to make sure my last message went through. No pressure either way, just want to point you to the right resource. [RepName]"
 
 SMS Day 1:
 > "Hey [FirstName], I help [niche] owners [achieve specific outcome] without [common sacrifice]. Curious if that's relevant to where you're at? Happy to share what's worked for others in your situation."
 
 SMS Day 3 (Final):
-> "[FirstName] — I'm going to close out your file unless I hear otherwise. If timing's off, totally get it — just want to make sure I'm not clogging up your inbox. Worth a quick chat? [CalendarLink]"
+> "[FirstName], I'm going to close out your file unless I hear otherwise. If timing's off, totally get it; just want to make sure I'm not clogging up your inbox. Worth a quick chat? [CalendarLink]"
 
 ---
 
 ## 2. Appointment Confirmation & Reminder Sequence
 
 **Trigger:** Contact books appointment (Calendly webhook / GHL calendar)
-**Goal:** Maximize show rate — target 60%+ for qualified leads
+**Goal:** Maximize show rate, target 60%+ for qualified leads
 
 **Automation Map:**
 ```
@@ -100,7 +100,7 @@ IMMEDIATE:
   - SMS: Final reminder + join link if video call
 ↓
 DURING WINDOW (if no show):
-  - 5 min after start: Create task "Call [FirstName] — they may be running late"
+  - 5 min after start: Create task "Call [FirstName]: may be running late"
   - 15 min after start: SMS "Are you still able to join? We can start a few minutes late"
 ↓
 POST-CALL (manual trigger by rep):
@@ -116,13 +116,13 @@ EXIT CONDITIONS:
 **Copy Templates:**
 
 SMS Confirmation (Immediate):
-> "You're confirmed for [Day] at [Time] with [Rep/Company]. I'll send a reminder the day before. Here's what we'll cover: [2-3 bullet outcomes]. Looking forward to it! — [Name]"
+> "You're confirmed for [Day] at [Time] with [Rep/Company]. I'll send a reminder the day before. Here's what we'll cover: [2-3 bullet outcomes]. Looking forward to it! [Name]"
 
 SMS 24hr Reminder:
-> "Hey [FirstName] — just a reminder you're booked tomorrow at [Time]. Still on? If anything's changed, here's the link to reschedule: [Link]. See you then!"
+> "Hey [FirstName], just a reminder you're booked tomorrow at [Time]. Still on? If anything's changed, here's the link to reschedule: [Link]. See you then!"
 
 SMS 1hr Reminder:
-> "[FirstName] — we're on in 1 hour. Here's your join link: [Link]. Talk soon!"
+> "[FirstName], we're on in 1 hour. Here's your join link: [Link]. Talk soon!"
 
 ---
 
@@ -158,34 +158,34 @@ EXIT CONDITIONS:
 **Copy Templates:**
 
 SMS 15min after:
-> "Hey [FirstName] — we missed you just now. Everything okay? Happy to pick up whenever works for you. — [Name]"
+> "Hey [FirstName], we missed you just now. Everything okay? Happy to pick up whenever works for you. [Name]"
 
 SMS 2hr after:
-> "[FirstName] — I have [Tuesday at 2pm] or [Wednesday at 10am] open. Either of those work? [CalendarLink]"
+> "[FirstName], I have [Tuesday at 2pm] or [Wednesday at 10am] open. Either of those work? [CalendarLink]"
 
 ---
 
 ## 4. Dead Lead Reactivation (30/60/90 Day)
 
 **Trigger:** Tag applied ("unresponsive-30d" / "unresponsive-60d") or pipeline stage
-**Goal:** Re-open 15–20% of cold leads — this is free pipeline from already-paid traffic
+**Goal:** Re-open 15–20% of cold leads; this is free pipeline from already-paid traffic
 
 **Automation Map:**
 ```
 TRIGGER: 30 days of inactivity OR specific tag
 ↓
 DAY 0:
-  - SMS: Pattern interrupt — totally different angle from original outreach
+  - SMS: Pattern interrupt, totally different angle from original outreach
   - Email: New case study or result (proof-forward, no pitch)
 ↓
 DAY 3:
-  - SMS: Consequence angle — cost of not acting
+  - SMS: Consequence angle, cost of not acting
 ↓
 DAY 7:
-  - Email: New offer angle — new bonus, price change, limited availability
+  - Email: New offer angle, new bonus, price change, limited availability
 ↓
 DAY 14:
-  - SMS: Breakup message — genuine, not manipulative
+  - SMS: Breakup message, genuine and not manipulative
 ↓
 DAY 30 (60-day sequence only):
   - SMS: Major news hook ("We just [launched X / achieved Y for clients] and thought of you")
@@ -202,10 +202,10 @@ EXIT CONDITIONS:
 **Copy Templates:**
 
 30-Day SMS (Pattern Interrupt):
-> "Random question [FirstName] — are you still dealing with [specific problem from their original inquiry]? Asking because we just helped a [similar person] go from [X] to [Y] in [timeframe] and figured it was worth a shot. — [Name]"
+> "Random question [FirstName], are you still dealing with [specific problem from their original inquiry]? Asking because we just helped a [similar person] go from [X] to [Y] in [timeframe] and figured it was worth a shot. [Name]"
 
 Breakup SMS:
-> "Hey [FirstName] — I'm going to stop reaching out after this. No hard feelings at all — I know timing matters. If you ever want to revisit [specific offer/topic], just reply here and I'll pick it up. Take care. — [Name]"
+> "Hey [FirstName], I'm going to stop reaching out after this. No hard feelings at all; I know timing matters. If you ever want to revisit [specific offer/topic], just reply here and I'll pick it up. Take care. [Name]"
 
 ---
 
@@ -232,14 +232,14 @@ DAY 7:
   - Email: First value delivery / milestone check
 ↓
 DAY 14:
-  - SMS: "How's it going?" — genuine relationship touch
+  - SMS: "How's it going?" (genuine relationship touch)
 ↓
 DAY 30:
   - Email: First result highlight + referral ask
-  - Task created for rep: "Call [FirstName] — 30-day check-in"
+  - Task created for rep: "Call [FirstName]: 30-day check-in"
 ↓
 DAY 45:
-  - Email/SMS: Upsell introduction — next rung of value ladder
+  - Email/SMS: Upsell introduction, next rung of value ladder
 ↓
 DAY 60:
   - Upsell follow-up
@@ -258,13 +258,13 @@ EXIT CONDITIONS:
 ## 6. Referral Request Automation
 
 **Trigger:** Day 30 post-purchase OR manual tag "ready-for-referral-ask"
-**Goal:** Generate 1 referral per 5 clients — zero CAC new customer
+**Goal:** Generate 1 referral per 5 clients, zero CAC new customer
 
 **Copy Template (SMS):**
-> "Hey [FirstName] — quick one. We've had some great results together with [specific outcome]. Do you know 1–2 other [type of person] who might be dealing with [same problem]? If so, just send me their name + number and I'll take great care of them. — [Name]"
+> "Hey [FirstName], quick one. We've had some great results together with [specific outcome]. Do you know 1-2 other [type of person] who might be dealing with [same problem]? If so, just send me their name + number and I'll take great care of them. [Name]"
 
 **Email Subject:** "Quick favor from a happy client?"
-> "Hi [FirstName], I've loved working with you on [X]. If the results have been worthwhile, the best compliment you can pay is an introduction to someone who might benefit too. No pressure — and if you know someone, just reply here with their info or forward this email to them. Thank you genuinely. — [Name]"
+> "Hi [FirstName], I've loved working with you on [X]. If the results have been worthwhile, the best compliment you can pay is an introduction to someone who might benefit too. No pressure, and if you know someone, just reply here with their info or forward this email to them. Thank you genuinely. [Name]"
 
 ---
 
@@ -283,7 +283,7 @@ Stage → "Proposal Sent":
 - Wait 72 hours → Task: "Call to follow up on proposal"
 
 Stage → "Negotiating":
-- Create task: "Decision expected by [date] — check in 48 hours before"
+- Create task: "Decision expected by [date]: check in 48 hours before"
 - Internal notification to sales manager
 
 Stage → "Closed Won":
@@ -314,7 +314,7 @@ DAY 3 (if no review):
   - Email: Review request with direct link + why it matters
 ↓
 DAY 7 (if no review):
-  - SMS: Final ask — lighter touch
+  - SMS: Final ask, lighter touch
 
 EXIT CONDITIONS:
   - Contact clicks review link → tag "review-requested", stop sequence
@@ -322,7 +322,7 @@ EXIT CONDITIONS:
 ```
 
 **SMS Copy:**
-> "Hey [FirstName] — [Rep Name] here. Really enjoyed working with you on [X]. If you had a great experience, would you mind leaving us a quick Google review? It takes 60 seconds and helps us a ton: [Direct Link]. No pressure — and thank you either way! 🙏"
+> "Hey [FirstName], [Rep Name] here. Really enjoyed working with you on [X]. If you had a great experience, would you mind leaving us a quick Google review? It takes 60 seconds and helps us a ton: [Direct Link]. No pressure, and thank you either way! 🙏"
 
 ---
 
@@ -333,7 +333,7 @@ EXIT CONDITIONS:
 **Registered but Didn't Attend:**
 ```
 Day 0 (1hr after event): 
-  - SMS: "Missed you today — here's the replay: [link]"
+  - SMS: "Missed you today; here's the replay: [link]"
   - Email: Full replay + key takeaways summary
 Day 2:
   - SMS: "Did you get a chance to watch? What part was most relevant to you?"
@@ -364,13 +364,13 @@ Day 5:
 **Goal:** Stay top-of-mind for 12 months; capture leads when they become ready
 
 **Cadence:**
-- Twice per month: Value email (tip, insight, case study — no hard pitch)
+- Twice per month: Value email (tip, insight, case study, no hard pitch)
 - Once per month: SMS check-in
 - Quarterly: Re-qualification attempt ("Has anything changed for you?")
 
 **Content framework for nurture emails:**
 1. One actionable insight they can use today (no product mention)
-2. One social proof element (client result — brief and specific)
+2. One social proof element (client result, brief and specific)
 3. Soft CTA: "If you ever want to talk about applying this to [their situation], I'm here."
 
 **The key:** Nurture sequences fail when they're 80% pitch and 20% value. Flip it. The contact should feel like they're getting a free newsletter from a smart expert, not a sales drip.
@@ -388,7 +388,7 @@ Day 5:
 **Always use "Remove from Workflow" actions when:**
 - Lead books an appointment (remove from all prospecting sequences)
 - Lead pays (remove from all sales sequences)
-- Lead says STOP or opts out (remove from everything — legal requirement)
+- Lead says STOP or opts out (remove from everything, legal requirement)
 - Lead enters a new, higher-priority sequence
 
 **Webhook integrations to build first:**

@@ -1,4 +1,4 @@
-# Ohana Property & Transition Services — Business Profile
+# Ohana Property & Transition Services: Business Profile
 
 Use this file as the discovery context whenever this skill is applied to Ohana's GHL sub-account. Skip the Phase 1 discovery questions for any information covered here.
 
@@ -11,42 +11,42 @@ Use this file as the discovery context whenever this skill is applied to Ohana's
 **Website:** ohanapropertyexperts.com
 **GHL Sub-Account:** Active (separate sub-account within the agency)
 
-**Core service:** Estate cleanout and junk removal — full-property clearing of homes after a death, downsizing, or court-ordered estate liquidation. Services include furniture removal, donation coordination, debris disposal, and full-property documentation. The home is delivered empty, clean, and market-ready.
+**Core service:** Estate cleanout and junk removal, full-property clearing of homes after a death, downsizing, or court-ordered estate liquidation. Services include furniture removal, donation coordination, debris disposal, and full-property documentation. The home is delivered empty, clean, and market-ready.
 
 **NOT:** Senior move management, moving company, auction house, or storage service. Ohana removes and disposes; they do not move people or sell items.
 
-**Core business mechanic:** Photo-based quoting. Leads submit photos of the property; Ohana quotes remotely without requiring an in-person walkthrough for every inquiry. This is the key conversion step — not a phone call or calendar booking. All CTAs and automations should drive toward photo submission, not "book a call."
+**Core business mechanic:** Photo-based quoting. Leads submit photos of the property; Ohana quotes remotely without requiring an in-person walkthrough for every inquiry. This is the key conversion step, not a phone call or calendar booking. All CTAs and automations should drive toward photo submission, not "book a call."
 
 ---
 
 ## Services (from site)
 
-1. **Estate Cleanout** — Complete property clearing for probate, inherited homes, and family estates
-2. **Junk Removal** — Single-item to whole-house junk and debris removal
-3. **Donation Coordination** — Sorting and routing usable items to local charities/thrifts
-4. **Property Documentation** — Before/after photo documentation for estate attorneys and executors
-5. **Senior Downsizing Support** — Clearing the former home (not the move itself)
-6. **Commercial Cleanout** — Office and commercial property clearing
+1. **Estate Cleanout**: Complete property clearing for probate, inherited homes, and family estates
+2. **Junk Removal**: Single-item to whole-house junk and debris removal
+3. **Donation Coordination**: Sorting and routing usable items to local charities/thrifts
+4. **Property Documentation**: Before/after photo documentation for estate attorneys and executors
+5. **Senior Downsizing Support**: Clearing the former home (not the move itself)
+6. **Commercial Cleanout**: Office and commercial property clearing
 
 ---
 
 ## Target Customer Segments
 
-### Segment A — Probate Attorneys (Referral Partners)
+### Segment A: Probate Attorneys (Referral Partners)
 - **Who:** Estate/probate attorneys in Bartholomew County and surrounding counties (Columbus, IN area)
 - **Pain point:** Their personal representative clients are overwhelmed and under time pressure (60-day probate inventory deadlines). Attorneys don't have a reliable cleanout vendor to refer; they scramble each time.
-- **What they want:** A single trusted vendor they can hand off to immediately when probate opens — someone who documents everything and doesn't create liability.
+- **What they want:** A single trusted vendor they can hand off to immediately when probate opens, someone who documents everything and doesn't create liability.
 - **Outreach segment:** A1 / A2 sequences
 - **GHL tag:** `segment-probate-attorney`
 
-### Segment B — Realtors (Referral Partners)
+### Segment B: Realtors (Referral Partners)
 - **Who:** Realtors in Columbus, IN who list estate properties, inherited homes, and downsizing situations
 - **Pain point:** Estate listings can't go live until the home is cleared. Delays cost them listing dates and commissions.
 - **What they want:** A reliable cleanout crew that works around their staging timeline and doesn't slow down the deal.
 - **Outreach segment:** B1 / B2 sequences
 - **GHL tag:** `segment-realtor`
 
-### Segment C — Direct Consumer (Estate Executors / Family)
+### Segment C: Direct Consumer (Estate Executors / Family)
 - **Who:** Personal representatives, heirs, or family members handling an estate in or near Columbus, IN
 - **Pain point:** Overwhelmed by the sheer volume of belongings, don't know where to start, often have a hard deadline (property sale, court date, lease end)
 - **What they want:** Someone who handles everything so they don't have to
@@ -55,7 +55,7 @@ Use this file as the discovery context whenever this skill is applied to Ohana's
 
 ---
 
-## GHL Pipeline — Ohana Cleanout Pipeline (9 Stages)
+## GHL Pipeline: Ohana Cleanout Pipeline (9 Stages)
 
 | Stage | Meaning | Primary Action |
 |-------|---------|---------------|
@@ -130,25 +130,25 @@ Use this file as the discovery context whenever this skill is applied to Ohana's
 
 | Name | Firm | Email | Phone | Sequence |
 |------|------|-------|-------|---------|
-| Jeff Rocker | Beck Rocker | cclerc@beckrocker.com | — | A1 |
-| F. Jefferson Crump III | JCAP | jep.jcap@sbcglobal.net | — | A1 |
-| Blake Reed | Voelz Law | blake@voelzlaw.com | — | A1 |
-| Lora Mount | Voelz Law | lora@voelzlaw.com | — | A1 |
-| Elizabeth James | Voelz Law | elizabeth@voelzlaw.com | — | A1 |
-| Alan Whitted | Whitted Law | alan@whittedlaw.com | — | A1 |
-| Sean Thomasson | Thomasson Law | sean@thomassonlaw.com | — | A1 |
-| Jason Guthrie | Thomasson Law | jason@thomassonlaw.com | — | A1 |
+| Jeff Rocker | Beck Rocker | cclerc@beckrocker.com | - | A1 |
+| F. Jefferson Crump III | JCAP | jep.jcap@sbcglobal.net | - | A1 |
+| Blake Reed | Voelz Law | blake@voelzlaw.com | - | A1 |
+| Lora Mount | Voelz Law | lora@voelzlaw.com | - | A1 |
+| Elizabeth James | Voelz Law | elizabeth@voelzlaw.com | - | A1 |
+| Alan Whitted | Whitted Law | alan@whittedlaw.com | - | A1 |
+| Sean Thomasson | Thomasson Law | sean@thomassonlaw.com | - | A1 |
+| Jason Guthrie | Thomasson Law | jason@thomassonlaw.com | - | A1 |
 
-*Note: 2 additional attorney contacts in the full list have no confirmed email — use phone/LinkedIn for first touch.*
+*Note: 2 additional attorney contacts in the full list have no confirmed email; use phone/LinkedIn for first touch.*
 
 ### Realtors
 
 | Name | Firm | Email | Phone | Sequence |
 |------|------|-------|-------|---------|
-| Melissa Holbrook | Carpenter Realtors | mholbrook@callcarpenter.com | — | B1 |
-| Andrea Anderson | Berkshire Hathaway HS IN | marketingbhhsin@gmail.com | — | B1 |
+| Melissa Holbrook | Carpenter Realtors | mholbrook@callcarpenter.com | - | B1 |
+| Andrea Anderson | Berkshire Hathaway HS IN | marketingbhhsin@gmail.com | - | B1 |
 
-*Note: 8 additional realtor contacts in the full list have no confirmed email — use phone/LinkedIn for first touch.*
+*Note: 8 additional realtor contacts in the full list have no confirmed email; use phone/LinkedIn for first touch.*
 
 ---
 
@@ -184,4 +184,4 @@ The nature of the service requires a property-specific quote. Sending someone to
 Referral partners compound. One active probate attorney can send 10-20 jobs per year. One Facebook ad produces one lead. Build the partner channel first; use the ad channel to fill gaps during ramp-up.
 
 **Speed-to-lead is still the #1 lever even with photo-based quoting:**
-The first message should acknowledge the inquiry and request photos within 5 minutes. The lead doesn't need to hear a price in minute 1 — they need to feel that someone picked up immediately. "Got your message — can you send me a few photos of the property? That's all I need to get you a number." is a better first touchpoint than "we'll review your request in 24 hours."
+The first message should acknowledge the inquiry and request photos within 5 minutes. The lead doesn't need to hear a price in minute 1; they need to feel that someone picked up immediately. "Got your message, can you send me a few photos of the property? That's all I need to get you a number." is a better first touchpoint than "we'll review your request in 24 hours."

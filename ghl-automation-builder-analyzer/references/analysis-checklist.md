@@ -1,4 +1,4 @@
-# GHL Automation Audit Checklist — 50 Points
+# GHL Automation Audit Checklist: 50 Points
 
 Use this in ANALYZE mode for a systematic full-stack review of an existing GHL setup. Score each item as: ✅ Pass / ⚠️ Needs improvement / ❌ Critical issue
 
@@ -6,7 +6,7 @@ Score at the end: 45–50 = Excellent, 35–44 = Good, 25–34 = Needs work, <25
 
 ---
 
-## SECTION 1: Speed & Timing (First Principles + GaryVee) — 10 points
+## SECTION 1: Speed & Timing (First Principles + GaryVee) - 10 points
 
 1. ☐ First contact attempt fires within 5 minutes of form submit / lead ad
 2. ☐ Messages are only sent between 8am–8pm in the lead's local timezone
@@ -21,14 +21,14 @@ Score at the end: 45–50 = Excellent, 35–44 = Good, 25–34 = Needs work, <25
 
 ---
 
-## SECTION 2: Channel Strategy (GaryVee + 80/20) — 10 points
+## SECTION 2: Channel Strategy (GaryVee + 80/20) - 10 points
 
 11. ☐ SMS is the primary channel for day-0 outreach (not email)
 12. ☐ Channel variety across the sequence (not same channel 2x in a row)
 13. ☐ SMS messages are under 160 characters OR properly segmented
 14. ☐ Email subjects create a curiosity gap (not company name or generic "follow up")
 15. ☐ Voicemail drops are only used after 2+ failed text/email attempts
-16. ☐ Reply detection is configured — lead reply pauses automation and creates task
+16. ☐ Reply detection is configured: lead reply pauses automation and creates task
 17. ☐ Opt-out/STOP detection is active and contacts are removed from all sequences
 18. ☐ Email domain is warmed and has DKIM/SPF configured (check deliverability)
 19. ☐ No spam-trigger words in email subject lines ("FREE", "ACT NOW", "LIMITED TIME" etc.)
@@ -36,9 +36,9 @@ Score at the end: 45–50 = Excellent, 35–44 = Good, 25–34 = Needs work, <25
 
 ---
 
-## SECTION 3: Copy & Message Quality (NEPQ + Hormozi) — 10 points
+## SECTION 3: Copy & Message Quality (NEPQ + Hormozi) - 10 points
 
-21. ☐ First message opens with a connection or curiosity question — NOT a pitch
+21. ☐ First message opens with a connection or curiosity question, NOT a pitch
 22. ☐ Messages follow NEPQ arc: connection → situation → problem → consequence → solution
 23. ☐ Every CTA points at a specific dream outcome with a number or timeframe
 24. ☐ Social proof is present before the main CTA (case study, testimonial, result)
@@ -47,13 +47,13 @@ Score at the end: 45–50 = Excellent, 35–44 = Good, 25–34 = Needs work, <25
 27. ☐ Messages are written in channel-native language (casual SMS, informative email)
 28. ☐ No placeholder text like [Your Name] or [Company] left in templates
 29. ☐ Personalization variables (FirstName, custom fields) are populated correctly
-30. ☐ Copy is specific to the niche — not generic enough to work for any business
+30. ☐ Copy is specific to the niche, not generic enough to work for any business
 
 ---
 
-## SECTION 4: Logic & Architecture (First Principles + Red Team) — 10 points
+## SECTION 4: Logic & Architecture (First Principles + Red Team) - 10 points
 
-31. ☐ Every automation has a single clearly defined goal (not "nurture" — be specific)
+31. ☐ Every automation has a single clearly defined goal (not "nurture"; be specific)
 32. ☐ Exit conditions are defined for every automation (win, loss, no-response)
 33. ☐ Tags are applied and removed consistently (no orphan tags)
 34. ☐ Tag naming convention is consistent (lowercase, hyphenated, descriptive)
@@ -66,7 +66,7 @@ Score at the end: 45–50 = Excellent, 35–44 = Good, 25–34 = Needs work, <25
 
 ---
 
-## SECTION 5: Business Strategy (YC + 80/20 + Hormozi) — 10 points
+## SECTION 5: Business Strategy (YC + 80/20 + Hormozi) - 10 points
 
 41. ☐ The automation supports a clear value ladder (low → high ticket progression)
 42. ☐ There is a referral ask automation (post-sale, at moment of peak satisfaction)
@@ -90,10 +90,10 @@ Your GHL setup is well-engineered. Focus on optimizing copy with NEPQ and A/B te
 Solid foundation. Priority fixes: address any ❌ items first, then ⚠️ items in Sections 1 and 3 (timing and copy have the highest ROI impact).
 
 **25–34 (Needs Work):**
-Multiple gaps are costing you conversions. Build a fix priority list: start with the 3 items from Section 1 that failed — timing issues compound every other problem. Then Section 3 (copy). Architecture last.
+Multiple gaps are costing you conversions. Build a fix priority list: start with the 3 items from Section 1 that failed; timing issues compound every other problem. Then Section 3 (copy). Architecture last.
 
 **<25 (Rebuild):**
-The automation foundation is broken. Don't patch — rebuild from the Speed-to-Lead pattern in `ghl-patterns.md`. Get that working first, then layer in appointment, reactivation, and post-sale sequences one at a time.
+The automation foundation is broken. Don't patch; rebuild from the Speed-to-Lead pattern in `ghl-patterns.md`. Get that working first, then layer in appointment, reactivation, and post-sale sequences one at a time.
 
 ---
 
