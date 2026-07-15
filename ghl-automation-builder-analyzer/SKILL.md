@@ -182,5 +182,7 @@ For deeper framework application:
 - `references/analysis-checklist.md` — Full 50-point audit checklist for ANALYZE mode
 - `references/implementation-critical-path.md` — Critical Path Method for sequencing the rollout/launch
 - `references/content-engine-integration.md` — How to connect BabyLoveGrowth (SEO) and Munch (video) into GHL: UTM attribution, Zapier wiring, tag conventions, and the feeder model
+- `references/ohana-profile.md` — Pre-loaded discovery context for Ohana Property & Transition Services LLC: business identity, segments, pipeline stages, tag dictionary, custom fields, CPM build status, and referral partner contact list
+- `references/ohana-outreach-drafts.md` — Ready-to-send Wave 1 email drafts for 10 Columbus, IN referral partners (8 probate attorneys + 2 realtors), with follow-up schedule and GHL tag assignments
 
 Read the relevant reference file when the user's request requires deeper expertise than the SKILL.md summary provides. For example: read `references/ghl-patterns.md` when building a specific type of automation from scratch, `references/analysis-checklist.md` when doing a full audit, or `references/content-engine-integration.md` when the user asks about connecting SEO/content tools, BabyLoveGrowth, Munch, or tracking where leads come from.
