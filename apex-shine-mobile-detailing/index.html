@@ -327,6 +327,9 @@ header.scrolled{background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);-webki
 .test-head h2{font-size:50px;color:#fff;}
 .test-head p{font-size:18px;color:rgba(255,255,255,0.65);margin-top:12px;}
 .testimonials-swiper{padding:10px 4px 30px;}
+.testimonials-swiper.swiper-fallback{overflow-x:auto;}
+.testimonials-swiper.swiper-fallback .swiper-wrapper{display:flex;gap:24px;transform:none !important;}
+.testimonials-swiper.swiper-fallback .swiper-slide{flex:0 0 320px;}
 .test-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;height:auto;}
 .test-stars{font-size:22px;color:var(--orange);letter-spacing:2px;margin-bottom:16px;}
 .test-quote{font-size:16px;color:rgba(255,255,255,0.85);line-height:1.75;font-style:italic;}
@@ -971,16 +974,26 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
 
 <script>
 // ---- Lenis smooth scroll (init first) ----
-const lenis = new Lenis({ lerp: 0.08 });
-function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
-requestAnimationFrame(raf);
+// Guarded: a blocked/failed CDN here must not stop every script below it.
+if (window.Lenis) {
+  const lenis = new Lenis({ lerp: 0.08 });
+  function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+}
 
 // ---- AOS ----
-AOS.init({ duration: 700, once: true, offset: 80 });
+if (window.AOS) {
+  AOS.init({ duration: 700, once: true, offset: 80 });
+} else {
+  // No AOS: reveal scroll-triggered content immediately instead of leaving it hidden.
+  document.querySelectorAll('[data-aos]').forEach(function(el){ el.style.opacity = 1; el.style.transform = 'none'; });
+}
 
 // ---- Splitting + GSAP hero headline ----
-Splitting();
-gsap.from('.hero-headline .word', { y: 40, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'power3.out' });
+if (window.Splitting && window.gsap) {
+  Splitting();
+  gsap.from('.hero-headline .word', { y: 40, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'power3.out' });
+}
 
 // ---- tsParticles ----
 document.addEventListener('DOMContentLoaded', function(){
@@ -1049,21 +1062,28 @@ mobileMenu.querySelectorAll('a').forEach(function(a){
 });
 
 // ---- Vanilla Tilt ----
-VanillaTilt.init(document.querySelectorAll('.service-card'), { max: 6, speed: 400, glare: true, 'max-glare': 0.15, perspective: 800 });
+if (window.VanillaTilt) {
+  VanillaTilt.init(document.querySelectorAll('.service-card'), { max: 6, speed: 400, glare: true, 'max-glare': 0.15, perspective: 800 });
+}
 
 // ---- Swiper testimonials ----
-new Swiper('.testimonials-swiper', {
-  loop: true,
-  spaceBetween: 24,
-  grabCursor: true,
-  centeredSlides: true,
-  autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
-  breakpoints: {
-    0:    { slidesPerView: 1.15, centeredSlides: true },
-    768:  { slidesPerView: 2.2,  centeredSlides: false },
-    1024: { slidesPerView: 3,    centeredSlides: false }
-  }
-});
+// Falls back to a plain horizontally-scrollable row (CSS below) if Swiper never loads.
+if (window.Swiper) {
+  new Swiper('.testimonials-swiper', {
+    loop: true,
+    spaceBetween: 24,
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+    breakpoints: {
+      0:    { slidesPerView: 1.15, centeredSlides: true },
+      768:  { slidesPerView: 2.2,  centeredSlides: false },
+      1024: { slidesPerView: 3,    centeredSlides: false }
+    }
+  });
+} else {
+  document.querySelector('.testimonials-swiper').classList.add('swiper-fallback');
+}
 
 // ---- Trust bar counters (Intersection Observer + GSAP expo.out) ----
 const trustSection = document.getElementById('trustbar');
@@ -1075,13 +1095,17 @@ const counterObserver = new IntersectionObserver(function(entries){
       document.querySelectorAll('.trust-num[data-count]').forEach(function(el){
         const target = parseInt(el.getAttribute('data-count'), 10);
         const suffix = el.getAttribute('data-suffix') || '';
-        const counter = { val: 0 };
-        gsap.to(counter, {
-          val: target,
-          duration: 2,
-          ease: 'expo.out',
-          onUpdate: function(){ el.textContent = Math.round(counter.val) + suffix; }
-        });
+        if (window.gsap) {
+          const counter = { val: 0 };
+          gsap.to(counter, {
+            val: target,
+            duration: 2,
+            ease: 'expo.out',
+            onUpdate: function(){ el.textContent = Math.round(counter.val) + suffix; }
+          });
+        } else {
+          el.textContent = target + suffix;
+        }
       });
     }
   });
