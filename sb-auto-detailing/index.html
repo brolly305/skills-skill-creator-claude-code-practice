@@ -301,7 +301,15 @@ header.scrolled{background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);-webki
 @media(max-width:900px){.process-grid{grid-template-columns:1fr 1fr;gap:36px 20px;}}
 
 /* TESTIMONIALS */
-#testimonials{background:#08161a;padding:100px 0;}
+#reviews{background:#08161a;padding:100px 0;}
+
+/* BOOKING */
+#booking{background:#fff;padding:100px 0;}
+.booking-embed-wrap{max-width:700px;margin:0 auto;}
+.booking-placeholder{background:var(--grey);border:2px dashed rgba(0,0,0,0.15);border-radius:16px;padding:56px 32px;text-align:center;}
+.booking-placeholder i{font-size:40px;color:var(--blue);margin-bottom:18px;}
+.booking-placeholder h3{font-size:24px;font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:12px;color:var(--text-dark);}
+.booking-placeholder p{color:var(--text-muted);font-size:15px;margin-bottom:26px;max-width:440px;margin-left:auto;margin-right:auto;}
 .test-head{text-align:center;margin-bottom:56px;}
 .test-head h2{font-size:50px;color:#fff;}
 .test-head p{font-size:18px;color:rgba(255,255,255,0.65);margin-top:12px;}
@@ -425,12 +433,13 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#transformations">Results</a>
+      <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
       <a href="tel:18124160511" class="nav-phone"><i class="fa-solid fa-phone"></i> (812) 416-0511</a>
-      <a href="#contact" class="btn btn-cta">Book Online</a>
+      <a href="#booking" class="btn btn-cta">Book Online</a>
     </div>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
@@ -440,9 +449,10 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
   <a href="#services">Services</a>
   <a href="#pricing">Pricing</a>
   <a href="#transformations">Results</a>
+  <a href="#reviews">Reviews</a>
   <a href="#faq">FAQ</a>
   <a href="#contact">Contact</a>
-  <a href="#contact" class="btn btn-cta">Book Online</a>
+  <a href="#booking" class="btn btn-cta">Book Online</a>
 </div>
 
 <!-- HERO -->
@@ -454,7 +464,7 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
       <h1 class="hero-headline" data-splitting>Cleaner. <span class="accent">Shinier.</span> Better.</h1>
       <p class="hero-sub">SB Auto Detailing brings professional exterior and interior detailing to Columbus, Indiana — at your home, your office, or our drop-off location. Paint protection that keeps your car looking newer, longer.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-cta btn-large">Get My Free Quote</a>
+        <a href="#booking" class="btn btn-cta btn-large">Book an Appointment</a>
         <a href="tel:18124160511" class="btn btn-outline btn-large">Call (812) 416-0511</a>
       </div>
       <div class="hero-trust">
@@ -699,18 +709,39 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<!-- Replaced fabricated review carousel: this is a real, new business with no reviews yet.
-     Publishing fake star ratings/customer quotes for a real business is misleading and
-     against Google's review policies. This panel states our commitment instead, and
-     invites real reviews once customers have been served. Swap in real testimonials
-     as they come in. -->
-<section id="testimonials">
+<!-- REVIEWS -->
+<!-- This is a real, new business with no reviews yet -- publishing fake star ratings/customer
+     quotes for a real business is misleading and against Google's review policies. This section
+     states our commitment honestly and drives people to leave real reviews. Once reviews exist,
+     duplicate the REVIEW CARD TEMPLATE block below for each one (inside .swiper-wrapper, before
+     the "what to expect" cards or in place of them). -->
+<section id="reviews">
   <div class="container">
     <div class="test-head">
-      <h2 data-aos="fade-up">What You Can Expect</h2>
-      <p data-aos="fade-up" data-aos-delay="100">We're new to Columbus, IN and excited to earn your trust, one car at a time.</p>
+      <span class="label" style="display:block;">REVIEWS</span>
+      <h2 data-aos="fade-up">Reviews</h2>
+      <p data-aos="fade-up" data-aos-delay="100">We're new to Columbus, IN — here's what you can expect, and how to find (or leave) a review.</p>
     </div>
+
+    <div style="text-align:center;margin-bottom:48px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-aos="fade-up">
+      <a href="https://www.google.com/maps/search/SB+Auto+Detailing+Columbus+IN" class="btn btn-cta" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i>&nbsp; Read &amp; Leave a Review on Google</a>
+      <a href="https://www.facebook.com/SBAutoDetailing" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i>&nbsp; Follow Us on Facebook</a>
+    </div>
+
+    <!--
+    REVIEW CARD TEMPLATE -- duplicate this block inside .swiper-wrapper below for each real review:
+
+    <div class="swiper-slide">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">"[Real customer quote here]"</p>
+        <div class="test-sep"></div>
+        <div class="test-name">[Customer Name]</div>
+        <div class="test-badge"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.6z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.9-12.2-9H4.5v5.7C8.1 40.9 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17 2 20.4 2 24s1 7 4.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.3 29.9 2 24 2 15.4 2 8.1 7.1 4.5 14.1l7.3 5.7c1.7-5.1 6.5-9 12.2-9z"/></svg> via Google Reviews</div>
+      </div>
+    </div>
+    -->
+
     <div class="swiper testimonials-swiper">
       <div class="swiper-wrapper">
 
@@ -751,9 +782,35 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
 
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;" data-aos="fade-up">
-      <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:16px;">Book your detail and help us earn our first reviews on Google &amp; Facebook.</p>
-      <a href="https://www.facebook.com/SBAutoDetailing" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i>&nbsp; Follow Us on Facebook</a>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<!-- Placeholder until a real scheduling account exists. To go live:
+     1. In Google Calendar, go to Settings -> "Appointment schedules" -> Create.
+     2. Set service duration, availability, and buffer time for detailing appointments.
+     3. Click Share and copy the public booking page URL
+        (looks like https://calendar.google.com/calendar/appointments/schedules/AcZssZ...).
+     4. Replace the .booking-placeholder div below with:
+        <iframe src="[YOUR BOOKING PAGE URL]?gv=true" style="border:0" width="100%" height="600" frameborder="0"></iframe>
+-->
+<section id="booking">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto;">
+      <span class="label" style="display:block;">BOOK ONLINE</span>
+      <h2 style="color:var(--black)">Schedule Your Appointment</h2>
+      <p style="color:var(--text-muted);">Pick a time that works for you — or call/text us directly.</p>
+    </div>
+    <div class="booking-embed-wrap" data-aos="fade-up">
+      <div class="booking-placeholder">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Online Calendar Coming Soon</h3>
+        <p>We're setting up online scheduling. In the meantime, call, text, or request a free quote below and we'll find a time that works.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:18124160511" class="btn btn-cta"><i class="fa-solid fa-phone"></i> Call (812) 416-0511</a>
+          <a href="#contact" class="btn btn-outline" style="color:var(--black);border-color:var(--black);">Request a Free Quote</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
