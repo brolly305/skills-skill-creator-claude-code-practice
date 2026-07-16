@@ -115,6 +115,7 @@
 :root{
   --black:#0A0A0C;
   --black2:#131317;
+  --black3:#1A1A1A;
   --blue:#2F6FED;
   --blue-light:#7FA8FF;
   --orange:#E6A100;
@@ -160,10 +161,11 @@ header.scrolled{background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);-webki
 .nav-inner{width:100%;display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto;padding:0 32px;}
 .logo{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:0.02em;display:flex;align-items:center;gap:8px;}
 .logo i{color:var(--blue);}
-.nav-links{display:flex;align-items:center;gap:34px;}
-.nav-links a:not(.btn){color:#fff;font-size:14px;font-weight:600;position:relative;padding:4px 0;}
-.nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:right;transition:transform .3s ease;}
-.nav-links a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left;}
+.nav-links{display:flex;align-items:center;gap:2px;position:relative;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:100px;padding:6px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.nav-links a:not(.btn){color:rgba(255,255,255,0.72);font-size:13.5px;font-weight:600;position:relative;z-index:2;padding:9px 16px;border-radius:100px;transition:color .3s ease;}
+.nav-links a:not(.btn):hover{color:#fff;}
+.nav-indicator{position:absolute;top:6px;left:6px;height:calc(100% - 12px);border-radius:100px;background:linear-gradient(90deg,var(--blue),var(--blue-light));z-index:1;opacity:0;transition:transform .45s cubic-bezier(.16,1,.3,1),width .45s cubic-bezier(.16,1,.3,1),opacity .25s ease;pointer-events:none;}
+.nav-indicator.visible{opacity:1;}
 .nav-right{display:flex;align-items:center;gap:26px;}
 .nav-phone{color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;animation:navPulse 6s ease-in-out infinite;}
 .nav-phone i{color:var(--orange);}
@@ -234,10 +236,10 @@ header.scrolled{background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);-webki
 .section-head h2{font-size:50px;color:#fff;margin-bottom:16px;}
 .section-head p{font-size:18px;color:rgba(255,255,255,0.65);max-width:580px;}
 .services-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-auto-rows:auto;gap:24px;}
-.service-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:none;color:#fff;border-radius:14px;padding:32px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;}
+.service-card{background:rgba(26,26,26,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:none;color:#fff;border-radius:14px;padding:32px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1);}
 .service-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,var(--blue) 0%,transparent 50%,var(--blue) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2;}
 .service-card::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--orange);transition:width .35s ease;}
-.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.35),0 0 26px rgba(47,111,237,0.25);}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.5),0 0 26px rgba(47,111,237,0.25);}
 .service-card:hover::after{width:100%;}
 .service-card.featured{background:rgba(47,111,237,0.15);border:none;grid-row:span 2;justify-content:center;}
 .service-card.featured::before{background:linear-gradient(180deg,var(--orange) 0%,transparent 50%,var(--orange) 100%);}
@@ -283,19 +285,20 @@ header.scrolled{background:rgba(10,10,12,0.92);backdrop-filter:blur(12px);-webki
 /* PRICING */
 #pricing{background:var(--grey);padding:100px 0;}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start;}
-.price-card{background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 10px 30px rgba(0,0,0,0.06);border:none;position:relative;transition:transform .3s ease,box-shadow .3s ease;}
+.price-card{background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 10px 30px rgba(0,0,0,0.06);border:none;position:relative;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1);}
 .price-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(180deg,var(--blue) 0%,transparent 50%,var(--blue) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
 .price-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.1),0 0 26px rgba(47,111,237,0.18);}
 .price-card.popular{transform:scale(1.05);box-shadow:0 20px 50px rgba(230,161,0,0.2);}
 .price-card.popular::before{background:linear-gradient(180deg,var(--orange) 0%,transparent 50%,var(--orange) 100%);}
 .price-card.popular:hover{transform:scale(1.05) translateY(-6px);}
 .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:12px;font-weight:700;letter-spacing:0.05em;padding:6px 18px;border-radius:100px;text-transform:uppercase;}
-.price-name{font-size:22px;font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:6px;}
+.price-name{font-size:22px;font-weight:700;font-family:'Oswald',sans-serif;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.04em;}
 .price-desc{font-size:14px;color:var(--text-muted);margin-bottom:20px;}
 .price-amount{font-size:44px;font-weight:700;font-family:'Oswald',sans-serif;color:var(--black);margin-bottom:4px;}
 .price-amount span{font-size:16px;font-weight:500;color:var(--text-muted);}
 .price-features{margin:24px 0;}
-.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--text-dark);margin-bottom:12px;line-height:1.4;}
+.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--text-dark);padding-bottom:12px;margin-bottom:12px;line-height:1.4;border-bottom:1px solid rgba(0,0,0,0.06);}
+.price-features li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
 .price-features i{color:var(--blue);margin-top:3px;}
 @media(max-width:900px){.pricing-grid{grid-template-columns:1fr;}.price-card.popular{transform:scale(1);}.price-card.popular:hover{transform:translateY(-6px);}}
 
@@ -437,7 +440,8 @@ footer{background:var(--black);border-top:3px solid var(--orange);color:#fff;pad
 <header id="site-header">
   <div class="nav-inner">
     <a href="#hero" class="logo"><i class="fa-solid fa-car-burst"></i> SB Auto Detailing</a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
+      <span class="nav-indicator" id="navIndicator"></span>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
       <a href="#transformations">Results</a>
@@ -1018,7 +1022,7 @@ if (window.Lenis) {
 
 // ---- AOS ----
 if (window.AOS) {
-  AOS.init({ duration: 700, once: true, offset: 80 });
+  AOS.init({ duration: 800, once: true, offset: 80, easing: 'ease-out-cubic' });
 } else {
   // No AOS: reveal scroll-triggered content immediately instead of leaving it hidden.
   document.querySelectorAll('[data-aos]').forEach(function(el){ el.style.opacity = 1; el.style.transform = 'none'; });
@@ -1126,6 +1130,26 @@ mobileMenu.querySelectorAll('a').forEach(function(a){
     mobileMenu.classList.remove('open');
   });
 });
+
+// ---- Nav: sliding pill indicator (dashboard-style nav) ----
+(function(){
+  const nav = document.getElementById('navLinks');
+  const indicator = document.getElementById('navIndicator');
+  if (!nav || !indicator) return;
+  const links = nav.querySelectorAll('a:not(.btn)');
+  links.forEach(function(link){
+    link.addEventListener('mouseenter', function(){
+      const navRect = nav.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      indicator.style.width = linkRect.width + 'px';
+      indicator.style.transform = 'translateX(' + (linkRect.left - navRect.left - 6) + 'px)';
+      indicator.classList.add('visible');
+    });
+  });
+  nav.addEventListener('mouseleave', function(){
+    indicator.classList.remove('visible');
+  });
+})();
 
 // ---- Vanilla Tilt ----
 if (window.VanillaTilt) {
