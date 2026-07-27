@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tree Removal &amp; Trimming in Delphi, IN | Gerardo Tree Service LLC</title>
+<meta name="description" content="Gerardo Tree Service LLC provides tree cutting and removal, trimming, mulching, landscaping, mowing, and property cleanup in Delphi, Indiana. Free estimates.">
+<link rel="canonical" href="https://www.gerardotreeservicellc.example/">
+<meta name="robots" content="index, follow">
+<meta name="geo.placename" content="Delphi">
+<meta name="geo.region" content="US-IN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gerardo Tree Service LLC | Delphi, IN">
+<meta property="og:description" content="Tree cutting and removal, trimming, mulching, and property cleanup in Delphi, Indiana. Get a free estimate today.">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071504_511240af-765e-4cc6-a12f-61091ca2cb0d.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gerardo Tree Service LLC | Delphi, IN">
+<meta name="twitter:description" content="Tree cutting and removal, trimming, mulching, and property cleanup in Delphi, Indiana.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Gerardo Tree Service LLC",
+  "telephone": "+1-660-341-6257",
+  "email": "gerardo19vasquez74@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Delphi",
+    "addressRegion": "IN",
+    "postalCode": "46923",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.5764,
+    "longitude": -86.6764
+  },
+  "areaServed": "Delphi, IN and the surrounding area",
+  "description": "Tree cutting and removal, tree trimming, mulching, rock landscaping, mowing, bush trimming and planting, spring and fall clean up, leaf clean up, snow removal, demolition services, and general power wash services.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Cutting and Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Trimming" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mulching" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rock Landscaping" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mowing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bush Trimming and Planting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spring and Fall Clean Up" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leaf Clean Up" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Snow Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Demolition Services" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Power Wash Services" } }
+    ]
+  }
+}
+</script>
+<!-- No aggregateRating or review markup: Gerardo Tree Service LLC has 0 reviews on Facebook as of this build. Add real reviews here once they exist, never invent them. -->
+
+<style>
+:root{
+  --forest-950:#122318;
+  --forest-800:#1B3626;
+  --forest-700:#254A34;
+  --bark-600:#5B4630;
+  --paper-50:#F3EEDF;
+  --paper-100:#EAE3CE;
+  --safety-500:#D2571A;
+  --safety-400:#E36A2C;
+  --ink-900:#1A1712;
+  --ink-700:#3A362D;
+  --font-display:'Outfit',sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-display);
+  background:var(--paper-50);
+  color:var(--ink-900);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--safety-500);
+}
+h1,h2,h3{font-weight:700;letter-spacing:-0.02em;line-height:1.05;text-wrap:balance;}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:.95rem;
+  padding:14px 26px;
+  border-radius:6px;
+  cursor:pointer;
+  border:none;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--safety-500);color:var(--paper-50);}
+.btn-primary:hover{background:var(--safety-400);box-shadow:0 8px 24px rgba(210,87,26,.35);}
+.btn-outline{background:transparent;color:var(--paper-50);border:1.5px solid rgba(243,238,223,.5);}
+.btn-outline:hover{border-color:var(--paper-50);background:rgba(243,238,223,.08);}
+.btn-outline-dark{background:transparent;color:var(--ink-900);border:1.5px solid rgba(26,23,18,.35);}
+.btn-outline-dark:hover{border-color:var(--ink-900);}
+
+/* Nav */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 0;
+  transition:background .3s ease, padding .3s ease, box-shadow .3s ease;
+}
+.nav.scrolled{background:rgba(18,35,24,.92);backdrop-filter:blur(10px);padding:12px 0;box-shadow:0 4px 20px rgba(0,0,0,.2);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{
+  font-weight:800;font-size:1.15rem;color:var(--paper-50);
+  display:flex;align-items:center;gap:10px;
+}
+.nav-logo i{color:var(--safety-500);}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{color:var(--paper-50);font-size:.9rem;font-weight:500;opacity:.85;}
+.nav-links a:hover{opacity:1;}
+.nav-phone{
+  font-family:var(--font-mono);color:var(--paper-50);font-size:.9rem;
+  display:flex;align-items:center;gap:8px;
+}
+.nav-phone i{color:var(--safety-500);}
+.nav-toggle{display:none;background:none;border:none;color:var(--paper-50);font-size:1.4rem;cursor:pointer;}
+
+/* Hero */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:linear-gradient(180deg, rgba(18,35,24,.55) 0%, rgba(18,35,24,.75) 60%, var(--forest-950) 100%),
+    url('https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071504_511240af-765e-4cc6-a12f-61091ca2cb0d.png') center/cover no-repeat;
+  color:var(--paper-50);
+  padding-top:100px;
+}
+.hero-inner{max-width:680px;}
+.hero .eyebrow{color:var(--safety-400);margin-bottom:18px;}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:20px;}
+.hero p.lede{font-size:1.15rem;line-height:1.6;color:rgba(243,238,223,.85);max-width:520px;margin-bottom:32px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;}
+.hero-facts{display:flex;flex-wrap:wrap;gap:28px;font-family:var(--font-mono);font-size:.82rem;color:rgba(243,238,223,.75);}
+.hero-facts span{display:flex;align-items:center;gap:8px;}
+.hero-facts i{color:var(--safety-500);}
+.scroll-cue{
+  position:absolute;bottom:32px;left:24px;
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(243,238,223,.6);
+  display:flex;align-items:center;gap:10px;
+}
+.scroll-cue .line{width:32px;height:1px;background:rgba(243,238,223,.4);}
+
+/* Journey */
+.journey{position:relative;}
+.scene{
+  position:sticky;top:0;height:100vh;width:100%;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.scene-media{position:absolute;inset:0;z-index:0;}
+.scene-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform;}
+.scene-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(18,35,24,.15) 0%, rgba(18,35,24,.85) 100%);z-index:1;}
+.scene-content{position:relative;z-index:2;padding:0 24px 80px;width:100%;color:var(--paper-50);}
+.scene-content-inner{max-width:1200px;margin:0 auto;}
+.scene-num{font-family:var(--font-mono);font-size:.78rem;color:var(--safety-400);letter-spacing:.14em;margin-bottom:14px;}
+.scene h2{font-size:clamp(1.8rem,4vw,3.2rem);max-width:640px;margin-bottom:14px;}
+.scene p{font-size:1rem;line-height:1.6;max-width:460px;color:rgba(243,238,223,.85);}
+
+/* Services */
+.services{background:var(--forest-950);color:var(--paper-50);padding:120px 0;}
+.section-head{max-width:640px;margin-bottom:60px;}
+.section-head h2{font-size:clamp(2rem,4vw,2.8rem);margin-top:14px;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(243,238,223,.12);border:1px solid rgba(243,238,223,.12);}
+.service-cell{background:var(--forest-950);padding:36px 30px;transition:background .25s ease;}
+.service-cell:hover{background:var(--forest-800);}
+.service-cell i{font-size:1.5rem;color:var(--safety-500);margin-bottom:18px;}
+.service-cell h3{font-size:1.05rem;font-weight:600;margin-bottom:8px;}
+.service-cell p{font-size:.85rem;color:rgba(243,238,223,.65);line-height:1.5;}
+
+/* Why us */
+.why{background:var(--paper-50);padding:120px 0;}
+.why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
+.why-copy .eyebrow{margin-bottom:14px;}
+.why-copy h2{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:20px;}
+.why-copy p{font-size:1.05rem;line-height:1.65;color:var(--ink-700);margin-bottom:28px;max-width:480px;}
+.why-facts{display:flex;flex-direction:column;gap:20px;}
+.why-fact{display:flex;gap:16px;align-items:flex-start;}
+.why-fact i{color:var(--safety-500);font-size:1.15rem;margin-top:3px;}
+.why-fact h4{font-size:1rem;font-weight:600;margin-bottom:4px;}
+.why-fact p{font-size:.9rem;color:var(--ink-700);margin:0;max-width:none;}
+.why-media{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;}
+.why-media img{width:100%;height:100%;object-fit:cover;}
+
+/* Area */
+.area{background:var(--forest-800);color:var(--paper-50);padding:100px 0;}
+.area-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:40px;}
+.area h2{font-size:clamp(1.8rem,3.5vw,2.4rem);max-width:480px;}
+.area-chips{display:flex;flex-wrap:wrap;gap:10px;max-width:420px;}
+.area-chip{
+  font-family:var(--font-mono);font-size:.82rem;
+  padding:8px 16px;border:1px solid rgba(243,238,223,.3);border-radius:100px;
+  color:rgba(243,238,223,.85);
+}
+
+/* Contact */
+.contact{background:var(--paper-50);padding:120px 0;}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;}
+.contact-info h2{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:18px;}
+.contact-info p{font-size:1.05rem;line-height:1.6;color:var(--ink-700);margin-bottom:32px;max-width:420px;}
+.contact-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.05rem;}
+.contact-line i{width:22px;color:var(--safety-500);}
+.contact-note{
+  margin-top:32px;padding:18px 20px;background:var(--paper-100);border-left:3px solid var(--safety-500);
+  font-size:.9rem;color:var(--ink-700);border-radius:0 6px 6px 0;
+}
+.contact-form{background:var(--forest-950);border-radius:10px;padding:44px;color:var(--paper-50);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.form-group label{font-size:.8rem;font-family:var(--font-mono);color:rgba(243,238,223,.7);}
+.form-group input,.form-group textarea,.form-group select{
+  background:rgba(243,238,223,.06);border:1px solid rgba(243,238,223,.2);border-radius:6px;
+  padding:12px 14px;color:var(--paper-50);font-family:var(--font-display);font-size:.95rem;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--safety-500);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-success{display:none;text-align:center;padding:40px 0;}
+.form-success i{font-size:2.4rem;color:var(--safety-500);margin-bottom:16px;}
+
+/* Footer */
+footer{background:var(--forest-950);color:rgba(243,238,223,.6);padding:56px 0 28px;}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-bottom:36px;}
+.footer-logo{font-weight:800;font-size:1.1rem;color:var(--paper-50);margin-bottom:8px;}
+.footer-tag{font-size:.85rem;max-width:320px;}
+.footer-contact{display:flex;flex-direction:column;gap:8px;font-size:.9rem;}
+.footer-bottom{border-top:1px solid rgba(243,238,223,.12);padding-top:24px;font-size:.78rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;}
+
+@media (max-width:860px){
+  .nav-links{display:none;}
+  .nav-toggle{display:block;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .why-grid,.contact-grid{grid-template-columns:1fr;}
+  .why-media{order:-1;aspect-ratio:16/9;}
+  .form-row{grid-template-columns:1fr;}
+  .area-inner{flex-direction:column;align-items:flex-start;}
+}
+@media (max-width:560px){
+  .services-grid{grid-template-columns:1fr;}
+  .hero-facts{gap:16px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .scene-media img{transform:none !important;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <div class="nav-logo"><i class="fa-solid fa-tree"></i> Gerardo Tree Service</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-phone" href="tel:+16603416257"><i class="fa-solid fa-phone"></i> (660) 341-6257</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Delphi, Indiana</p>
+    <h1>Tree removal and property cleanup, done right the first time.</h1>
+    <p class="lede">Gerardo Tree Service LLC handles tree cutting and removal, trimming, mulching, and full property cleanup for homeowners in Delphi and the surrounding area.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-clipboard-check"></i> Get Your Free Estimate</a>
+      <a href="tel:+16603416257" class="btn btn-outline"><i class="fa-solid fa-phone"></i> (660) 341-6257</a>
+    </div>
+    <div class="hero-facts">
+      <span><i class="fa-solid fa-location-dot"></i> Delphi, IN 46923</span>
+      <span><i class="fa-solid fa-clock"></i> Every day, by appointment</span>
+      <span><i class="fa-solid fa-file-invoice-dollar"></i> Free estimates</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span> Scroll to see the job, start to finish</div>
+</header>
+
+<div class="journey" id="journey">
+
+  <section class="scene" data-scene="1">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071504_511240af-765e-4cc6-a12f-61091ca2cb0d.png" alt="Overgrown tree looming over a house, tree service truck arriving at a Delphi, Indiana property" loading="eager"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">01 / Arrival</p>
+      <h2>Every job starts with a walkaround.</h2>
+      <p>We look at the whole property before anything gets cut, so nothing gets damaged that shouldn't.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="2">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071506_a76a165e-f929-4e95-abf5-dafe1c101f23.png" alt="Tree service worker assessing a large tree with rigging gear staged on the ground" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">02 / Assessment</p>
+      <h2>We look before we cut.</h2>
+      <p>Gear staged, plan set. Every removal and trim starts with a clear read on the tree and what's around it.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="3">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071509_ef50e84b-817e-4677-966c-7f42448749ef.png" alt="Worker climbing into a tree canopy on rope and saddle with a chainsaw" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">03 / The Climb</p>
+      <h2>Precision, well off the ground.</h2>
+      <p>Tree trimming and canopy work, handled section by section instead of dropped all at once.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="4">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071511_4e584fc7-0002-4643-aaee-e7bf6ec0f6c9.png" alt="Large tree limb being lowered on a controlled rigging rope" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">04 / The Drop</p>
+      <h2>Controlled removal, every time.</h2>
+      <p>Nothing free-falls near a house, a fence, or a driveway. It comes down on rope, on our terms.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="5">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071513_90395bad-f427-44db-9d06-cfc1628d3f17.png" alt="Wood chipper clearing debris in a residential yard" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">05 / Clearing</p>
+      <h2>Down to the ground, cleared out.</h2>
+      <p>Wood, brush, and debris get worked down and hauled off, not left in a pile on your lawn.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="6">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071515_fe4a825e-1377-4169-876d-0f10d439bf0b.png" alt="Crew raking and hauling debris into a trailer" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">06 / The Clean Sweep</p>
+      <h2>We don't leave a mess behind.</h2>
+      <p>Raked, bagged, and loaded out. Spring and fall clean up, leaf clean up, all part of the job.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="7">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071517_bb3d7fe4-b5ee-4642-83f1-042a270c1b19.png" alt="Clean, safe residential backyard after tree removal, golden hour" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">07 / The Result</p>
+      <h2>A safer yard, done right.</h2>
+      <p>That's the job: a property that's safer, cleaner, and better than we found it.</p>
+    </div></div>
+  </section>
+
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What We Do</p>
+      <h2>Full-property tree and yard services.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-cell"><i class="fa-solid fa-tree-city"></i><h3>Tree Cutting and Removal</h3><p>Full removal for dead, damaged, or unwanted trees of any size.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-scissors"></i><h3>Tree Trimming</h3><p>Canopy shaping and deadwood removal to keep trees healthy and safe.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-seedling"></i><h3>Mulching</h3><p>Fresh mulch beds that protect roots and clean up the look of your yard.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-mound"></i><h3>Rock Landscaping</h3><p>Rock beds and borders for low-maintenance, good-looking landscaping.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-fan"></i><h3>Mowing</h3><p>Reliable lawn mowing to keep your property looking cared for.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-spa"></i><h3>Bush Trimming and Planting</h3><p>Shaping existing bushes and planting new ones where you want them.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-broom"></i><h3>Spring and Fall Clean Up</h3><p>Seasonal cleanup to reset your yard before and after the season changes.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-leaf"></i><h3>Leaf Clean Up</h3><p>Leaves raked, bagged, and hauled off your property.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-snowflake"></i><h3>Snow Removal</h3><p>Driveways and walkways cleared so you can get out the door.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-house-crack"></i><h3>Demolition Services</h3><p>Small structure and debris demolition, cleared and hauled away.</p></div>
+      <div class="service-cell"><i class="fa-solid fa-spray-can-sparkles"></i><h3>General Power Wash Services</h3><p>Driveways, siding, and walkways washed down and refreshed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container why-grid">
+    <div class="why-copy">
+      <p class="eyebrow">Why Gerardo Tree Service</p>
+      <h2>Locally owned, based right in Delphi.</h2>
+      <p>Gerardo Tree Service LLC is a locally owned tree and property service based in Delphi, Indiana. We show up, do the work, and clean up after ourselves, every time.</p>
+      <div class="why-facts">
+        <div class="why-fact"><i class="fa-solid fa-location-dot"></i><div><h4>Based in Delphi, IN</h4><p>Locally owned and serving Delphi and the surrounding area.</p></div></div>
+        <div class="why-fact"><i class="fa-solid fa-file-invoice-dollar"></i><div><h4>Free estimates</h4><p>Call, message, or fill out the form below for a free quote before any work starts.</p></div></div>
+        <div class="why-fact"><i class="fa-solid fa-list-check"></i><div><h4>One crew, full-property service</h4><p>From tree removal to mowing to snow removal, one call covers it.</p></div></div>
+      </div>
+    </div>
+    <div class="why-media">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260727_071509_ef50e84b-817e-4677-966c-7f42448749ef.png" alt="Tree service worker performing precise canopy trimming work">
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="container area-inner">
+    <h2>Proudly serving Delphi, Indiana and the surrounding area.</h2>
+    <div class="area-chips">
+      <span class="area-chip">Delphi, IN</span>
+      <span class="area-chip">Carroll County</span>
+      <span class="area-chip">Surrounding areas</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Get your free estimate today.</h2>
+      <p>Call, email, or send your job details below and we'll get back to you about your free estimate.</p>
+      <div class="contact-line"><i class="fa-solid fa-phone"></i> <a href="tel:+16603416257">(660) 341-6257</a></div>
+      <div class="contact-line"><i class="fa-solid fa-envelope"></i> <a href="mailto:gerardo19vasquez74@gmail.com">gerardo19vasquez74@gmail.com</a></div>
+      <div class="contact-line"><i class="fa-solid fa-location-dot"></i> Delphi, IN 46923</div>
+      <div class="contact-line"><i class="fa-solid fa-clock"></i> Every day, by appointment</div>
+      <div class="contact-note"><i class="fa-solid fa-circle-info"></i> We're new to Facebook reviews, so if you work with us, a review helps other neighbors in Delphi find us.</div>
+    </div>
+    <div class="contact-form">
+      <form id="quoteForm">
+        <div class="form-row">
+          <div class="form-group"><label for="fName">Name</label><input type="text" id="fName" required></div>
+          <div class="form-group"><label for="fPhone">Phone</label><input type="tel" id="fPhone" required></div>
+        </div>
+        <div class="form-group"><label for="fEmail">Email</label><input type="email" id="fEmail" required></div>
+        <div class="form-group">
+          <label for="fService">Service Needed</label>
+          <select id="fService">
+            <option>Tree Cutting and Removal</option>
+            <option>Tree Trimming</option>
+            <option>Mulching</option>
+            <option>Rock Landscaping</option>
+            <option>Mowing</option>
+            <option>Bush Trimming and Planting</option>
+            <option>Spring and Fall Clean Up</option>
+            <option>Leaf Clean Up</option>
+            <option>Snow Removal</option>
+            <option>Demolition Services</option>
+            <option>General Power Wash Services</option>
+            <option>Not sure / other</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="fMsg">Job Details</label><textarea id="fMsg" placeholder="Tell us about the tree, the yard, or the job you need done."></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Request Free Estimate</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Thanks, we'll be in touch.</h3>
+        <p>We got your request and will reach out about your free estimate soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo"><i class="fa-solid fa-tree"></i> Gerardo Tree Service LLC</div>
+        <p class="footer-tag">Tree cutting and removal, trimming, mulching, and full property cleanup in Delphi, Indiana.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+16603416257"><i class="fa-solid fa-phone"></i> (660) 341-6257</a>
+        <a href="mailto:gerardo19vasquez74@gmail.com"><i class="fa-solid fa-envelope"></i> gerardo19vasquez74@gmail.com</a>
+        <span><i class="fa-solid fa-location-dot"></i> Delphi, IN 46923</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Gerardo Tree Service LLC</span>
+      <span>Delphi, Indiana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script>
+// Nav background on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}, { passive: true });
+
+// Mobile nav toggle (simple fallback: jump to contact)
+const navToggle = document.getElementById('navToggle');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    document.querySelector('.nav-links').style.cssText = 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(18,35,24,.97);padding:20px 24px;gap:16px;';
+  });
+}
+
+// Smooth scroll (guarded)
+if (window.Lenis) {
+  try {
+    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    if (window.gsap) lenis.on('scroll', () => window.ScrollTrigger && window.ScrollTrigger.update());
+  } catch (e) { /* smooth scroll unavailable, native scroll still works */ }
+}
+
+// Scene image scroll-motion (guarded, the site's main effect)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.scene').forEach((scene) => {
+    const img = scene.querySelector('.scene-media img');
+    const content = scene.querySelector('.scene-content-inner');
+    gsap.set(content, { opacity: 0, y: 30 });
+    gsap.to(img, {
+      scale: 1,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: scene,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+    gsap.to(content, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: scene,
+        start: 'top 60%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+} else {
+  // Fallback: no GSAP or reduced motion, ship the journey fully static and legible
+  document.querySelectorAll('.scene-content-inner').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+}
+
+// Contact form (client-side demo submit)
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    quoteForm.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+}
+</script>
+</body>
+</html>
