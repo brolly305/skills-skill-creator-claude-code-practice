@@ -560,6 +560,7 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 } else {
   // Fallback: no GSAP or reduced motion, ship the journey fully static and legible
   document.querySelectorAll('.scene-content-inner').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  document.querySelectorAll('.scene-media img').forEach((el) => { el.style.transform = 'none'; });
 }
 
 // Contact form (client-side demo submit)
