@@ -1,0 +1,66 @@
+{
+  "skill_name": "musashi-five-rings",
+  "evals": [
+    {
+      "id": 0,
+      "name": "build-framework-service-business",
+      "mode": "BUILD",
+      "prompt": "I run a 2-person junk removal outfit in Sacramento \u2014 me and my brother-in-law, one truck, about $8k/month revenue, almost all of it from Google Local Services ads that keep getting more expensive every quarter. I don't want another list of marketing tactics. I want an actual method for the next 12 months that I can keep coming back to when things go sideways. Where do I even start?",
+      "expected_output": "A Five Rings Scroll grounded in this specific business: honest one-line definition, verifiable win condition, real inventory of timber (two people, one truck, LSA dependency), a drilled operating form with cadence, a named opponent and chosen initiative with 2-3 concrete tactics, a survey of how other haulers compete, named unknowns, and a short custom Dokkodo. Should NOT be a generic marketing tactic list or a tour of the whole tactic catalogue.",
+      "files": [],
+      "assertions": [
+        "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+        "States a win condition that a third party could verify (has a number or a date)",
+        "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+        "Fire section names a specific opponent rather than leaving it abstract",
+        "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+        "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+        "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+        "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+        "Wind section characterizes at least two rival approaches concretely",
+        "Void section names at least one specific unknown and one thing the user is pretending to know",
+        "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+        "Contains no fabricated direct quotations attributed to Musashi",
+        "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "stress-test-q3-plan",
+      "mode": "TEST",
+      "prompt": "musashi this \u2014 here's the Q3 plan for the dev tools startup I co-founded. We're 6 people, $40k MRR, selling a CI observability tool. Plan: (1) ship the 4 big features customers keep asking for, (2) double content output to 8 blog posts a month, (3) hire 2 AEs to go upmarket into enterprise, (4) match Datadog's pricing on the entry tier so we stop losing deals on price, (5) rebrand with a new logo and site in September. We think if we execute all 5 we hit $100k MRR by year end.",
+      "expected_output": "A blunt ring-by-ring assessment quoting the actual plan items, with a verdict per ring, the weakest ring named plainly with 2-3 fixes, and a closing verdict. Should catch specifics: matching Datadog on price is fighting on ground the giant chose; 5 simultaneous initiatives with 6 people is a foundation problem; the rebrand is ornament; no named opponent-response; no initiative declared.",
+      "files": [],
+      "assertions": [
+        "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+        "Cites specific items from the user's five-point plan as evidence, not generic critique",
+        "Names one weakest ring plainly",
+        "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+        "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+        "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+        "Gives 2-3 concrete fixes for the weakest ring",
+        "Closes with a blunt verdict rather than a balanced both-sides summary",
+        "Contains no fabricated direct quotations attributed to Musashi",
+        "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "study-fire-book-applied",
+      "mode": "STUDY + TEST",
+      "prompt": "I keep seeing people quote the Book of Five Rings but I've never actually read it. What's the Fire book actually about, and what does 'the body of a rock' mean? Also \u2014 is any of it useful for what I'm dealing with, which is a competitor who just launched a near-identical product at 40% of our price and is undercutting us at every renewal?",
+      "expected_output": "Accurate teaching of the Fire book (position, the three sen, the named tactics) and of iwao no mi, followed by concrete application to the price-undercutting situation \u2014 likely release four hands, injure the corners, become the enemy, mountain-sea change. No fabricated quotations. Should not stay in 17th-century Japan.",
+      "files": [],
+      "assertions": [
+        "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+        "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+        "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+        "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+        "Does not attribute Sun Tzu or Hagakure material to Musashi",
+        "Contains no fabricated direct quotations attributed to Musashi",
+        "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+        "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+      ]
+    }
+  ]
+}
