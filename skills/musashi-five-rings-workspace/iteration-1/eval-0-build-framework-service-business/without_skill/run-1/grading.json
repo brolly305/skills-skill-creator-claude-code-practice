@@ -1,0 +1,75 @@
+{
+  "expectations": [
+    {
+      "text": "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+      "passed": false,
+      "evidence": "No rings at all. Structure is an invented 'Constraint Loop': a scoreboard of five numbers, a five-rung ladder, a rhythm, and one rule."
+    },
+    {
+      "text": "States a win condition that a third party could verify (has a number or a date)",
+      "passed": true,
+      "evidence": "Gate criteria are numeric and checkable: 'gross profit per truck-day is up 25%+', 'owned ratio hits 25%', 'owned ratio hits 40% and you're consistently booked 3+ days out'."
+    },
+    {
+      "text": "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+      "passed": true,
+      "evidence": "Derives ~20-25 jobs/month from $8k; 'Two guys, one truck, one job a day'; addresses the brother-in-law partnership directly; LSA auction is the central diagnosis."
+    },
+    {
+      "text": "Fire section names a specific opponent rather than leaving it abstract",
+      "passed": true,
+      "evidence": "No Fire section, but a specific opponent is named on substance: the LSA auction ('the people who win it are the ones with call centers and $2M ad budgets') and '1-800-GOT-JUNK'."
+    },
+    {
+      "text": "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+      "passed": false,
+      "evidence": "No initiative is named or chosen. The plan proceeds without declaring whether it is attacking, receiving, or meeting."
+    },
+    {
+      "text": "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+      "passed": true,
+      "evidence": "Vacuously satisfied \u2014 zero named tactics used. Passes the letter of the assertion without demonstrating anything."
+    },
+    {
+      "text": "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+      "passed": true,
+      "evidence": "Vacuously satisfied \u2014 no named tactics to cash out. The advice given is nonetheless concrete."
+    },
+    {
+      "text": "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+      "passed": true,
+      "evidence": "No Water section, but a real cadence is given: 'Friday, 15 minutes' scoreboard; 'First Monday of the month, 60-90 minutes'; 'Once a quarter, half a day'."
+    },
+    {
+      "text": "Wind section characterizes at least two rival approaches concretely",
+      "passed": false,
+      "evidence": "Only one rival is characterized, in a single clause: 'why you can win these and 1-800-GOT-JUNK often can't'. No survey of competing approaches, no take/refuse distinction."
+    },
+    {
+      "text": "Void section names at least one specific unknown and one thing the user is pretending to know",
+      "passed": false,
+      "evidence": "Unknowns are handled as an assumptions list to correct, which is close. But nothing names what the owner is currently pretending to know \u2014 the self-deception check is absent."
+    },
+    {
+      "text": "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+      "passed": false,
+      "evidence": "No precepts. Ends with a 'This week' action list of five items."
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "No quotations of any kind; Musashi is never mentioned."
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Plain modern business prose."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 5,
+    "total": 13,
+    "pass_rate": 0.6154
+  }
+}

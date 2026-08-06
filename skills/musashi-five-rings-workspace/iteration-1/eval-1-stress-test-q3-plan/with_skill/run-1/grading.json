@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+      "passed": true,
+      "evidence": "'Earth \u5730 \u2014 thin', 'Water \u6c34 \u2014 hollow', 'Fire \u706b \u2014 hollow', 'Wind \u98a8 \u2014 hollow', 'Void \u7a7a \u2014 hollow'."
+    },
+    {
+      "text": "Cites specific items from the user's five-point plan as evidence, not generic critique",
+      "passed": true,
+      "evidence": "A table scores all five items against cost-in-Q3 and earliest revenue; body quotes 'We think if we execute all 5 we hit $100k' directly."
+    },
+    {
+      "text": "Names one weakest ring plainly",
+      "passed": true,
+      "evidence": "'## The weakest ring is Earth' \u2014 with the reasoning that Fire and Wind are 'loudest failures, but they're downstream'."
+    },
+    {
+      "text": "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+      "passed": true,
+      "evidence": "'your engagement with them is to fight on the ground they chose with the weapon they are best funded to use'; notes Datadog's entry tier is subsidized by expansion revenue \u2014 'That's not a price war, it's a unilateral price cut you're calling a competitive move.'"
+    },
+    {
+      "text": "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+      "passed": true,
+      "evidence": "'The rebrand is the clearest ornament on the list. A new logo does not change a platform engineer's buying decision.'"
+    },
+    {
+      "text": "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+      "passed": true,
+      "evidence": "'Assign each person to exactly one item on that list and you will find you cannot staff it \u2014 that exercise is your cut list.'"
+    },
+    {
+      "text": "Gives 2-3 concrete fixes for the weakest ring",
+      "passed": true,
+      "evidence": "Three numbered moves: build the $60k bridge table this week; count the timber and name an owner per initiative; price the enterprise motion (SOC 2, SSO, MSA, DPA) before staffing it, with founders running five deals first."
+    },
+    {
+      "text": "Closes with a blunt verdict rather than a balanced both-sides summary",
+      "passed": true,
+      "evidence": "'Executed perfectly, this plan does not get you to $100k'; ends in January with 'a lower price on your whole book, a rebuilt site that lost its rankings... That is worse than doing nothing.'"
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "No quotation marks around Musashi material anywhere; 'The mountain and the sea cannot be the same' and 'True strategy has no dependence on speed' appear as paraphrase in the author's own voice."
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Modern prose; the Dokkodo section uses plain imperative business precepts ('The logo is not the problem.')."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  }
+}

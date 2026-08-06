@@ -1,0 +1,75 @@
+{
+  "expectations": [
+    {
+      "text": "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+      "passed": true,
+      "evidence": "All five present as headed sections: '\u5730 Earth \u2014 the ground', '\u6c34 Water \u2014 the form', '\u706b Fire \u2014 the engagement', '\u98a8 Wind \u2014 the other schools', '\u7a7a Void \u2014 what remains'."
+    },
+    {
+      "text": "States a win condition that a third party could verify (has a number or a date)",
+      "passed": true,
+      "evidence": "'By month 12 \u2014 $18,000/month gross, no more than 35% of it traceable to Local Services Ads, at least 8 named accounts..., 60+ Google reviews.'"
+    },
+    {
+      "text": "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+      "passed": true,
+      "evidence": "Title 'A two-man junk removal outfit in Sacramento'; derives ~27 jobs/month from $8k; 'Your brother-in-law' placed as inner pillar; 'The truck is knotted wood holding up the front of the house'; LSA freeze is the central move."
+    },
+    {
+      "text": "Fire section names a specific opponent rather than leaving it abstract",
+      "passed": true,
+      "evidence": "Names two: 'the auction itself' (LSA) as primary, and the national franchises '1-800-GOT-JUNK, College Hunks, JunkLuggers' as secondary, with each one's cost structure described."
+    },
+    {
+      "text": "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+      "passed": true,
+      "evidence": "Splits deliberately: 'On Google: tai no sen \u2014 receive, do not attack... Everywhere else: ken no sen \u2014 attack first,' each with a stated reason."
+    },
+    {
+      "text": "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+      "passed": true,
+      "evidence": "Exactly three: release four hands, injure the corners, hold down a pillow."
+    },
+    {
+      "text": "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+      "passed": true,
+      "evidence": "Each carries an explicit 'The move:' \u2014 freeze LSA spend at today's dollar figure for 12 months; take storage-lien/turnover/realtor work that never enters the auction; ask for the review by name and 'text me directly next time'."
+    },
+    {
+      "text": "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+      "passed": true,
+      "evidence": "Daily: live answer, walk-and-price, close-out, load log. Weekly: Friday hour, ten touches. Monthly: first Sunday, 90 minutes. Quarterly: reread and re-price."
+    },
+    {
+      "text": "Wind section characterizes at least two rival approaches concretely",
+      "passed": true,
+      "evidence": "Three, each with what-they-do / what-they-believe-wins / where-it-fails / take / refuse: national franchises, the Marketplace solo hauler, the SEO agency."
+    },
+    {
+      "text": "Void section names at least one specific unknown and one thing the user is pretending to know",
+      "passed": true,
+      "evidence": "Unknowns: real cost per job, close rate on LSA leads, whether property managers will hire a two-man outfit. Pretending: \"'LSA keeps getting more expensive' is currently a feeling\" and framing an idle-truck problem as a marketing-cost problem."
+    },
+    {
+      "text": "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+      "passed": true,
+      "evidence": "Seven precepts, all business-specific ('Do not raise the ad budget', 'No truck moves before the review is asked for by name'), closing with 'Number one will hurt in February.'"
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "No quotation marks around any line attributed to Musashi; Musashi's ideas are paraphrased ('the mountain and the sea cannot be the same', 'if you let the collapsing spirit revive, it will not be a collapse') without being presented as verbatim citation."
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Plain modern prose throughout; Japanese terms limited to real ones (yotsute wo hanasu, kado ni sawaru, makura wo osayuru, tai no sen, ken no sen) used correctly."
+    }
+  ],
+  "summary": {
+    "passed": 13,
+    "failed": 0,
+    "total": 13,
+    "pass_rate": 1.0
+  }
+}

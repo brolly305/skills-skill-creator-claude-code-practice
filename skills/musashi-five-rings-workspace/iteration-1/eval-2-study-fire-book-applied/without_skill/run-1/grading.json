@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+      "passed": true,
+      "evidence": "'Fire is where he stops talking about how you hold a sword and starts talking about the encounter: terrain, timing, initiative, reading the opponent, and how to break someone.'"
+    },
+    {
+      "text": "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+      "passed": true,
+      "evidence": "All three named and defined, though tai tai no sen is rendered loosely as 'both moving at once' rather than meeting the attack at its inception."
+    },
+    {
+      "text": "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+      "passed": true,
+      "evidence": "'It's the final entry in the Fire Book'; reads it as undivided resolve and explicitly rejects 'be stubborn' and 'be stoic'."
+    },
+    {
+      "text": "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+      "passed": true,
+      "evidence": "Six applied: become the enemy (three scenarios), four hands, hold down the pillow (90-120 day renewal window), depending on the place, strike at the corners, mountain-sea change."
+    },
+    {
+      "text": "Does not attribute Sun Tzu or Hagakure material to Musashi",
+      "passed": true,
+      "evidence": "Neither appears."
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "The one blockquote ('you become as immovable as a rock, so that ten thousand things cannot touch you') is close to the Harris rendering and labelled as Harris. The Hosokawa seppuku anecdote is flagged twice as extra-textual and 'may well not have happened'."
+    },
+    {
+      "text": "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+      "passed": true,
+      "evidence": "Applies each idea to the renewal war and opens with the honest caveat that 'Anyone who tells you Musashi has the answer to a SaaS price war is selling something.'"
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Plain prose; closes with translation recommendations."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

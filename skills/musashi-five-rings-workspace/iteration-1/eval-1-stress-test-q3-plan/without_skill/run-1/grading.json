@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+      "passed": false,
+      "evidence": "Five ring-named sections exist (Ground, Water, Fire, Wind, Void) but none carries a verdict. The verdict column in its table scores the five plan items, not the five rings."
+    },
+    {
+      "text": "Cites specific items from the user's five-point plan as evidence, not generic critique",
+      "passed": true,
+      "evidence": "Table lists all five initiatives with per-item verdicts; does the arithmetic on the AE hire ('$30k+/month of new burn \u2014 about 75% of your entire current MRR')."
+    },
+    {
+      "text": "Names one weakest ring plainly",
+      "passed": false,
+      "evidence": "No ring is named as weakest. The closest is 'The single most important thing on this page: four of your five initiatives pay out after the deadline' \u2014 a finding about items, not a ring diagnosis."
+    },
+    {
+      "text": "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+      "passed": true,
+      "evidence": "'Matching that number is fighting on ground the enemy chose, with the enemy's weapon, at the enemy's preferred distance'; notes 'They can take it to zero. You cannot.'"
+    },
+    {
+      "text": "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+      "passed": true,
+      "evidence": "'It produces zero MRR... fix the copy in a week, not the logo in a quarter'; tags the rebrand with 'Do not seek pleasure for its own sake.'"
+    },
+    {
+      "text": "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+      "passed": true,
+      "evidence": "'Five simultaneous bets with six people is not execution risk, it is execution certainty \u2014 you will be late on all five rather than early on one.'"
+    },
+    {
+      "text": "Gives 2-3 concrete fixes for the weakest ring",
+      "passed": true,
+      "evidence": "'The plan I'd actually run' gives three: ship 2 evidence-chosen features, run an expansion motion into the base, founder-led enterprise with no AEs."
+    },
+    {
+      "text": "Closes with a blunt verdict rather than a balanced both-sides summary",
+      "passed": true,
+      "evidence": "'$100k is a Q2-2027 number. Say that out loud to the team and to your board now, rather than in December.'"
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "All quoted lines check out: 'Do nothing which is of no use' (principle 9), 'Distinguish between gain and loss in worldly matters' (principle 5), 'Perceive those things which cannot be seen' (principle 7), and Dokkodo 1 and 15. 'Kan no me tsuyoku, ken no me yowaku' is rendered correctly."
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Modern prose; the closing Dokkodo lines are real precepts applied to real plan items."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8
+  }
+}

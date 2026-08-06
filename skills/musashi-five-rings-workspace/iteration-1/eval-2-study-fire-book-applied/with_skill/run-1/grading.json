@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+      "passed": true,
+      "evidence": "'Fire is what happens on contact \u2014 the fight itself'; structured as position first ('most of a fight is decided by where it happens'), then the three initiatives, then the named tactics."
+    },
+    {
+      "text": "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+      "passed": true,
+      "evidence": "All three defined: attacking first; receiving and taking them at the point of commitment; 'not first, not second, but inside their move.'"
+    },
+    {
+      "text": "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+      "passed": true,
+      "evidence": "'It is the last teaching of the Fire book'; gives the kanji \u5dcc\u306e\u8eab; rules out three misreadings ('Not armour... Not tension... Not immobility of the body') and states 'the rock is earned downstream of the training, never upstream of it.'"
+    },
+    {
+      "text": "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+      "passed": true,
+      "evidence": "Five, each cashed out: release four hands (change the unit of comparison); become the enemy (three diagnoses \u2014 funded land-grab, lower cost structure, loss leader \u2014 each with an opposite response); injure the corners (take the segment that can't buy on list price); hold down the pillow (move engagement 90-120 days before renewal); mountain-sea change."
+    },
+    {
+      "text": "Does not attribute Sun Tzu or Hagakure material to Musashi",
+      "passed": true,
+      "evidence": "Neither is mentioned; no borrowed material appears."
+    },
+    {
+      "text": "Contains no fabricated direct quotations attributed to Musashi",
+      "passed": true,
+      "evidence": "One quotation only \u2014 'if you let the collapsing spirit revive, it will not be a collapse' \u2014 explicitly attributed '(Harris)'. Everything else is paraphrase. Also warns the reader that circulating quotations are 'one man's rendering, sometimes nobody's.'"
+    },
+    {
+      "text": "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+      "passed": true,
+      "evidence": "Over half the response is the price war: how to diagnose which of three situations the competitor is in from outside (funding, job postings, contract terms, SLA), what to do in each, and three sequenced first moves."
+    },
+    {
+      "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+      "passed": true,
+      "evidence": "Plain prose; closes with 'What Musashi won't do for you' \u2014 naming the text's limits rather than mythologizing it."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

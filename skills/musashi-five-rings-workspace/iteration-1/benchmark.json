@@ -1,0 +1,492 @@
+{
+  "metadata": {
+    "skill_name": "musashi-five-rings",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-08-06T23:11:23Z",
+    "evals_run": [
+      0,
+      1,
+      2
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 13,
+        "failed": 0,
+        "total": 13,
+        "time_seconds": 254.6,
+        "tokens": 70840,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+          "passed": true,
+          "evidence": "All five present as headed sections: '\u5730 Earth \u2014 the ground', '\u6c34 Water \u2014 the form', '\u706b Fire \u2014 the engagement', '\u98a8 Wind \u2014 the other schools', '\u7a7a Void \u2014 what remains'."
+        },
+        {
+          "text": "States a win condition that a third party could verify (has a number or a date)",
+          "passed": true,
+          "evidence": "'By month 12 \u2014 $18,000/month gross, no more than 35% of it traceable to Local Services Ads, at least 8 named accounts..., 60+ Google reviews.'"
+        },
+        {
+          "text": "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+          "passed": true,
+          "evidence": "Title 'A two-man junk removal outfit in Sacramento'; derives ~27 jobs/month from $8k; 'Your brother-in-law' placed as inner pillar; 'The truck is knotted wood holding up the front of the house'; LSA freeze is the central move."
+        },
+        {
+          "text": "Fire section names a specific opponent rather than leaving it abstract",
+          "passed": true,
+          "evidence": "Names two: 'the auction itself' (LSA) as primary, and the national franchises '1-800-GOT-JUNK, College Hunks, JunkLuggers' as secondary, with each one's cost structure described."
+        },
+        {
+          "text": "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+          "passed": true,
+          "evidence": "Splits deliberately: 'On Google: tai no sen \u2014 receive, do not attack... Everywhere else: ken no sen \u2014 attack first,' each with a stated reason."
+        },
+        {
+          "text": "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+          "passed": true,
+          "evidence": "Exactly three: release four hands, injure the corners, hold down a pillow."
+        },
+        {
+          "text": "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+          "passed": true,
+          "evidence": "Each carries an explicit 'The move:' \u2014 freeze LSA spend at today's dollar figure for 12 months; take storage-lien/turnover/realtor work that never enters the auction; ask for the review by name and 'text me directly next time'."
+        },
+        {
+          "text": "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+          "passed": true,
+          "evidence": "Daily: live answer, walk-and-price, close-out, load log. Weekly: Friday hour, ten touches. Monthly: first Sunday, 90 minutes. Quarterly: reread and re-price."
+        },
+        {
+          "text": "Wind section characterizes at least two rival approaches concretely",
+          "passed": true,
+          "evidence": "Three, each with what-they-do / what-they-believe-wins / where-it-fails / take / refuse: national franchises, the Marketplace solo hauler, the SEO agency."
+        },
+        {
+          "text": "Void section names at least one specific unknown and one thing the user is pretending to know",
+          "passed": true,
+          "evidence": "Unknowns: real cost per job, close rate on LSA leads, whether property managers will hire a two-man outfit. Pretending: \"'LSA keeps getting more expensive' is currently a feeling\" and framing an idle-truck problem as a marketing-cost problem."
+        },
+        {
+          "text": "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+          "passed": true,
+          "evidence": "Seven precepts, all business-specific ('Do not raise the ad budget', 'No truck moves before the review is asked for by name'), closing with 'Number one will hurt in February.'"
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "No quotation marks around any line attributed to Musashi; Musashi's ideas are paraphrased ('the mountain and the sea cannot be the same', 'if you let the collapsing spirit revive, it will not be a collapse') without being presented as verbatim citation."
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Plain modern prose throughout; Japanese terms limited to real ones (yotsute wo hanasu, kado ni sawaru, makura wo osayuru, tai no sen, ken no sen) used correctly."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 245.5,
+        "tokens": 69407,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+          "passed": true,
+          "evidence": "'Earth \u5730 \u2014 thin', 'Water \u6c34 \u2014 hollow', 'Fire \u706b \u2014 hollow', 'Wind \u98a8 \u2014 hollow', 'Void \u7a7a \u2014 hollow'."
+        },
+        {
+          "text": "Cites specific items from the user's five-point plan as evidence, not generic critique",
+          "passed": true,
+          "evidence": "A table scores all five items against cost-in-Q3 and earliest revenue; body quotes 'We think if we execute all 5 we hit $100k' directly."
+        },
+        {
+          "text": "Names one weakest ring plainly",
+          "passed": true,
+          "evidence": "'## The weakest ring is Earth' \u2014 with the reasoning that Fire and Wind are 'loudest failures, but they're downstream'."
+        },
+        {
+          "text": "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+          "passed": true,
+          "evidence": "'your engagement with them is to fight on the ground they chose with the weapon they are best funded to use'; notes Datadog's entry tier is subsidized by expansion revenue \u2014 'That's not a price war, it's a unilateral price cut you're calling a competitive move.'"
+        },
+        {
+          "text": "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+          "passed": true,
+          "evidence": "'The rebrand is the clearest ornament on the list. A new logo does not change a platform engineer's buying decision.'"
+        },
+        {
+          "text": "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+          "passed": true,
+          "evidence": "'Assign each person to exactly one item on that list and you will find you cannot staff it \u2014 that exercise is your cut list.'"
+        },
+        {
+          "text": "Gives 2-3 concrete fixes for the weakest ring",
+          "passed": true,
+          "evidence": "Three numbered moves: build the $60k bridge table this week; count the timber and name an owner per initiative; price the enterprise motion (SOC 2, SSO, MSA, DPA) before staffing it, with founders running five deals first."
+        },
+        {
+          "text": "Closes with a blunt verdict rather than a balanced both-sides summary",
+          "passed": true,
+          "evidence": "'Executed perfectly, this plan does not get you to $100k'; ends in January with 'a lower price on your whole book, a rebuilt site that lost its rankings... That is worse than doing nothing.'"
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "No quotation marks around Musashi material anywhere; 'The mountain and the sea cannot be the same' and 'True strategy has no dependence on speed' appear as paraphrase in the author's own voice."
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Modern prose; the Dokkodo section uses plain imperative business precepts ('The logo is not the problem.')."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 140.7,
+        "tokens": 51851,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+          "passed": true,
+          "evidence": "'Fire is what happens on contact \u2014 the fight itself'; structured as position first ('most of a fight is decided by where it happens'), then the three initiatives, then the named tactics."
+        },
+        {
+          "text": "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+          "passed": true,
+          "evidence": "All three defined: attacking first; receiving and taking them at the point of commitment; 'not first, not second, but inside their move.'"
+        },
+        {
+          "text": "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+          "passed": true,
+          "evidence": "'It is the last teaching of the Fire book'; gives the kanji \u5dcc\u306e\u8eab; rules out three misreadings ('Not armour... Not tension... Not immobility of the body') and states 'the rock is earned downstream of the training, never upstream of it.'"
+        },
+        {
+          "text": "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+          "passed": true,
+          "evidence": "Five, each cashed out: release four hands (change the unit of comparison); become the enemy (three diagnoses \u2014 funded land-grab, lower cost structure, loss leader \u2014 each with an opposite response); injure the corners (take the segment that can't buy on list price); hold down the pillow (move engagement 90-120 days before renewal); mountain-sea change."
+        },
+        {
+          "text": "Does not attribute Sun Tzu or Hagakure material to Musashi",
+          "passed": true,
+          "evidence": "Neither is mentioned; no borrowed material appears."
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "One quotation only \u2014 'if you let the collapsing spirit revive, it will not be a collapse' \u2014 explicitly attributed '(Harris)'. Everything else is paraphrase. Also warns the reader that circulating quotations are 'one man's rendering, sometimes nobody's.'"
+        },
+        {
+          "text": "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+          "passed": true,
+          "evidence": "Over half the response is the price war: how to diagnose which of three situations the competitor is in from outside (funding, job postings, contract terms, SLA), what to do in each, and three sequenced first moves."
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Plain prose; closes with 'What Musashi won't do for you' \u2014 naming the text's limits rather than mythologizing it."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6154,
+        "passed": 8,
+        "failed": 5,
+        "total": 13,
+        "time_seconds": 213.1,
+        "tokens": 40696,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+          "passed": false,
+          "evidence": "No rings at all. Structure is an invented 'Constraint Loop': a scoreboard of five numbers, a five-rung ladder, a rhythm, and one rule."
+        },
+        {
+          "text": "States a win condition that a third party could verify (has a number or a date)",
+          "passed": true,
+          "evidence": "Gate criteria are numeric and checkable: 'gross profit per truck-day is up 25%+', 'owned ratio hits 25%', 'owned ratio hits 40% and you're consistently booked 3+ days out'."
+        },
+        {
+          "text": "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+          "passed": true,
+          "evidence": "Derives ~20-25 jobs/month from $8k; 'Two guys, one truck, one job a day'; addresses the brother-in-law partnership directly; LSA auction is the central diagnosis."
+        },
+        {
+          "text": "Fire section names a specific opponent rather than leaving it abstract",
+          "passed": true,
+          "evidence": "No Fire section, but a specific opponent is named on substance: the LSA auction ('the people who win it are the ones with call centers and $2M ad budgets') and '1-800-GOT-JUNK'."
+        },
+        {
+          "text": "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+          "passed": false,
+          "evidence": "No initiative is named or chosen. The plan proceeds without declaring whether it is attacking, receiving, or meeting."
+        },
+        {
+          "text": "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+          "passed": true,
+          "evidence": "Vacuously satisfied \u2014 zero named tactics used. Passes the letter of the assertion without demonstrating anything."
+        },
+        {
+          "text": "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+          "passed": true,
+          "evidence": "Vacuously satisfied \u2014 no named tactics to cash out. The advice given is nonetheless concrete."
+        },
+        {
+          "text": "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+          "passed": true,
+          "evidence": "No Water section, but a real cadence is given: 'Friday, 15 minutes' scoreboard; 'First Monday of the month, 60-90 minutes'; 'Once a quarter, half a day'."
+        },
+        {
+          "text": "Wind section characterizes at least two rival approaches concretely",
+          "passed": false,
+          "evidence": "Only one rival is characterized, in a single clause: 'why you can win these and 1-800-GOT-JUNK often can't'. No survey of competing approaches, no take/refuse distinction."
+        },
+        {
+          "text": "Void section names at least one specific unknown and one thing the user is pretending to know",
+          "passed": false,
+          "evidence": "Unknowns are handled as an assumptions list to correct, which is close. But nothing names what the owner is currently pretending to know \u2014 the self-deception check is absent."
+        },
+        {
+          "text": "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+          "passed": false,
+          "evidence": "No precepts. Ends with a 'This week' action list of five items."
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "No quotations of any kind; Musashi is never mentioned."
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Plain modern business prose."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": 195.1,
+        "tokens": 39671,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+          "passed": false,
+          "evidence": "Five ring-named sections exist (Ground, Water, Fire, Wind, Void) but none carries a verdict. The verdict column in its table scores the five plan items, not the five rings."
+        },
+        {
+          "text": "Cites specific items from the user's five-point plan as evidence, not generic critique",
+          "passed": true,
+          "evidence": "Table lists all five initiatives with per-item verdicts; does the arithmetic on the AE hire ('$30k+/month of new burn \u2014 about 75% of your entire current MRR')."
+        },
+        {
+          "text": "Names one weakest ring plainly",
+          "passed": false,
+          "evidence": "No ring is named as weakest. The closest is 'The single most important thing on this page: four of your five initiatives pay out after the deadline' \u2014 a finding about items, not a ring diagnosis."
+        },
+        {
+          "text": "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+          "passed": true,
+          "evidence": "'Matching that number is fighting on ground the enemy chose, with the enemy's weapon, at the enemy's preferred distance'; notes 'They can take it to zero. You cannot.'"
+        },
+        {
+          "text": "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+          "passed": true,
+          "evidence": "'It produces zero MRR... fix the copy in a week, not the logo in a quarter'; tags the rebrand with 'Do not seek pleasure for its own sake.'"
+        },
+        {
+          "text": "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+          "passed": true,
+          "evidence": "'Five simultaneous bets with six people is not execution risk, it is execution certainty \u2014 you will be late on all five rather than early on one.'"
+        },
+        {
+          "text": "Gives 2-3 concrete fixes for the weakest ring",
+          "passed": true,
+          "evidence": "'The plan I'd actually run' gives three: ship 2 evidence-chosen features, run an expansion motion into the base, founder-led enterprise with no AEs."
+        },
+        {
+          "text": "Closes with a blunt verdict rather than a balanced both-sides summary",
+          "passed": true,
+          "evidence": "'$100k is a Q2-2027 number. Say that out loud to the team and to your board now, rather than in December.'"
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "All quoted lines check out: 'Do nothing which is of no use' (principle 9), 'Distinguish between gain and loss in worldly matters' (principle 5), 'Perceive those things which cannot be seen' (principle 7), and Dokkodo 1 and 15. 'Kan no me tsuyoku, ken no me yowaku' is rendered correctly."
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Modern prose; the closing Dokkodo lines are real precepts applied to real plan items."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 170.2,
+        "tokens": 37496,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+          "passed": true,
+          "evidence": "'Fire is where he stops talking about how you hold a sword and starts talking about the encounter: terrain, timing, initiative, reading the opponent, and how to break someone.'"
+        },
+        {
+          "text": "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+          "passed": true,
+          "evidence": "All three named and defined, though tai tai no sen is rendered loosely as 'both moving at once' rather than meeting the attack at its inception."
+        },
+        {
+          "text": "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+          "passed": true,
+          "evidence": "'It's the final entry in the Fire Book'; reads it as undivided resolve and explicitly rejects 'be stubborn' and 'be stoic'."
+        },
+        {
+          "text": "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+          "passed": true,
+          "evidence": "Six applied: become the enemy (three scenarios), four hands, hold down the pillow (90-120 day renewal window), depending on the place, strike at the corners, mountain-sea change."
+        },
+        {
+          "text": "Does not attribute Sun Tzu or Hagakure material to Musashi",
+          "passed": true,
+          "evidence": "Neither appears."
+        },
+        {
+          "text": "Contains no fabricated direct quotations attributed to Musashi",
+          "passed": true,
+          "evidence": "The one blockquote ('you become as immovable as a rock, so that ten thousand things cannot touch you') is close to the Harris rendering and labelled as Harris. The Hosokawa seppuku anecdote is flagged twice as extra-textual and 'may well not have happened'."
+        },
+        {
+          "text": "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+          "passed": true,
+          "evidence": "Applies each idea to the renewal war and opens with the honest caveat that 'Anyone who tells you Musashi has the answer to a SaaS price war is selling something.'"
+        },
+        {
+          "text": "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku",
+          "passed": true,
+          "evidence": "Plain prose; closes with translation recommendations."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 213.6,
+        "stddev": 63.297,
+        "min": 140.7,
+        "max": 254.6
+      },
+      "tokens": {
+        "mean": 64032.6667,
+        "stddev": 10573.9361,
+        "min": 51851,
+        "max": 70840
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.8051,
+        "stddev": 0.1924,
+        "min": 0.6154,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 192.8,
+        "stddev": 21.5423,
+        "min": 170.2,
+        "max": 213.1
+      },
+      "tokens": {
+        "mean": 39287.6667,
+        "stddev": 1634.0772,
+        "min": 37496,
+        "max": 40696
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.19",
+      "time_seconds": "+20.8",
+      "tokens": "+24745"
+    }
+  },
+  "notes": [
+    "SINGLE RUN per configuration \u2014 every stddev in this report is 0 and means nothing. Treat the pass rates as one sample, not a distribution.",
+    "The delta is carried almost entirely by eval-0 (build mode): 100% vs 62%. eval-1 was 100% vs 80%, and eval-2 was a dead tie at 100% vs 100%.",
+    "NON-DISCRIMINATING: 'no fabricated quotations' and 'no samurai cosplay' passed 6/6. They measure nothing today. Keep them as regression guards \u2014 they would catch a future regression \u2014 but they inflate every score and should be read as floor, not signal.",
+    "SATURATED EVAL: eval-2 (study mode) scored 8/8 for both configurations. The baseline correctly explained the Fire book, all three sen, and placed iwao no mi as its closing teaching \u2014 unprompted, and it quoted the Harris rendering accurately while flagging the Hosokawa anecdote as possibly apocryphal. Either the skill adds nothing in pure study mode or the assertions are too easy. This eval needs harder assertions before it can inform anything.",
+    "VACUOUS PASSES: in eval-0 the baseline passed 'uses at most three named Fire-book tactics' and 'every named tactic is cashed out' by using ZERO tactics. Those two passes are worth ~15 points of its 62% and are meaningless. Rewrite as 'uses between one and three' to make them discriminate.",
+    "The baseline outputs are strong on substance and weak on structure. eval-0's baseline invented a 'Constraint Loop' (five numbers, five-rung ladder, four gates) that is genuinely good operational advice \u2014 arguably more specific on junk-removal economics than the with-skill run. What it did not produce was a method the user could return to by name, which is precisely what the prompt asked for. The skill's value here is durable structure, not better business analysis.",
+    "COST: with_skill averaged 64,033 tokens vs 39,288 (+63%) and 213.6s vs 192.8s (+11%). The overhead is reference-file reading. On eval-2, where the delta was zero, that cost bought nothing \u2014 worth checking whether study-mode questions can be served by one reference file instead of several.",
+    "Assertions 1, 5 and 11 in eval-0 (five rings present, initiative declared, Dokkodo written) are structurally skill-shaped: a no-skill run can essentially never pass them. They are fair as a test of whether the skill delivers its promised artifact, but they are not evidence that the artifact is better \u2014 the human review is what settles that."
+  ]
+}
