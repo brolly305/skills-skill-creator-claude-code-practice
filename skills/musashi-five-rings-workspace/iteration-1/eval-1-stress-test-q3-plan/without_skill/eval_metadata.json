@@ -1,0 +1,17 @@
+{
+  "eval_id": 1,
+  "eval_name": "stress-test-q3-plan",
+  "prompt": "musashi this \u2014 here's the Q3 plan for the dev tools startup I co-founded. We're 6 people, $40k MRR, selling a CI observability tool. Plan: (1) ship the 4 big features customers keep asking for, (2) double content output to 8 blog posts a month, (3) hire 2 AEs to go upmarket into enterprise, (4) match Datadog's pricing on the entry tier so we stop losing deals on price, (5) rebrand with a new logo and site in September. We think if we execute all 5 we hit $100k MRR by year end.",
+  "assertions": [
+    "Gives an explicit verdict for each of the five rings (sound / thin / hollow or equivalent)",
+    "Cites specific items from the user's five-point plan as evidence, not generic critique",
+    "Names one weakest ring plainly",
+    "Identifies matching Datadog's entry-tier price as fighting on ground chosen by a stronger opponent",
+    "Flags at least one plan item as ornament rather than function (e.g. the September rebrand)",
+    "Challenges the feasibility of five simultaneous initiatives for a six-person team",
+    "Gives 2-3 concrete fixes for the weakest ring",
+    "Closes with a blunt verdict rather than a balanced both-sides summary",
+    "Contains no fabricated direct quotations attributed to Musashi",
+    "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+  ]
+}

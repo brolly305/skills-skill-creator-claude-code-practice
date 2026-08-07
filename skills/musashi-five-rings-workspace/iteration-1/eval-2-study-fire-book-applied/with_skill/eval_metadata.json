@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "study-fire-book-applied",
+  "prompt": "I keep seeing people quote the Book of Five Rings but I've never actually read it. What's the Fire book actually about, and what does 'the body of a rock' mean? Also \u2014 is any of it useful for what I'm dealing with, which is a competitor who just launched a near-identical product at 40% of our price and is undercutting us at every renewal?",
+  "assertions": [
+    "Explains the Fire book accurately as being about engagement: position, timing, and initiative",
+    "Explains the three sen (ken no sen / tai no sen / tai tai no sen)",
+    "Explains 'body of a rock' (iwao no mi) as immovable spirit arising from mastery, and places it correctly as the closing teaching of the Fire book",
+    "Applies at least two named Fire-book tactics to the price-undercutting situation with concrete moves",
+    "Does not attribute Sun Tzu or Hagakure material to Musashi",
+    "Contains no fabricated direct quotations attributed to Musashi",
+    "Answers the user's actual competitive problem rather than staying in 17th-century Japan",
+    "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+  ]
+}

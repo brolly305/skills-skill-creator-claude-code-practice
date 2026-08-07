@@ -1,0 +1,20 @@
+{
+  "eval_id": 0,
+  "eval_name": "build-framework-service-business",
+  "prompt": "I run a 2-person junk removal outfit in Sacramento \u2014 me and my brother-in-law, one truck, about $8k/month revenue, almost all of it from Google Local Services ads that keep getting more expensive every quarter. I don't want another list of marketing tactics. I want an actual method for the next 12 months that I can keep coming back to when things go sideways. Where do I even start?",
+  "assertions": [
+    "Covers all five rings as distinct sections (Earth, Water, Fire, Wind, Void)",
+    "States a win condition that a third party could verify (has a number or a date)",
+    "Grounds the plan in the user's stated facts: two people, one truck, ~$8k/month, Google LSA dependency",
+    "Fire section names a specific opponent rather than leaving it abstract",
+    "Declares which of the three initiatives (ken no sen / tai no sen / tai tai no sen) applies, and why",
+    "Uses at most three named Fire-book tactics (does not tour the catalogue)",
+    "Every named tactic is cashed out into a concrete move, not left as a metaphor",
+    "Water section gives a training cadence (daily/weekly/per-cycle), not just goals",
+    "Wind section characterizes at least two rival approaches concretely",
+    "Void section names at least one specific unknown and one thing the user is pretending to know",
+    "Ends with a custom Dokkodo of 3-7 terse precepts specific to this business",
+    "Contains no fabricated direct quotations attributed to Musashi",
+    "No samurai cosplay: no pseudo-archaic voice, invented Japanese, or closing haiku"
+  ]
+}
