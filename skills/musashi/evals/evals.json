@@ -1,0 +1,29 @@
+{
+  "skill_name": "musashi",
+  "evals": [
+    {
+      "id": 0,
+      "name": "indecision-between-topics",
+      "phase": "0",
+      "prompt": "I keep going back and forth between learning Python, getting my real estate license, or learning video editing so I can do social media for my junk removal business. I've got maybe 5 hours a week. Help me learn one of them fast.",
+      "expected_output": "Does not pick a topic for the user. Asks the phase-0 questions (act, forcing event, what gets dropped), one at a time or clearly sequenced. Gives a ~3-hour real-output task per candidate. Notes the real estate license involves a certification and flags the escalation boundary without refusing to help. Points out if one option looks like avoidance of the business's actual need.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "compressed-cycle-meeting-tomorrow",
+      "phase": "compressed",
+      "prompt": "I have a meeting tomorrow with a commercial property manager about a recurring cleanout contract and I know basically nothing about how property management companies handle vendor contracts. Get me up to speed fast.",
+      "expected_output": "Runs the compressed cycle: defines tomorrow's act (hold my own / ask the right questions), gives a map scoped to that act only, then rehearses through retrieval by asking the likely questions and grading answers. Flags where its information may vary by company or region and names what to verify. States honestly that this optimizes for tomorrow, not retention. Does not give legal advice on contract terms; points to an attorney for review of an actual contract.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "mid-cycle-strict-quiz",
+      "phase": "3",
+      "prompt": "quiz me on how DNS resolution works, I've been studying it for a week",
+      "expected_output": "Goes straight to phase 3 without a phase-0 lecture. Asks one question at a time, increasing difficulty. Grades strictly: marks vague or hand-wavy answers wrong and names the specific gap. Re-explains only what was missed and follows with a harder version to confirm the fix held.",
+      "files": []
+    }
+  ]
+}

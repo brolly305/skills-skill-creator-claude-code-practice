@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How To Actually Learn Anything</title>
+<style>
+:root{
+  --paper:#eef0e9; --card:#f7f8f4; --tint:#dfe6dc;
+  --ink:#151b13; --muted:#5a6356; --faint:#8a9285;
+  --rule:#c9d1c5; --green:#2f5d3f; --clay:#b4522f;
+  --sans:system-ui,-apple-system,"Segoe UI Variable","Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11150f; --card:#181d15; --tint:#1f271d;
+    --ink:#e8ebe3; --muted:#9ca594; --faint:#717a69;
+    --rule:#2c342a; --green:#83b892; --clay:#e08a62;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11150f; --card:#181d15; --tint:#1f271d;
+  --ink:#e8ebe3; --muted:#9ca594; --faint:#717a69;
+  --rule:#2c342a; --green:#83b892; --clay:#e08a62;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+.sheet{max-width:60rem;margin:0 auto;padding:2rem 1rem 4rem;}
+
+/* ---- masthead ---- */
+.mast{border-bottom:4px solid var(--ink);padding-bottom:1.4rem;}
+.kicker{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--clay);margin:0 0 .9rem;
+}
+h1{
+  margin:0;font-size:clamp(2.3rem,8.5vw,4.6rem);line-height:.92;
+  font-weight:800;letter-spacing:-.035em;text-transform:uppercase;text-wrap:balance;
+  text-shadow:.055em .045em 0 var(--tint);
+}
+h1 .g{color:var(--green);}
+.thesis{
+  margin:1.1rem 0 0;font-size:clamp(.98rem,2.4vw,1.15rem);color:var(--muted);
+  max-width:34rem;text-wrap:pretty;
+}
+
+/* ---- audit strip ---- */
+.audit{margin-top:1.6rem;}
+.audit h2, .closer h2, .phases h2{
+  font-size:.78rem;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;margin:0 0 .85rem;
+}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.5rem;}
+.chip{border:1px solid var(--rule);padding:.55rem .6rem;background:var(--card);}
+.chip b{display:block;font-size:.82rem;line-height:1.25;font-weight:650;}
+.chip span{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+  display:inline-block;margin-top:.35rem;padding:.06rem .3rem;border:1px solid currentColor;
+}
+.k{color:var(--green);} .f{color:var(--muted);} .c{color:var(--clay);}
+.audit .note{margin:.8rem 0 0;font-size:.85rem;color:var(--muted);max-width:40rem;}
+
+/* ---- phases ---- */
+.phases{margin-top:2.6rem;}
+.grid{display:grid;gap:.75rem;grid-template-columns:1fr;}
+@media(min-width:44rem){.grid{grid-template-columns:1fr 1fr;}}
+.card{
+  border:1px solid var(--rule);background:var(--card);padding:1.05rem 1rem 1.15rem;
+  display:flex;flex-direction:column;gap:.6rem;
+}
+.card.spot{background:var(--tint);border-color:var(--green);}
+.chead{display:flex;align-items:flex-start;gap:.7rem;}
+.n{
+  font-family:var(--mono);font-size:1.75rem;line-height:.85;font-weight:700;
+  color:var(--clay);flex:none;letter-spacing:-.04em;
+}
+.card.spot .n{color:var(--green);}
+.ctitle{flex:1;min-width:0;}
+.ctitle h3{margin:0;font-size:1.02rem;font-weight:750;letter-spacing:-.018em;line-height:1.15;}
+.ctitle p{margin:.2rem 0 0;font-size:.8rem;color:var(--muted);}
+.ico{flex:none;width:26px;height:26px;color:var(--green);}
+.card ul{margin:0;padding-left:1rem;display:flex;flex-direction:column;gap:.35rem;}
+.card li{font-size:.855rem;line-height:1.42;}
+.card li::marker{color:var(--green);}
+.prevents{
+  margin:.15rem 0 0;padding-top:.55rem;border-top:1px dashed var(--rule);
+  font-size:.79rem;color:var(--muted);
+}
+.prevents b{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--clay);display:block;margin-bottom:.15rem;
+}
+.new{
+  font-family:var(--mono);font-size:.55rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--paper);background:var(--green);padding:.1rem .32rem;align-self:flex-start;
+}
+
+/* ---- prompt drawers ---- */
+.phases .lead{margin:-.35rem 0 .9rem;font-size:.85rem;color:var(--muted);}
+.card details{border-top:1px solid var(--rule);margin-top:.15rem;}
+.card summary{
+  list-style:none;cursor:pointer;padding:.6rem 0 .1rem;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--green);display:flex;align-items:center;gap:.45rem;
+}
+.card summary::-webkit-details-marker{display:none;}
+.card summary::before{
+  content:"+";display:inline-grid;place-items:center;width:1.05rem;height:1.05rem;
+  border:1px solid currentColor;font-size:.8rem;line-height:1;letter-spacing:0;
+}
+.card details[open] > summary::before{content:"−";}
+.card summary:focus-visible{outline:2px solid var(--green);outline-offset:3px;}
+.pl{
+  font-family:var(--mono);font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);margin:.75rem 0 .3rem;
+}
+.pbox{
+  margin:0;background:var(--paper);border:1px solid var(--rule);padding:.7rem .75rem;
+  font-family:var(--mono);font-size:.74rem;line-height:1.55;color:var(--ink);
+  white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.card.spot .pbox{background:var(--card);}
+
+/* ---- closer ---- */
+.closer{margin-top:2.6rem;}
+.twoup{display:grid;gap:.75rem;grid-template-columns:1fr;}
+@media(min-width:44rem){.twoup{grid-template-columns:3fr 2fr;}}
+.rule-box{border:3px solid var(--ink);padding:1.1rem 1rem;background:var(--card);}
+.rule-box h3{margin:0 0 .5rem;font-size:1.28rem;font-weight:800;letter-spacing:-.025em;line-height:1.1;}
+.rule-box h3 em{font-style:normal;color:var(--clay);}
+.rule-box p{margin:0;font-size:.87rem;color:var(--muted);}
+.rule-box p + p{margin-top:.5rem;}
+.badweek{border:1px solid var(--rule);background:var(--card);padding:1.1rem 1rem;}
+.badweek h3{margin:0 0 .55rem;font-size:.95rem;font-weight:750;}
+.badweek ul{margin:0;padding-left:1rem;display:flex;flex-direction:column;gap:.4rem;}
+.badweek li{font-size:.83rem;line-height:1.4;}
+.badweek li::marker{color:var(--clay);}
+
+footer{
+  margin-top:2.2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-size:.75rem;color:var(--faint);line-height:1.5;
+}
+footer b{color:var(--muted);font-weight:600;}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+<div class="mast">
+  <p class="kicker">A correction — six prompts rebuilt as a sequence</p>
+  <h1>How To <span class="g">Actually</span><br>Learn Anything</h1>
+  <p class="thesis">The popular version assumes you've already picked a topic, have twenty clean
+  hours, and will be honest about what you understood. Fix those three and the method changes
+  shape entirely.</p>
+</div>
+
+<div class="audit">
+  <h2>The original six, scored</h2>
+  <div class="chips">
+    <div class="chip"><b>Learn it in 20 hours</b><span class="f">Fix</span></div>
+    <div class="chip"><b>One-page cheat sheet</b><span class="f">Fix</span></div>
+    <div class="chip"><b>Quiz me until I break</b><span class="k">Keep</span></div>
+    <div class="chip"><b>Learning ladder</b><span class="f">Fix</span></div>
+    <div class="chip"><b>Signal in the noise</b><span class="c">Cut</span></div>
+    <div class="chip"><b>Feynman loop</b><span class="k">Keep</span></div>
+  </div>
+  <p class="note">Both keeps are retrieval loops — you answer, you're found wanting, the gap
+  closes. Both are also the uncomfortable ones, which predicts exactly which two get skipped.
+  The cut is "match your learning style": that hypothesis has repeatedly failed to replicate.</p>
+</div>
+
+<div class="phases">
+  <h2>What to do instead</h2>
+  <p class="lead">Each card opens to the prompt to paste. Words in [brackets] are yours to fill in.</p>
+  <div class="grid">
+
+    <div class="card spot">
+      <div class="chead">
+        <span class="n">0</span>
+        <span class="ctitle"><h3>Decide, or admit you haven't</h3>
+        <p>Before any plan exists</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 21V13"/><path d="M12 13 5 6"/><path d="M12 13l7-7"/><circle cx="12" cy="13" r="1.6"/><path d="M4 4h3M17 4h3"/>
+        </svg>
+      </div>
+      <span class="new">Missing from the original</span>
+      <ul>
+        <li><b>What act</b> will I be able to do that I can't now? Not "understand X" — ship X.</li>
+        <li><b>What forces the date?</b> No forcing event means it slips. That's a prediction, not a scolding.</li>
+        <li><b>What am I dropping</b> to make room? Time is conserved.</li>
+        <li>Can't choose between topics? Don't. Give each three hours, then notice which one you thought about afterward.</li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>Six weeks of study that was really avoidance of a harder decision.</p>
+      <details>
+        <summary>The prompts</summary>
+        <p class="pl">Test the decision</p>
+<pre class="pbox">I'm thinking about learning [topic]. Before you help me plan
+anything, push back on the decision itself.
+
+Ask me, one at a time:
+1. What will I be able to DO afterward that I can't do now?
+2. What deadline or event forces this?
+3. What am I dropping to make room?
+
+If my answers are vague, say so. Then tell me honestly whether
+this looks like a learning project or just an interest — and
+whether it might be a way of avoiding something harder.</pre>
+        <p class="pl">When you can't choose</p>
+<pre class="pbox">I can't decide between [A], [B] and [C]. Don't pick for me.
+
+For each one, give me the smallest real task I could do in
+about three hours that would tell me whether I actually want
+to go deeper. Real output — not reading or watching.</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="chead">
+        <span class="n">1</span>
+        <span class="ctitle"><h3>Measure your starting point</h3>
+        <p>Twenty minutes, saves hours</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="8" width="20" height="8"/><path d="M7 8v3M12 8v4M17 8v3"/>
+        </svg>
+      </div>
+      <ul>
+        <li>Make Claude ask <b>you</b> eight questions first — including about adjacent fields.</li>
+        <li>Then: what can I skip, and what will I <b>think</b> I know and actually don't?</li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>Being taught what you already half-know. Confident wrong knowledge you never look up.</p>
+      <details>
+        <summary>The prompt</summary>
+        <p class="pl">Diagnose me first</p>
+<pre class="pbox">I want to be able to [specific act] by [date].
+
+Before you plan anything: ask me eight questions that would
+tell you what I already know, including from adjacent fields.
+Ask them one at a time and don't soften your assessment.
+
+Then tell me which parts of this topic I can skip because I
+already have them, and which parts I'm likely to think I know
+and actually don't.</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="chead">
+        <span class="n">2</span>
+        <span class="ctitle"><h3>Get a map, hold it loosely</h3>
+        <p>The fixed 80/20</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M15 9l-2.2 5.8L7 17l2.2-5.8z"/>
+        </svg>
+      </div>
+      <ul>
+        <li>Ask for the 20% <b>for your specific act</b> — not the 20% of the field. Different lists.</li>
+        <li>Also ask: what's commonly taught that I don't need, where do practitioners disagree, where are you least confident.</li>
+        <li>Then check the map against <b>one human or one primary source.</b></li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>Spending ten sessions on a fluent map you had no standing to audit.</p>
+      <details>
+        <summary>The prompt</summary>
+        <p class="pl">The map, with its weak spots showing</p>
+<pre class="pbox">Give me the smallest set of concepts I need to [specific act]
+— not the 20% of the field in general, the 20% for that act.
+
+Then three things:
+1. What's commonly taught in this topic that I do NOT need
+   for this outcome, and why it's usually included anyway.
+2. Where practitioners genuinely disagree, so I know what
+   isn't settled.
+3. Where you are least confident, or where your information
+   is most likely to be out of date.
+
+Keep it to one screen.</pre>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="chead">
+        <span class="n">3</span>
+        <span class="ctitle"><h3>Run the loop</h3>
+        <p>Not 10 × 2 hours</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 12a8.5 8.5 0 1 1-2.8-6.3"/><path d="M20.8 4.2v4.4h-4.4"/>
+        </svg>
+      </div>
+      <ul>
+        <li><b>25–45 minutes.</b> Short enough to survive a weeknight — so you'll actually do it.</li>
+        <li><b>Open cold.</b> Five minutes writing what you remember, no notes. Uncomfortable, highest value.</li>
+        <li><b>Close with an artifact.</b> Notes don't count — notes record having been present.</li>
+        <li><b>Return</b> at day 1, 3, 7, 21. Spacing is what you still have next quarter.</li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>A 20-hour sprint that's mostly gone in a month.</p>
+      <details>
+        <summary>The prompts</summary>
+        <p class="pl">The strict grader</p>
+<pre class="pbox">Quiz me on [topic], ten questions, increasing difficulty.
+
+Grade me strictly. You have a bias toward encouragement —
+override it. If an answer is vague, hand-wavy, or uses a term
+correctly without showing I understand it, mark it WRONG and
+say exactly which part was empty.
+
+After each answer: grade, name the specific gap, re-explain
+only what I missed. Then ask a harder version of the same
+question to check the repair held.</pre>
+        <p class="pl">The Feynman loop</p>
+<pre class="pbox">I'm going to explain [concept] in my own words. Don't correct
+me as I go. When I'm done, tell me:
+- which parts I got right
+- which parts I got away with — used the right words without
+  showing I understand them
+- the one question that would expose my weakest spot
+
+Then re-teach only what I got wrong, and have me explain it
+again until the gaps are gone.</pre>
+      </details>
+    </div>
+
+    <div class="card spot">
+      <div class="chead">
+        <span class="n">4</span>
+        <span class="ctitle"><h3>Make contact</h3>
+        <p>By session three, ready or not</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/>
+        </svg>
+      </div>
+      <span class="new">Missing from the original</span>
+      <ul>
+        <li>Ship the smallest working version to someone who doesn't have to be nice about it.</li>
+        <li>Or teach one real person and watch where their face goes blank.</li>
+        <li>Do it <b>badly and early.</b> Premature contact is cheap; deferred contact is six wasted weeks.</li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>Six blocks of generated text mistaken for ability.</p>
+      <details>
+        <summary>The prompt</summary>
+        <p class="pl">Design the first real test</p>
+<pre class="pbox">I've done three sessions on [topic]. Design the smallest real
+test of whether I can [specific act] — something I can do
+this week, with a real person or under real conditions, where
+failing is cheap.
+
+Afterward I'll tell you what happened. Help me separate what it
+revealed about my skill from what it revealed about the map
+we've been working from.</pre>
+      </details>
+    </div>
+
+    <div class="card spot">
+      <div class="chead">
+        <span class="n">5</span>
+        <span class="ctitle"><h3>Stop on purpose</h3>
+        <p>Written at phase 0</p></span>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><rect x="8.6" y="8.6" width="6.8" height="6.8"/>
+        </svg>
+      </div>
+      <span class="new">Missing from the original</span>
+      <ul>
+        <li><b>Done looks like:</b> the act from phase 0, performed unaided. Then say so and stop.</li>
+        <li><b>Abandon if:</b> the forcing event vanished, or three sessions produced nothing showable.</li>
+        <li>Both endings are wins. Quitting on a written condition is a decision; drifting is attrition with a story attached.</li>
+      </ul>
+      <p class="prevents"><b>Prevents</b>The topic that sits on you, unfinished and unquit, for a year.</p>
+      <details>
+        <summary>The prompt</summary>
+        <p class="pl">The honest check-in</p>
+<pre class="pbox">At the start I wrote:
+  Done looks like: [the act]
+  Abandon if: [the condition]
+
+Where I actually am now: [honest status].
+
+Tell me plainly which applies — done, abandon, or continue.
+If it's continue, say specifically what's left. Don't soften
+it, and don't talk me into continuing out of sunk cost.</pre>
+      </details>
+    </div>
+
+  </div>
+</div>
+
+<div class="closer">
+  <h2>The one rule underneath all six</h2>
+  <div class="twoup">
+    <div class="rule-box">
+      <h3>Don't ask it to explain. <em>Ask it to judge.</em></h3>
+      <p>Asking Claude to explain produces fluent text, a feeling of comprehension, and almost no
+      durable knowledge. It's the mode that feels best and does least.</p>
+      <p>Attempt first, then submit. Write your own cheat sheet, <em>then</em> ask what's missing.
+      Explain it in your words, <em>then</em> ask what you got away with. Solve it, <em>then</em>
+      ask for the case that breaks your solution.</p>
+      <p>And when you use it as a grader, tell it plainly: <b>you have a bias toward
+      encouragement — override it, and mark vague answers wrong.</b> A lenient judge reopens the
+      exact hole the exercise exists to close.</p>
+    </div>
+    <div class="badweek">
+      <h3>Decide the bad week now</h3>
+      <ul>
+        <li><b>Ten minutes still counts.</b> Cold retrieval only, no new material.</li>
+        <li><b>A missed week isn't a failed project.</b> Resume at your last artifact, never from the beginning.</li>
+        <li><b>Three empty sessions is data</b> — a signal the forcing event went away, not a character flaw. Go back to phase 0.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <b>On the sources:</b> the twenty-hour figure comes from Josh Kaufman's <i>The First 20 Hours</i>
+  (2013), where it describes reaching passable ability at a narrowly defined sub-skill — not a
+  domain. The evidence against matching instruction to "learning styles" is summarized in
+  Pashler, McDaniel, Rohrer &amp; Bjork (2008). Retrieval practice and spacing are among the
+  better-replicated findings in learning research; the day 1 / 3 / 7 / 21 intervals here are a
+  serviceable default rather than a precise result.
+</footer>
+
+</div>
+</body>
+</html>
