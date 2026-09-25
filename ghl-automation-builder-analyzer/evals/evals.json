@@ -1,0 +1,23 @@
+{
+  "skill_name": "ghl-automation-builder-analyzer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I run a roofing company. We get about 40 leads per week from Facebook ads but only about 8 of them actually answer when we call or text. Our guys are calling from an unknown number and usually wait until the next morning. What should my GHL automation look like to fix this?",
+      "expected_output": "Speed-to-lead automation with immediate SMS from a recognized number, first-5-minute connection question in NEPQ style, multi-touch sequence across Day 0-7, Red Team analysis of timing/channel issues, specific copy for each touchpoint, KPIs to track (contact rate, show rate), and 80/20 identification that speed is the #1 lever.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you audit my GHL setup? Here's what I have: when someone fills out the form on our website, they get an email that says 'Thanks for reaching out, we'll be in touch soon!' Then a rep calls them within 24 hours. If they book a call, we send one reminder the morning of. That's basically it. We sell high-ticket B2B consulting at $15k-$50k. Show rate is about 30% and close rate on shows is 25%.",
+      "expected_output": "Full audit against the checklist highlighting critical gaps (no SMS, 24hr first contact delay, single reminder, no nurture sequence), Red Team failure points, Steelman of what's working, Hormozi value ladder gaps, NEPQ sequence recommendation, specific show rate and close rate benchmarks vs. current performance, prioritized fix list with 80/20 focus.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to build a 90-day client nurture sequence in GHL for my dental practice. Patients come in for a cleaning, then we basically never contact them until they're overdue for their next appointment. I want something that keeps us top-of-mind, gets reviews, upsells whitening and aligners, and generates referrals. Budget is limited so I can't have someone managing this full time.",
+      "expected_output": "Full 90-day post-visit automation map with: immediate post-visit satisfaction check, review request timing (day 3), educational content sequence (value-first, no pitch), referral ask at peak satisfaction moment, upsell introduction for whitening/aligners at day 30-45, re-booking reminder, all copy written out, GaryVee channel native messaging, Hormozi value ladder, NEPQ-informed copy arc, exit conditions, tags to use.",
+      "files": []
+    }
+  ]
+}
