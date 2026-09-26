@@ -19,6 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <script type="application/ld+json">
 {
@@ -212,6 +214,20 @@ footer{background:var(--forest-950);color:rgba(246,242,232,.6);padding:56px 0 28
   .hero-facts{gap:18px;}
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+
+/* Journey (cinematic scroll sequence) */
+.journey{position:relative;}
+.scene{position:sticky;top:0;height:100vh;width:100%;overflow:hidden;display:flex;align-items:flex-end;}
+.scene-media{position:absolute;inset:0;z-index:0;background:var(--forest-950);}
+.scene-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);will-change:transform;}
+.scene-scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,35,24,.08) 0%, rgba(15,35,24,.9) 100%);z-index:1;}
+.scene-content{position:relative;z-index:2;padding:0 24px 80px;width:100%;}
+.scene-content-inner{max-width:1180px;margin:0 auto;}
+.scene-num{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-400);margin-bottom:14px;}
+.scene h2{font-size:clamp(1.7rem,3.8vw,2.8rem);max-width:600px;margin-bottom:12px;color:var(--cream-50);}
+.scene p{font-size:1rem;line-height:1.6;max-width:440px;color:rgba(246,242,232,.85);}
+.journey-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--font-body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,242,232,.55);}
+@media (prefers-reduced-motion:reduce){ .scene-media img{transform:none !important;} }
 </style>
 </head>
 <body>
@@ -234,7 +250,61 @@ footer{background:var(--forest-950);color:rgba(246,242,232,.6);padding:56px 0 28
   </div>
 </nav>
 
-<header class="hero">
+<div class="journey" id="journey">
+
+  <section class="scene" data-scene="1">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260926_053701_062a1eac-fc4b-4632-8634-9aa3b61f1693.png" alt="A lived-in living room, full of furniture and belongings" loading="eager"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">01 / The Beginning</p>
+      <h2>A home, and everything it held.</h2>
+      <p>Every property we take on starts exactly like this: full of a life lived in it.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="2">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260926_053705_207bc3e8-39ad-4b5d-a213-7770de0047a7.png" alt="The same room, a keepsake photo now set aside" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">02 / What We Ask First</p>
+      <h2>We look before we touch anything.</h2>
+      <p>A photo, a keepsake, anything uncertain: we ask before it goes anywhere.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="3">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260926_053709_8a6a6883-6ce2-41c9-9b0e-65b18507378b.png" alt="Boxes neatly labeled and stacked near the doorway" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">03 / The Sort</p>
+      <h2>Nothing rushed, nothing assumed.</h2>
+      <p>Boxes get labeled, not dumped. You set the pace, not us.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="4">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260926_053713_7c6f3c79-0a5f-4ec0-a39c-364ea50cc3b6.png" alt="The room half-cleared, light filling the open space" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">04 / Taking Shape</p>
+      <h2>The space starts to breathe again.</h2>
+      <p>Junk removal, estate cleanouts, property transitions: all handled the same careful way.</p>
+    </div></div>
+  </section>
+
+  <section class="scene" data-scene="5">
+    <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20260926_053718_187e5123-9afb-4647-898e-db589b57ea03.png" alt="The room fully cleared, calm and at peace" loading="lazy"></div>
+    <div class="scene-scrim"></div>
+    <div class="scene-content"><div class="scene-content-inner">
+      <p class="scene-num">05 / What's Left</p>
+      <h2>A space ready for what's next.</h2>
+      <p>Handled with care. Priced by range. No pressure, ever.</p>
+    </div></div>
+  </section>
+
+</div>
+
+<section class="hero">
   <div class="container hero-inner">
     <p class="eyebrow">The next chapter</p>
     <h1><span class="line-1">Property in transition.</span><span class="line-2">Handled with care.</span></h1>
@@ -252,7 +322,7 @@ footer{background:var(--forest-950);color:rgba(246,242,232,.6);padding:56px 0 28
     <p class="stat-label">Priced by range</p>
     <p class="stat-value">$199 &ndash; $875+</p>
   </div>
-</header>
+</section>
 
 <section class="services" id="services">
   <div class="container">
@@ -430,6 +500,42 @@ if (navToggle) {
   navToggle.addEventListener('click', () => {
     document.querySelector('.nav-links').style.cssText = 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(15,35,24,.97);padding:20px 24px;gap:16px;';
   });
+}
+
+// Journey scroll-motion (guarded; degrades to a fully static, legible sequence if GSAP fails to load)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.scene').forEach((scene) => {
+    const img = scene.querySelector('.scene-media img');
+    const content = scene.querySelector('.scene-content-inner');
+    gsap.set(content, { opacity: 0, y: 30 });
+    gsap.to(img, {
+      scale: 1,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: scene,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+    gsap.to(content, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: scene,
+        start: 'top 60%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+} else {
+  document.querySelectorAll('.scene-content-inner').forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  document.querySelectorAll('.scene-media img').forEach((el) => { el.style.transform = 'none'; });
 }
 
 const walkthroughForm = document.getElementById('walkthroughForm');
