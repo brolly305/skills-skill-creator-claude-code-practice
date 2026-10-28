@@ -3,342 +3,560 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>H. Cruz-Cruz LLC | HVAC Heating &amp; Cooling, Indianapolis IN</title>
-<meta name="description" content="H. Cruz-Cruz LLC — licensed and insured HVAC heating, cooling and plumbing services around Indianapolis, Anderson, Marion, Kokomo, Frankfort, Lebanon, Lafayette, West Lafayette, Columbus, Seymour, Bloomington and Colfax, Indiana. Se habla espanol.">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<title>H. Cruz-Cruz LLC | Heating, Cooling &amp; Plumbing</title>
+<meta name="description" content="H. Cruz-Cruz LLC: licensed and insured heating, air conditioning and plumbing services for homes in Indianapolis and 11 surrounding Indiana cities. Se habla español.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
-  :root{
-    --navy-950:#111c2b;
-    --navy-800:#1c2b3a;
-    --navy-700:#263a4d;
-    --tan-500:#b8926b;
-    --tan-400:#c9a683;
-    --cream-50:#f6f2ea;
-    --cream-100:#efe8db;
-    --leaf-600:#3f6b4a;
-    --leaf-500:#4f7e5a;
-    --ink-900:#1a1611;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    background:var(--cream-50);
-    color:var(--ink-900);
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{
-    font-family:'Fraunces',serif;
-    letter-spacing:-0.02em;
-    line-height:1.05;
-  }
-  .tracking-tightest{letter-spacing:-0.03em}
-  .scene{position:relative;height:100vh;overflow:hidden}
-  .scene-media{position:absolute;inset:0}
-  .scene-media img{
-    width:100%;height:100%;object-fit:cover;
-    transform:scale(1.14);
-    will-change:transform;
-  }
-  .scene-scrim{
-    position:absolute;inset:0;
-    background:
-      linear-gradient(to top, rgba(17,28,43,.92) 0%, rgba(17,28,43,.55) 38%, rgba(17,28,43,.15) 65%, rgba(17,28,43,.35) 100%);
-  }
-  .scene-content{
-    position:relative;z-index:2;height:100%;
-    display:flex;flex-direction:column;justify-content:flex-end;
-    padding:2.5rem 1.5rem 4rem;
-    max-width:64rem;margin:0 auto;
-    opacity:0;transform:translateY(24px);
-  }
-  @media(min-width:768px){
-    .scene-content{padding:3rem 3rem 6rem}
-  }
-  .scene-num{
-    font-family:'Fraunces',serif;
-    font-variant-numeric:tabular-nums;
-    color:var(--tan-400);
-    font-size:.85rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    margin-bottom:.75rem;
-  }
-  .no-motion .scene-content{opacity:1;transform:none}
-  .no-motion .scene-media img{transform:scale(1)}
-  @media (prefers-reduced-motion: reduce){
-    .scene-content{opacity:1 !important;transform:none !important}
-    .scene-media img{transform:scale(1) !important}
-  }
+:root{
+  --ink:#0c141e;
+  --ink-2:#111b28;
+  --panel:#152132;
+  --panel-2:#1b2a3e;
+  --cream:#f3ede3;
+  --cream-dim:rgba(243,237,227,.72);
+  --cream-faint:rgba(243,237,227,.5);
+  --line:rgba(243,237,227,.12);
+  --tan:#d9ab7c;
+  --tan-deep:#b8926b;
+  --leaf:#5c8f68;
+  --leaf-deep:#3f6b4a;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:64px;--s7:96px;--s8:128px;
+  --gutter:clamp(20px,5vw,72px);
+  --shadow-1:0 1px 2px rgba(0,0,0,.25),0 8px 24px -12px rgba(6,10,16,.55);
+  --shadow-2:0 2px 6px rgba(0,0,0,.25),0 24px 60px -24px rgba(6,10,16,.75),0 0 0 1px rgba(217,171,124,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);color:var(--cream);
+  font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.display{font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:-0.035em;line-height:1.02}
+.display em,.accent{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--tan);letter-spacing:-0.01em}
+.eyebrow{font-family:'Manrope',sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim)}
+.eyebrow .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--tan);margin-right:10px;vertical-align:middle;transform:translateY(-1px)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  .scrub-section{position:relative;height:600vh}
-  .scrub-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
-  .scrub-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .stage-caption{
-    position:absolute;inset:0;z-index:2;
-    display:flex;flex-direction:column;justify-content:flex-end;
-    padding:2.5rem 1.5rem 4rem;max-width:64rem;margin:0 auto;
-    opacity:0;transition:opacity .5s ease;pointer-events:none;
-  }
-  .stage-caption.active{opacity:1}
-  .stage-caption.center{align-items:center;text-align:center}
-  @media(min-width:768px){
-    .stage-caption{padding:3rem 3rem 6rem}
-  }
-  .stage-dots{position:absolute;right:1.25rem;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:.6rem}
-  .stage-dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.3);transition:background .3s ease,transform .3s ease}
-  .stage-dot.active{background:var(--tan-400);transform:scale(1.5)}
-  @media (prefers-reduced-motion: reduce){
-    .stage-caption{transition:none}
-    .stage-caption:first-child{opacity:1}
-  }
+/* grain */
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  .shadow-soft{
-    box-shadow: 0 1px 2px rgba(26,22,17,.06), 0 12px 32px -12px rgba(26,22,17,.18), 0 2px 6px -2px rgba(63,107,74,.12);
-  }
-  .shadow-lift{
-    box-shadow: 0 2px 4px rgba(26,22,17,.08), 0 24px 48px -16px rgba(17,28,43,.35);
-  }
-  .btn{
-    transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1), background-color .2s ease;
-  }
-  .btn:hover{transform:translateY(-2px)}
-  .btn:active{transform:translateY(0px) scale(.98)}
-  .btn:focus-visible{outline:2px solid var(--leaf-500);outline-offset:3px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;letter-spacing:-.005em;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .25s ease;will-change:transform}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn:focus-visible,.link:focus-visible,.rail button:focus-visible,.lang button:focus-visible,.nav a:focus-visible,.card:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+.btn-primary{background:var(--tan);color:#1a1209;box-shadow:0 10px 30px -10px rgba(217,171,124,.55),0 2px 6px rgba(0,0,0,.25)}
+.btn-primary:hover{background:#e4b98c;box-shadow:0 16px 40px -12px rgba(217,171,124,.65),0 2px 6px rgba(0,0,0,.25)}
+.btn-ghost{background:rgba(243,237,227,.08);color:var(--cream);box-shadow:inset 0 0 0 1px rgba(243,237,227,.22)}
+.btn-ghost:hover{background:rgba(243,237,227,.14)}
+.link{display:inline-flex;align-items:center;gap:8px;color:var(--tan);font-weight:500;position:relative}
+.link::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:currentColor;transform:scaleX(.35);transform-origin:left;transition:transform .4s var(--ease)}
+.link:hover::after{transform:scaleX(1)}
+.link:active{opacity:.75}
 
-  .card-float{transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s cubic-bezier(.16,1,.3,1)}
-  .card-float:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(26,22,17,.08), 0 30px 50px -18px rgba(17,28,43,.28)}
+/* header */
+.header{position:fixed;inset:0 0 auto 0;z-index:50}
+.header::before{content:"";position:absolute;inset:0;background:rgba(12,20,30,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);opacity:0;transition:opacity .4s ease}
+.header.solid::before{opacity:1}
+.header-in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--s3);height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px;flex:none}
+.brand-name{display:block;font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.14em;font-size:15px;line-height:1.1}
+.brand-sub{display:block;font-family:'Manrope',sans-serif;font-size:10px;letter-spacing:.22em;color:var(--cream-faint);text-transform:uppercase;margin-top:4px}
+.nav{display:flex;align-items:center;gap:var(--s4);font-size:14px;color:var(--cream-dim)}
+.nav a{transition:color .2s ease}
+.nav a:hover{color:var(--cream)}
+.nav a:active{opacity:.7}
+.head-right{display:flex;align-items:center;gap:var(--s2)}
+.lang{display:flex;align-items:center;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);padding:3px}
+.lang button{font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;padding:7px 11px;border-radius:999px;color:var(--cream-faint);transition:color .2s ease,background-color .2s ease}
+.lang button[aria-pressed="true"]{background:var(--cream);color:var(--ink)}
+.lang button:hover:not([aria-pressed="true"]){color:var(--cream)}
+.phone-pill{padding:11px 18px;font-size:14px}
+.phone-pill .num{font-variant-numeric:tabular-nums}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:560px){
+  .brand-sub{display:none}
+  .brand-name{font-size:13px;letter-spacing:.1em}
+  .phone-pill .num{display:none}
+  .phone-pill{padding:11px}
+}
 
-  .grain{position:relative}
-  .grain::after{
-    content:"";position:absolute;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+/* build stack */
+.build{position:relative;background:var(--ink)}
+.stack{position:relative}
+.stage{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--ink)}
+.stage-media{position:absolute;inset:0}
+.stage-media img{width:100%;height:100%;object-fit:cover}
+.stage-scrim{position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(12,20,30,.9) 0%,rgba(12,20,30,.62) 34%,rgba(12,20,30,.12) 64%,rgba(12,20,30,0) 100%),
+  linear-gradient(0deg,rgba(12,20,30,.75) 0%,rgba(12,20,30,0) 38%),
+  linear-gradient(180deg,rgba(12,20,30,.55) 0%,rgba(12,20,30,0) 22%)}
+.stage-dim{position:absolute;inset:0;background:var(--ink);opacity:0;pointer-events:none}
+.stage-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:96px var(--gutter) 88px;max-width:1280px;margin:0 auto}
+.stage-copy>*{max-width:600px}
+.stage-copy>.display{max-width:none}
+.stage-num{display:flex;align-items:center;gap:14px;margin-bottom:var(--s3)}
+.stage-num .n{font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;color:var(--tan)}
+.stage-num .bar{width:40px;height:1px;background:rgba(243,237,227,.35)}
+.stage h1{font-size:clamp(44px,6.6vw,98px)}
+.stage h2{font-size:clamp(38px,5.6vw,84px)}
+.stage p{margin-top:var(--s3);font-size:clamp(16px,1.35vw,19px);color:var(--cream-dim);max-width:520px}
+.stage-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s5)}
+.stage-meta{margin-top:var(--s4);font-size:13px;color:var(--cream-faint);display:flex;flex-wrap:wrap;gap:6px 18px}
+.stage-meta span{display:inline-flex;align-items:center;gap:8px}
+.stage-meta svg{width:14px;height:14px;color:var(--tan)}
+.scroll-hint{position:absolute;left:var(--gutter);bottom:32px;font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-faint);display:flex;align-items:center;gap:12px}
+.scroll-hint i{display:block;width:1px;height:34px;background:linear-gradient(var(--tan),transparent);transform-origin:top;animation:hint 2.4s var(--ease) infinite}
+@keyframes hint{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+.illus-note{position:absolute;right:var(--gutter);bottom:28px;font-size:11px;color:rgba(243,237,227,.38);letter-spacing:.04em}
 
-  .link-underline{position:relative}
-  .link-underline::after{
-    content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;
-    background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1);
-  }
-  .link-underline:hover::after,.link-underline:focus-visible::after{transform:scaleX(1);transform-origin:left}
+.rail{position:absolute;right:calc(var(--gutter) - 8px);top:50%;transform:translateY(-50%);z-index:5;display:none;flex-direction:column;gap:4px}
+.rail button{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:6px 8px;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,237,227,.42);transition:color .3s ease}
+.rail button .lbl{opacity:0;transform:translateX(6px);transition:opacity .3s ease,transform .4s var(--ease)}
+.rail button .tick{width:18px;height:2px;background:currentColor;transform-origin:right;transform:scaleX(.6);transition:transform .4s var(--ease)}
+.rail button:hover,.rail button.on{color:var(--cream)}
+.rail button:hover .lbl,.rail button.on .lbl{opacity:1;transform:none}
+.rail button.on .tick{transform:scaleX(1.6);background:var(--tan)}
+.rail button:active{opacity:.7}
+.progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(243,237,227,.1);z-index:5;display:none}
+.progress i{display:block;height:100%;background:var(--tan);transform-origin:left;transform:scaleX(0)}
 
-  input,textarea{
-    transition:border-color .2s ease, box-shadow .2s ease;
-  }
-  input:focus,textarea:focus{
-    outline:none;border-color:var(--leaf-600);box-shadow:0 0 0 3px rgba(79,126,90,.15);
-  }
+/* motion mode: pinned 3D stack */
+.motion .stack{height:100svh;min-height:560px;perspective:1600px;perspective-origin:50% 0%;overflow:hidden}
+.motion .stage{position:absolute;inset:0;height:auto;min-height:0;transform-origin:50% 100%;will-change:transform;backface-visibility:hidden}
+.motion .stage + .stage{box-shadow:0 -30px 80px -20px rgba(0,0,0,.6)}
+.motion .rail{display:flex}
+.motion .progress{display:block}
+@media (max-width:900px){.motion .rail{display:none}}
+
+@media (max-width:760px){
+  .stage-scrim{background:
+    linear-gradient(0deg,rgba(12,20,30,.94) 0%,rgba(12,20,30,.72) 42%,rgba(12,20,30,.1) 72%),
+    linear-gradient(180deg,rgba(12,20,30,.6) 0%,rgba(12,20,30,0) 20%)}
+  .stage-copy{justify-content:flex-end;padding-bottom:88px}
+  .stage-media img{object-position:62% 50%}
+  .scroll-hint{display:none}
+  .illus-note{left:var(--gutter);right:auto;bottom:22px}
+}
+
+/* trust strip */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.trust-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{display:flex;align-items:center;gap:14px;padding:28px 0;font-family:'Manrope',sans-serif;font-weight:600;font-size:15px}
+.trust-item + .trust-item{padding-left:var(--s4);border-left:1px solid var(--line)}
+.trust-item svg{width:22px;height:22px;color:var(--tan);flex:none}
+@media (max-width:900px){.trust-in{grid-template-columns:1fr 1fr}.trust-item:nth-child(3){padding-left:0;border-left:0}.trust-item:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:480px){.trust-item{font-size:14px;gap:10px}.trust-item + .trust-item{padding-left:var(--s2)}}
+
+/* sections */
+.section{position:relative;padding:var(--s8) 0}
+.section-head{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--s5);align-items:end;margin-bottom:var(--s6)}
+.section-head h2{font-size:clamp(36px,4.6vw,64px)}
+.section-head p{color:var(--cream-dim);max-width:460px;justify-self:end}
+@media (max-width:860px){.section{padding:var(--s7) 0}.section-head{grid-template-columns:1fr;gap:var(--s3)}.section-head p{justify-self:start}}
+
+/* services */
+.services{background:linear-gradient(180deg,var(--ink-2),var(--ink))}
+.svc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s5);align-items:start}
+.svc-list{display:flex;flex-direction:column;gap:var(--s2)}
+.card{position:relative;background:linear-gradient(180deg,var(--panel-2),var(--panel));border-radius:20px;padding:var(--s4);box-shadow:var(--shadow-1);
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+.card-top{display:flex;align-items:baseline;gap:var(--s2);margin-bottom:var(--s2)}
+.card-top .k{font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;color:var(--tan)}
+.card h3{font-family:'Manrope',sans-serif;font-weight:600;font-size:clamp(20px,1.9vw,24px);letter-spacing:-.02em;line-height:1.2}
+.card ul{list-style:none;display:grid;gap:10px;margin-top:var(--s2)}
+.card li{display:flex;gap:12px;color:var(--cream-dim);font-size:15.5px;line-height:1.5}
+.card li::before{content:"";flex:none;width:14px;height:1px;background:var(--tan);margin-top:11px}
+.job{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);align-items:start}
+.job figure{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-2);background:var(--panel)}
+.job figure:first-child{margin-top:var(--s6)}
+.job img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease)}
+.job figure:hover img{transform:scale(1.04)}
+.job figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 45%);pointer-events:none}
+.job figure::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(184,146,107,.12);mix-blend-mode:multiply;pointer-events:none}
+.job figcaption{position:absolute;left:var(--s2);right:var(--s2);bottom:var(--s2);z-index:2;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em}
+.job figcaption small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--tan);font-weight:700;margin-bottom:2px}
+.svc-foot{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center;color:var(--cream-dim);font-size:15px}
+@media (max-width:960px){.svc-grid{grid-template-columns:1fr}.job figure:first-child{margin-top:0}}
+
+/* area */
+.area{background:var(--ink)}
+.cities{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.city{padding:26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-family:'Manrope',sans-serif;font-weight:500;font-size:clamp(16px,1.5vw,19px);letter-spacing:-.01em;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.city.home{background:linear-gradient(135deg,rgba(217,171,124,.16),rgba(217,171,124,.04))}
+.city.home .tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tan);font-weight:700}
+.area-note{margin-top:var(--s3);color:var(--cream-faint);font-size:14px}
+@media (max-width:860px){.cities{grid-template-columns:1fr 1fr}.city{padding:20px 16px}}
+
+/* book */
+.book{background:radial-gradient(1200px 600px at 85% 0%,rgba(217,171,124,.12),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(92,143,104,.12),transparent 60%),var(--ink-2)}
+.book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s6);align-items:start}
+.book h2{font-size:clamp(38px,4.2vw,60px)}
+.book-lead{margin-top:var(--s3);color:var(--cream-dim);max-width:460px}
+.big-phone{display:inline-block;margin-top:var(--s5);font-family:'Manrope',sans-serif;font-weight:600;font-size:clamp(36px,4.6vw,64px);letter-spacing:-.03em;font-variant-numeric:tabular-nums;transition:color .25s ease}
+.big-phone:hover{color:var(--tan)}
+.big-phone:focus-visible{outline:2px solid var(--tan);outline-offset:6px}
+.big-phone:active{opacity:.75}
+.book-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s3)}
+.lang-note{margin-top:var(--s4);font-size:14px;color:var(--cream-faint)}
+form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.92));border-radius:24px;padding:clamp(24px,3vw,40px);box-shadow:var(--shadow-2);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-family:'Manrope',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;color:var(--cream);background:rgba(12,20,30,.55);border:1px solid rgba(243,237,227,.14);border-radius:12px;padding:13px 14px;transition:border-color .2s ease,box-shadow .2s ease;color-scheme:dark}
+.field textarea{resize:vertical;min-height:110px}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:rgba(243,237,227,.28)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--tan);box-shadow:0 0 0 3px rgba(217,171,124,.18)}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:inline-block;padding:10px 14px;border-radius:999px;font-size:14px;color:var(--cream-dim);box-shadow:inset 0 0 0 1px rgba(243,237,227,.18);transition:background-color .2s ease,color .2s ease;text-transform:none;letter-spacing:0;font-family:'Inter',sans-serif;font-weight:500}
+.seg label:hover span{color:var(--cream)}
+.seg input:checked + span{background:var(--cream);color:var(--ink)}
+.seg input:focus-visible + span{outline:2px solid var(--tan);outline-offset:2px}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);margin-top:4px}
+.form-foot p{font-size:13px;color:var(--cream-faint);max-width:320px;line-height:1.5}
+@media (max-width:960px){.book-grid{grid-template-columns:1fr}}
+@media (max-width:560px){form.quote{grid-template-columns:1fr}}
+
+/* footer */
+.footer{border-top:1px solid var(--line);padding:var(--s6) 0 var(--s5);background:var(--ink)}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s4);align-items:flex-start}
+.foot-meta{color:var(--cream-faint);font-size:14px;line-height:1.9}
+.foot-meta a{color:var(--cream-dim);transition:color .2s ease}
+.foot-meta a:hover{color:var(--tan)}
+.foot-fine{margin-top:var(--s5);padding-top:var(--s3);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s2);font-size:12px;color:rgba(243,237,227,.4)}
+
+/* reveal */
+.motion .rv{opacity:0;transform:translateY(28px)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+}
 </style>
 </head>
-<body class="no-motion">
+<body>
 
-<header class="fixed top-0 inset-x-0 z-50 bg-[var(--cream-50)]/90 backdrop-blur-sm border-b border-[var(--tan-500)]/20">
-  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2.5">
-      <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 24L24 8L42 24" stroke="var(--tan-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11 20V40H37V20" stroke="var(--tan-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="20" y="26" width="5" height="5" stroke="var(--tan-500)" stroke-width="2"/>
-        <path d="M17 30C17 33 19.5 35.5 22.5 34.8C23.5 37.5 27 37.8 28.3 35.2C31 36 33 33.5 31.8 31" stroke="var(--leaf-600)" stroke-width="2" stroke-linecap="round"/>
+<header class="header" id="top">
+  <div class="wrap header-in">
+    <a class="brand" href="#build" aria-label="H. Cruz-Cruz LLC home">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M7 22.5 24 8l17 14.5" stroke="#d9ab7c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M33.5 15.8V9.5h3.6v9.4" stroke="#d9ab7c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.5 26v14.5H25M36.5 26v14.5h-6" stroke="#d9ab7c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="21" y="20" width="6" height="6" rx=".6" stroke="#d9ab7c" stroke-width="1.8"/>
+        <path d="M24 23h0M21 23h6M24 20v6" stroke="#d9ab7c" stroke-width="1.2"/>
+        <path d="M14 42c-2.6-6.8 1.6-12.6 9.4-12.2.6 7.6-3.6 12.6-9.4 12.2Z" fill="#5c8f68"/>
+        <path d="M23.4 42.4c-.4-4.6 2.6-7.6 7-7.4-.1 4.6-2.8 7.6-7 7.4Z" fill="#5c8f68"/>
       </svg>
-      <span class="font-semibold text-[var(--navy-900)] text-[15px] leading-tight">H. Cruz-Cruz <span class="text-[var(--leaf-600)]">LLC</span></span>
+      <span>
+        <span class="brand-name">H. CRUZ-CRUZ</span>
+        <span class="brand-sub" data-i18n="brandSub">LLC · Heating · Cooling · Plumbing</span>
+      </span>
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--navy-800)]">
-      <a href="#services" class="link-underline">Services</a>
-      <a href="#area" class="link-underline">Service Area</a>
-      <a href="#quote" class="link-underline">Request a Quote</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#area" data-i18n="navArea">Service area</a>
+      <a href="#book" data-i18n="navBook">Book a visit</a>
     </nav>
-    <a href="tel:+13179376310" class="btn shadow-soft bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white text-sm font-semibold px-4 py-2.5 rounded-full">
-      (317) 937-6310
-    </a>
+    <div class="head-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn btn-ghost phone-pill" href="tel:+13179376310" aria-label="Call (317) 937-6310">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span class="num">(317) 937-6310</span>
+      </a>
+    </div>
   </div>
 </header>
 
-<main id="top">
+<main>
+  <section class="build" id="build" aria-label="From foundation to finished system">
+    <div class="stack">
 
-  <section class="scrub-section" id="scrollVideo">
-    <div class="scrub-sticky">
-      <video id="scrubVideo" class="scrub-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_005409_ace2b130-4568-4a2a-97a5-7e5d987ff1a8.mp4" poster="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_01f70138-7703-46de-9e66-b8a073f0dcb0.png" muted autoplay loop playsinline preload="auto"></video>
-      <div class="scene-scrim"></div>
-
-      <div class="stage-caption active" data-stage="0">
-        <div class="scene-num">01 — Foundation</div>
-        <h1 class="text-white text-[2.5rem] md:text-6xl font-semibold tracking-tightest mb-3">Comfort, built<br>from the ground up.</h1>
-        <p class="text-white/85 text-base md:text-lg max-w-xl">H. Cruz-Cruz LLC. Licensed and insured HVAC heating, cooling and plumbing services around Indianapolis. Se habla espanol.</p>
-      </div>
-
-      <div class="stage-caption" data-stage="1">
-        <div class="scene-num">02 — The Build</div>
-        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Every install done right,<br>panel by panel.</h2>
-        <p class="text-white/85 text-base md:text-lg max-w-xl">Central A/C systems, installations and tune-ups, handled with the same care whether it's a small repair or a full system.</p>
-      </div>
-
-      <div class="stage-caption" data-stage="2">
-        <div class="scene-num">03 — The Details</div>
-        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Wiring, thermostats,<br>and everything between.</h2>
-        <p class="text-white/85 text-base md:text-lg max-w-xl">Repairs, thermostats, duct cleaning and replacement — the detail work that keeps a system reliable for years.</p>
-      </div>
-
-      <div class="stage-caption" data-stage="3">
-        <div class="scene-num">04 — The Check</div>
-        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Nothing leaves until<br>the numbers are right.</h2>
-        <p class="text-white/85 text-base md:text-lg max-w-xl">Pressure, airflow, and system performance checked before any job is called finished.</p>
-      </div>
-
-      <div class="stage-caption" data-stage="4">
-        <div class="scene-num">05 — The Close-Out</div>
-        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Range, bath, and dryer vents.<br>Water heaters, too.</h2>
-        <p class="text-white/85 text-base md:text-lg max-w-xl">Plumbing and venting work finished to the same standard as the HVAC systems we install.</p>
-      </div>
-
-      <div class="stage-caption center" data-stage="5">
-        <div class="scene-num">06 — Ready</div>
-        <h2 class="text-white text-3xl md:text-6xl font-semibold tracking-tightest mb-5">Ready for whatever<br>the season brings.</h2>
-        <div class="flex flex-wrap gap-3 justify-center" style="pointer-events:auto">
-          <a href="tel:+13179376310" class="btn shadow-lift bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-3.5 rounded-full">Call (317) 937-6310</a>
-          <a href="#quote" class="btn shadow-lift bg-white/95 hover:bg-white text-[var(--navy-900)] font-semibold px-6 py-3.5 rounded-full">Request a Quote</a>
+      <article class="stage" data-stage="0">
+        <div class="stage-media"><img src="img/stage-1.jpg" alt="An empty galvanized equipment curb on a rooftop at sunrise, ready for a new unit." fetchpriority="high"></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">Licensed &amp; insured · English &amp; Español</span></div>
+          <h1 class="display" style="margin-top:24px" data-i18n-html="s1Title">Comfort, built<br>from the <em>ground up.</em></h1>
+          <p data-i18n="s1Body">Heating, cooling and plumbing for homes across Indianapolis and 11 surrounding Indiana cities.</p>
+          <div class="stage-ctas">
+            <a class="btn btn-primary" href="tel:+13179376310">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <span data-i18n="ctaCall">Call (317) 937-6310</span>
+            </a>
+            <a class="btn btn-ghost" href="#book" data-i18n="ctaBook">Request a visit</a>
+          </div>
         </div>
-      </div>
+        <div class="scroll-hint"><i></i><span data-i18n="scrollHint">Scroll to watch it come together</span></div>
+        <div class="stage-dim"></div>
+      </article>
 
-      <div class="stage-dots" aria-hidden="true">
-        <span class="stage-dot active" data-dot="0"></span>
-        <span class="stage-dot" data-dot="1"></span>
-        <span class="stage-dot" data-dot="2"></span>
-        <span class="stage-dot" data-dot="3"></span>
-        <span class="stage-dot" data-dot="4"></span>
-        <span class="stage-dot" data-dot="5"></span>
-      </div>
+      <article class="stage" data-stage="1">
+        <div class="stage-media"><img src="img/stage-2.jpg" alt="A steel HVAC unit frame assembled on the rooftop curb."></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="stage-num"><span class="n">02</span><span class="bar"></span><span class="eyebrow" data-i18n="s2Eyebrow">Structure</span></div>
+          <h2 class="display" data-i18n-html="s2Title">It starts<br><em>square and level.</em></h2>
+          <p data-i18n="s2Body">New air conditioning and central A/C systems, set up on a solid base so they run the way they should.</p>
+        </div>
+        <div class="stage-dim"></div>
+      </article>
+
+      <article class="stage" data-stage="2">
+        <div class="stage-media"><img src="img/stage-3.jpg" alt="Two technicians installing coils and compressors inside the unit frame."></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="stage-num"><span class="n">03</span><span class="bar"></span><span class="eyebrow" data-i18n="s3Eyebrow">The heart</span></div>
+          <h2 class="display" data-i18n-html="s3Title">Built by hand,<br><em>connection by connection.</em></h2>
+          <p data-i18n="s3Body">Lines, coils and components installed with care. Not rushed, not cut short.</p>
+        </div>
+        <div class="stage-dim"></div>
+      </article>
+
+      <article class="stage" data-stage="3">
+        <div class="stage-media"><img src="img/stage-4.jpg" alt="A technician working on the unit's open electrical and control panel."></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="stage-num"><span class="n">04</span><span class="bar"></span><span class="eyebrow" data-i18n="s4Eyebrow">Controls</span></div>
+          <h2 class="display" data-i18n-html="s4Title">Wiring and thermostats,<br><em>done right.</em></h2>
+          <p data-i18n="s4Body">From the control board to the thermostat on your wall: repairs and replacements that hold up.</p>
+        </div>
+        <div class="stage-dim"></div>
+      </article>
+
+      <article class="stage" data-stage="4">
+        <div class="stage-media"><img src="img/stage-5.jpg" alt="A technician reading refrigerant pressure gauges beside a diagnostic laptop."></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="stage-num"><span class="n">05</span><span class="bar"></span><span class="eyebrow" data-i18n="s5Eyebrow">Tune-ups</span></div>
+          <h2 class="display" data-i18n-html="s5Title">Checked until<br><em>the numbers are right.</em></h2>
+          <p data-i18n="s5Body">A/C tune-ups and diagnostics: pressures, temperatures and airflow, measured properly.</p>
+        </div>
+        <div class="stage-dim"></div>
+      </article>
+
+      <article class="stage" data-stage="5">
+        <div class="stage-media"><img src="img/stage-6.jpg" alt="A finished rooftop unit with a technician reviewing a checklist at sunset."></div>
+        <div class="stage-scrim"></div>
+        <div class="stage-copy">
+          <div class="stage-num"><span class="n">06</span><span class="bar"></span><span class="eyebrow" data-i18n="s6Eyebrow">Ready</span></div>
+          <h2 class="display" data-i18n-html="s6Title">Ready for<br><em>every Indiana season.</em></h2>
+          <p data-i18n="s6Body">Call or text to book a visit. We'll talk through what your home needs.</p>
+          <div class="stage-ctas">
+            <a class="btn btn-primary" href="tel:+13179376310"><span data-i18n="ctaCall">Call (317) 937-6310</span></a>
+            <a class="btn btn-ghost" href="sms:+13179376310" data-i18n="ctaText">Send a text</a>
+          </div>
+        </div>
+        <div class="illus-note" data-i18n="illusNote">Rooftop sequence is illustrative.</div>
+        <div class="stage-dim"></div>
+      </article>
+
     </div>
+
+    <nav class="rail" aria-label="Build stages">
+      <button type="button" data-go="0"><span class="lbl" data-i18n="r1">Foundation</span><span class="tick"></span></button>
+      <button type="button" data-go="1"><span class="lbl" data-i18n="s2Eyebrow">Structure</span><span class="tick"></span></button>
+      <button type="button" data-go="2"><span class="lbl" data-i18n="s3Eyebrow">The heart</span><span class="tick"></span></button>
+      <button type="button" data-go="3"><span class="lbl" data-i18n="s4Eyebrow">Controls</span><span class="tick"></span></button>
+      <button type="button" data-go="4"><span class="lbl" data-i18n="s5Eyebrow">Tune-ups</span><span class="tick"></span></button>
+      <button type="button" data-go="5"><span class="lbl" data-i18n="s6Eyebrow">Ready</span><span class="tick"></span></button>
+    </nav>
+    <div class="progress" aria-hidden="true"><i></i></div>
   </section>
 
-  <section class="relative grain py-20 md:py-28 bg-[var(--cream-50)]">
-    <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
-      <div class="inline-flex items-center gap-2 text-[var(--leaf-600)] text-xs font-semibold tracking-[.18em] uppercase mb-4">
-        <span class="w-6 h-px bg-[var(--leaf-600)]"></span>H. Cruz-Cruz LLC<span class="w-6 h-px bg-[var(--leaf-600)]"></span>
-      </div>
-      <h2 class="display text-4xl md:text-6xl font-semibold tracking-tightest text-[var(--navy-900)] mb-6">
-        Air conditioning, heating,<br>and plumbing — <span class="italic text-[var(--leaf-600)]">bilingual, licensed, insured.</span>
-      </h2>
-      <p class="text-[var(--navy-800)]/75 text-lg max-w-2xl mx-auto">Se habla espanol and English. A family-run shop serving the Indianapolis area, built on word of mouth and work that holds up.</p>
+  <div class="trust">
+    <div class="wrap trust-in">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="t1">Licensed &amp; insured</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5h9v7H8l-4 3V5Z"/><path d="M13 9h7v9l-3-2.5h-4V9Z"/></svg><span>English &amp; Español</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9"/></svg><span data-i18n="t3">Heating · Cooling · Plumbing</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="t4">12 Indiana cities</span></div>
     </div>
-  </section>
+  </div>
 
-  <section id="services" class="relative py-20 md:py-28 bg-[var(--navy-950)]">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="mb-14 max-w-xl">
-        <div class="text-[var(--tan-400)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Services We Offer</div>
-        <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-white">Air conditioning, plumbing, and everything that keeps a home comfortable.</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">Air Conditioning Installation</h3>
-          <p class="text-white/65 text-sm">New A/C systems installed and set up correctly from day one.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">Central A/C System</h3>
-          <p class="text-white/65 text-sm">Full central air conditioning systems for homes of any size.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">A/C Tune-Up</h3>
-          <p class="text-white/65 text-sm">Seasonal tune-ups to keep an existing system running efficiently.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">All Repairs &amp; Thermostats</h3>
-          <p class="text-white/65 text-sm">Diagnostics, repairs, and thermostat installation or replacement.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">Duct Cleaning &amp; Replacement</h3>
-          <p class="text-white/65 text-sm">Cleaning and replacing ductwork to keep airflow and air quality where it should be.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
-          <h3 class="text-white font-semibold text-lg mb-2">Range, Bath &amp; Dryer Vents</h3>
-          <p class="text-white/65 text-sm">Vent replacement and installation for ranges, bathrooms, and dryers.</p>
-        </div>
-        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5 sm:col-span-2 lg:col-span-1">
-          <h3 class="text-white font-semibold text-lg mb-2">Water Heater Replacement</h3>
-          <p class="text-white/65 text-sm">Water heater replacement and installation, done right the first time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="area" class="relative py-20 md:py-28 bg-[var(--cream-100)]">
-    <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
-      <div class="text-[var(--leaf-600)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Service Area</div>
-      <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-[var(--navy-900)] mb-8">Centered in Indianapolis, serving the surrounding area.</h2>
-      <div class="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Indianapolis</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Lebanon</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Frankfort</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Lafayette</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">West Lafayette</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Marion</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Anderson</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Columbus</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Seymour</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Kokomo</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Bloomington</span>
-        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Colfax</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="quote" class="relative grain py-20 md:py-28 bg-[var(--navy-950)]">
-    <div class="max-w-5xl mx-auto px-5 md:px-8">
-      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+  <section class="section services grain" id="services">
+    <div class="wrap">
+      <div class="section-head">
         <div>
-          <div class="text-[var(--tan-400)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Book a Visit</div>
-          <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-white mb-5">Request a quote, or call to schedule a technician.</h2>
-          <p class="text-white/70 mb-8">Call or text (317) 937-6310 directly, or send the details below and we'll text you back to confirm a time. Licensed and insured. Se habla espanol.</p>
-          <div class="flex flex-col gap-3">
-            <a href="tel:+13179376310" class="btn shadow-lift bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-4 rounded-xl text-center">Call (317) 937-6310</a>
-            <a href="sms:+13179376310" class="btn shadow-soft bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-4 rounded-xl text-center">Text Us Instead</a>
+          <div class="eyebrow rv" data-i18n="svcEyebrow">What we do</div>
+          <h2 class="display rv" style="margin-top:20px" data-i18n-html="svcTitle">Seven services.<br><em>One call.</em></h2>
+        </div>
+        <p class="rv" data-i18n="svcLead">Not sure which one fits? Call and describe what's going on. We'll help you figure out the right next step.</p>
+      </div>
+
+      <div class="svc-grid">
+        <div class="svc-list">
+          <div class="card rv">
+            <div class="card-top"><span class="k">01</span><h3 data-i18n="g1">Cooling &amp; heating</h3></div>
+            <ul>
+              <li data-i18n="i1">Air conditioning installation</li>
+              <li data-i18n="i2">Central A/C systems</li>
+              <li data-i18n="i3">A/C tune-ups</li>
+              <li data-i18n="i4">All repairs &amp; thermostats</li>
+            </ul>
+          </div>
+          <div class="card rv">
+            <div class="card-top"><span class="k">02</span><h3 data-i18n="g2">Air &amp; ventilation</h3></div>
+            <ul>
+              <li data-i18n="i5">Duct cleaning &amp; replacement</li>
+              <li data-i18n="i6">Range, bath &amp; dryer vent replacement and installation</li>
+            </ul>
+          </div>
+          <div class="card rv">
+            <div class="card-top"><span class="k">03</span><h3 data-i18n="g3">Water heaters</h3></div>
+            <ul>
+              <li data-i18n="i7">Water heater replacement &amp; installation</li>
+            </ul>
+          </div>
+          <div class="svc-foot rv">
+            <a class="link" href="tel:+13179376310"><span data-i18n="svcCall">Call and describe the issue</span> <span aria-hidden="true">→</span></a>
+            <a class="link" href="#book"><span data-i18n="svcBook">Book a visit</span> <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <form id="quoteForm" class="shadow-lift bg-[var(--cream-50)] rounded-2xl p-7 md:p-8 flex flex-col gap-4">
-          <div>
-            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qName">Name</label>
-            <input id="qName" required type="text" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="Your name">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qPhone">Phone</label>
-            <input id="qPhone" required type="tel" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="(317) 555-0123">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qCity">City</label>
-            <input id="qCity" required type="text" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="Indianapolis, Lafayette, etc.">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qJob">What do you need looked at?</label>
-            <textarea id="qJob" required rows="3" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white resize-none" placeholder="A/C not cooling, tune-up, water heater, etc."></textarea>
-          </div>
-          <button type="submit" class="btn shadow-soft bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-3.5 rounded-xl mt-1">Send Request by Text</button>
-          <p class="text-xs text-[var(--navy-800)]/60 -mt-1">Opens your messaging app with these details pre-filled, sent directly to (317) 937-6310.</p>
-        </form>
+
+        <div class="job">
+          <figure class="rv">
+            <img src="img/job-furnace.jpg" alt="An open residential furnace during service, wiring and burner assembly visible." loading="lazy">
+            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job1">Heating work</span></figcaption>
+          </figure>
+          <figure class="rv">
+            <img src="img/job-ductwork.jpg" alt="Basement ductwork with a new round duct connection along the ceiling joists." loading="lazy">
+            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job2">Ductwork</span></figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-[var(--navy-950)] border-t border-white/10 py-10">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-white/55 text-sm">
-      <div class="flex items-center gap-2.5">
-        <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 24L24 8L42 24" stroke="var(--tan-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M11 20V40H37V20" stroke="var(--tan-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>H. Cruz-Cruz LLC — Licensed &amp; Insured</span>
+  <section class="section area" id="area">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow rv" data-i18n="areaEyebrow">Service area</div>
+          <h2 class="display rv" style="margin-top:20px" data-i18n-html="areaTitle">Based in Indianapolis.<br><em>Close to home.</em></h2>
+        </div>
+        <p class="rv" data-i18n="areaLead">Serving these Indiana communities. Call with your address and we'll confirm scheduling for your area.</p>
       </div>
-      <div>(317) 937-6310 · Se habla espanol · Indianapolis, IN area</div>
+      <div class="cities rv">
+        <div class="city home"><span>Indianapolis</span><span class="tag" data-i18n="homeBase">Home base</span></div>
+        <div class="city">Anderson</div>
+        <div class="city">Marion</div>
+        <div class="city">Kokomo</div>
+        <div class="city">Frankfort</div>
+        <div class="city">Colfax</div>
+        <div class="city">Lebanon</div>
+        <div class="city">Lafayette</div>
+        <div class="city">West Lafayette</div>
+        <div class="city">Bloomington</div>
+        <div class="city">Columbus</div>
+        <div class="city">Seymour</div>
+      </div>
     </div>
-  </footer>
+  </section>
 
+  <section class="section book grain" id="book">
+    <div class="wrap book-grid">
+      <div>
+        <div class="eyebrow rv" data-i18n="bookEyebrow">Book a visit</div>
+        <h2 class="display rv" style="margin-top:20px" data-i18n-html="bookTitle">Let's take a look<br><em>at your system.</em></h2>
+        <p class="book-lead rv" data-i18n="bookLead">Request a technician visit or a quote. Tell us what's happening and when works for you, and we'll confirm a time.</p>
+        <a class="big-phone rv" href="tel:+13179376310">(317) 937-6310</a>
+        <div class="book-actions rv">
+          <a class="btn btn-primary" href="tel:+13179376310" data-i18n="ctaCallShort">Call now</a>
+          <a class="btn btn-ghost" href="sms:+13179376310" data-i18n="ctaText">Send a text</a>
+        </div>
+        <p class="lang-note rv" data-i18n="langNote">Se habla español. English spoken.</p>
+      </div>
+
+      <form class="quote rv" id="quote" novalidate>
+        <div class="field"><label for="qName" data-i18n="fName">Name</label><input id="qName" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="qPhone" data-i18n="fPhone">Phone</label><input id="qPhone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field">
+          <label for="qCity" data-i18n="fCity">City</label>
+          <select id="qCity" name="city" required>
+            <option value="" data-i18n="fChoose">Choose…</option>
+            <option>Indianapolis</option><option>Anderson</option><option>Marion</option><option>Kokomo</option>
+            <option>Frankfort</option><option>Colfax</option><option>Lebanon</option><option>Lafayette</option>
+            <option>West Lafayette</option><option>Bloomington</option><option>Columbus</option><option>Seymour</option>
+            <option value="other" data-i18n="fOther">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="qService" data-i18n="fService">Service</label>
+          <select id="qService" name="service" required>
+            <option value="" data-i18n="fChoose">Choose…</option>
+            <option data-i18n="i1">Air conditioning installation</option>
+            <option data-i18n="i2">Central A/C systems</option>
+            <option data-i18n="i3">A/C tune-ups</option>
+            <option data-i18n="i4">All repairs &amp; thermostats</option>
+            <option data-i18n="i5">Duct cleaning &amp; replacement</option>
+            <option data-i18n="i6">Range, bath &amp; dryer vent replacement and installation</option>
+            <option data-i18n="i7">Water heater replacement &amp; installation</option>
+            <option data-i18n="fNotSure">Not sure, need a visit</option>
+          </select>
+        </div>
+        <div class="field"><label for="qDate" data-i18n="fDate">Preferred day</label><input id="qDate" name="date" type="date"></div>
+        <div class="field">
+          <span class="sr-only" id="timeLbl" data-i18n="fTime">Time of day</span>
+          <label aria-hidden="true" data-i18n="fTime">Time of day</label>
+          <div class="seg" role="radiogroup" aria-labelledby="timeLbl">
+            <label><input type="radio" name="time" value="am" checked><span data-i18n="tAm">Morning</span></label>
+            <label><input type="radio" name="time" value="pm"><span data-i18n="tPm">Afternoon</span></label>
+            <label><input type="radio" name="time" value="any"><span data-i18n="tAny">Flexible</span></label>
+          </div>
+        </div>
+        <div class="field full"><label for="qMsg" data-i18n="fMsg">What's going on?</label><textarea id="qMsg" name="msg" data-i18n-ph="fMsgPh" placeholder="Example: A/C running but not cooling upstairs."></textarea></div>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit" data-i18n="fSend">Send request by text</button>
+          <p data-i18n="fNote">Opens your messaging app with your request filled in, addressed to (317) 937-6310. Nothing sends until you press send.</p>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <a class="brand" href="#build" aria-label="Back to top">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 22.5 24 8l17 14.5" stroke="#d9ab7c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 26v14.5H25M36.5 26v14.5h-6" stroke="#d9ab7c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 42c-2.6-6.8 1.6-12.6 9.4-12.2.6 7.6-3.6 12.6-9.4 12.2Z" fill="#5c8f68"/></svg>
+        <span><span class="brand-name">H. CRUZ-CRUZ LLC</span><span class="brand-sub" data-i18n="footSub">Air conditioning &amp; plumbing services</span></span>
+      </a>
+      <div class="foot-meta">
+        <a href="tel:+13179376310">(317) 937-6310</a><br>
+        <span data-i18n="footLic">Licensed &amp; insured</span> · English &amp; Español<br>
+        <span data-i18n="footArea">Indianapolis and surrounding Indiana communities</span>
+      </div>
+      <div class="foot-meta">
+        <a href="#services" data-i18n="navServices">Services</a><br>
+        <a href="#area" data-i18n="navArea">Service area</a><br>
+        <a href="#book" data-i18n="navBook">Book a visit</a>
+      </div>
+    </div>
+    <div class="foot-fine">
+      <span>© 2026 H. Cruz-Cruz LLC</span>
+      <span data-i18n="illusNote">Rooftop sequence is illustrative.</span>
+    </div>
+  </div>
+</footer>
 
 <script type="application/ld+json">
 {
@@ -346,26 +564,25 @@
   "@type": "HVACBusiness",
   "name": "H. Cruz-Cruz LLC",
   "telephone": "+1-317-937-6310",
-  "description": "Licensed and insured HVAC heating, cooling and plumbing services, bilingual (English and Spanish), serving the Indianapolis, Indiana area.",
+  "description": "Licensed and insured heating, air conditioning and plumbing services for homes in the Indianapolis, Indiana area. English and Spanish spoken.",
+  "knowsLanguage": ["en", "es"],
   "areaServed": [
     {"@type": "City", "name": "Indianapolis, IN"},
-    {"@type": "City", "name": "Lebanon, IN"},
+    {"@type": "City", "name": "Anderson, IN"},
+    {"@type": "City", "name": "Marion, IN"},
+    {"@type": "City", "name": "Kokomo, IN"},
     {"@type": "City", "name": "Frankfort, IN"},
+    {"@type": "City", "name": "Colfax, IN"},
+    {"@type": "City", "name": "Lebanon, IN"},
     {"@type": "City", "name": "Lafayette, IN"},
     {"@type": "City", "name": "West Lafayette, IN"},
-    {"@type": "City", "name": "Marion, IN"},
-    {"@type": "City", "name": "Anderson, IN"},
-    {"@type": "City", "name": "Columbus, IN"},
-    {"@type": "City", "name": "Seymour, IN"},
-    {"@type": "City", "name": "Kokomo, IN"},
     {"@type": "City", "name": "Bloomington, IN"},
-    {"@type": "City", "name": "Colfax, IN"}
+    {"@type": "City", "name": "Columbus, IN"},
+    {"@type": "City", "name": "Seymour, IN"}
   ],
-  "knowsLanguage": ["en", "es"],
-  "priceRange": "$$",
   "makesOffer": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Air Conditioning Installation"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Central A/C System"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Central A/C Systems"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "A/C Tune-Up"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Repairs & Thermostats"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Duct Cleaning & Replacement"}},
@@ -376,62 +593,185 @@
 </script>
 
 <script>
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const scrubVideo = document.getElementById('scrubVideo');
-  const captions = document.querySelectorAll('.stage-caption');
-  const dots = document.querySelectorAll('.stage-dot');
-
-  function setActiveStage(i) {
-    captions.forEach((c, idx) => c.classList.toggle('active', idx === i));
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+(function(){
+  const I18N = {
+    en: {
+      brandSub:'LLC · Heating · Cooling · Plumbing', navServices:'Services', navArea:'Service area', navBook:'Book a visit',
+      heroEyebrow:'Licensed & insured · English & Español',
+      s1Title:'Comfort, built<br>from the <em>ground up.</em>',
+      s1Body:'Heating, cooling and plumbing for homes across Indianapolis and 11 surrounding Indiana cities.',
+      ctaCall:'Call (317) 937-6310', ctaCallShort:'Call now', ctaBook:'Request a visit', ctaText:'Send a text',
+      scrollHint:'Scroll to watch it come together', r1:'Foundation',
+      s2Eyebrow:'Structure', s2Title:'It starts<br><em>square and level.</em>', s2Body:'New air conditioning and central A/C systems, set up on a solid base so they run the way they should.',
+      s3Eyebrow:'The heart', s3Title:'Built by hand,<br><em>connection by connection.</em>', s3Body:'Lines, coils and components installed with care. Not rushed, not cut short.',
+      s4Eyebrow:'Controls', s4Title:'Wiring and thermostats,<br><em>done right.</em>', s4Body:'From the control board to the thermostat on your wall: repairs and replacements that hold up.',
+      s5Eyebrow:'Tune-ups', s5Title:'Checked until<br><em>the numbers are right.</em>', s5Body:'A/C tune-ups and diagnostics: pressures, temperatures and airflow, measured properly.',
+      s6Eyebrow:'Ready', s6Title:'Ready for<br><em>every Indiana season.</em>', s6Body:"Call or text to book a visit. We'll talk through what your home needs.",
+      illusNote:'Rooftop sequence is illustrative.',
+      t1:'Licensed & insured', t3:'Heating · Cooling · Plumbing', t4:'12 Indiana cities',
+      svcEyebrow:'What we do', svcTitle:'Seven services.<br><em>One call.</em>',
+      svcLead:"Not sure which one fits? Call and describe what's going on. We'll help you figure out the right next step.",
+      g1:'Cooling & heating', g2:'Air & ventilation', g3:'Water heaters',
+      i1:'Air conditioning installation', i2:'Central A/C systems', i3:'A/C tune-ups', i4:'All repairs & thermostats',
+      i5:'Duct cleaning & replacement', i6:'Range, bath & dryer vent replacement and installation', i7:'Water heater replacement & installation',
+      svcCall:'Call and describe the issue', svcBook:'Book a visit', jobTag:'On the job', job1:'Heating work', job2:'Ductwork',
+      areaEyebrow:'Service area', areaTitle:'Based in Indianapolis.<br><em>Close to home.</em>',
+      areaLead:"Serving these Indiana communities. Call with your address and we'll confirm scheduling for your area.", homeBase:'Home base',
+      bookEyebrow:'Book a visit', bookTitle:"Let's take a look<br><em>at your system.</em>",
+      bookLead:"Request a technician visit or a quote. Tell us what's happening and when works for you, and we'll confirm a time.",
+      langNote:'Se habla español. English spoken.',
+      fName:'Name', fPhone:'Phone', fCity:'City', fService:'Service', fChoose:'Choose…', fOther:'Other', fNotSure:'Not sure, need a visit',
+      fDate:'Preferred day', fTime:'Time of day', tAm:'Morning', tPm:'Afternoon', tAny:'Flexible',
+      fMsg:"What's going on?", fMsgPh:'Example: A/C running but not cooling upstairs.', fSend:'Send request by text',
+      fNote:'Opens your messaging app with your request filled in, addressed to (317) 937-6310. Nothing sends until you press send.',
+      footSub:'Air conditioning & plumbing services', footLic:'Licensed & insured', footArea:'Indianapolis and surrounding Indiana communities',
+      smsIntro:'Hi H. Cruz-Cruz, I would like to request a visit.', smsName:'Name', smsPhone:'Phone', smsCity:'City', smsService:'Service', smsWhen:'Preferred', smsDetails:'Details',
+      errFill:'Please add your name, phone, city and service.'
+    },
+    es: {
+      brandSub:'LLC · Calefacción · Aire · Plomería', navServices:'Servicios', navArea:'Área de servicio', navBook:'Agendar visita',
+      heroEyebrow:'Con licencia y seguro · English & Español',
+      s1Title:'Confort, construido<br><em>desde la base.</em>',
+      s1Body:'Calefacción, aire acondicionado y plomería para hogares en Indianápolis y 11 ciudades más de Indiana.',
+      ctaCall:'Llamar al (317) 937-6310', ctaCallShort:'Llamar ahora', ctaBook:'Solicitar una visita', ctaText:'Enviar un mensaje',
+      scrollHint:'Desliza para verlo tomar forma', r1:'La base',
+      s2Eyebrow:'Estructura', s2Title:'Todo empieza<br><em>firme y nivelado.</em>', s2Body:'Instalación de aire acondicionado y sistemas centrales sobre una base sólida, para que funcionen como deben.',
+      s3Eyebrow:'El corazón', s3Title:'Hecho a mano,<br><em>conexión por conexión.</em>', s3Body:'Líneas, serpentines y componentes instalados con cuidado. Sin prisas y sin atajos.',
+      s4Eyebrow:'Controles', s4Title:'Cableado y termostatos,<br><em>bien hechos.</em>', s4Body:'Desde la tarjeta de control hasta el termostato en su pared: reparaciones y reemplazos que duran.',
+      s5Eyebrow:'Mantenimiento', s5Title:'Revisado hasta que<br><em>los números cuadran.</em>', s5Body:'Mantenimiento y diagnóstico de A/C: presiones, temperaturas y flujo de aire, medidos como se debe.',
+      s6Eyebrow:'Listo', s6Title:'Listo para<br><em>cada temporada en Indiana.</em>', s6Body:'Llame o envíe un mensaje para agendar una visita. Hablamos de lo que su hogar necesita.',
+      illusNote:'La secuencia en el techo es ilustrativa.',
+      t1:'Con licencia y seguro', t3:'Calefacción · Aire · Plomería', t4:'12 ciudades de Indiana',
+      svcEyebrow:'Lo que hacemos', svcTitle:'Siete servicios.<br><em>Una llamada.</em>',
+      svcLead:'¿No sabe cuál necesita? Llame y cuéntenos qué está pasando. Le ayudamos a decidir el siguiente paso.',
+      g1:'Aire y calefacción', g2:'Ductos y ventilación', g3:'Calentadores de agua',
+      i1:'Instalación de aire acondicionado', i2:'Sistemas de A/C central', i3:'Mantenimiento de A/C', i4:'Todo tipo de reparaciones y termostatos',
+      i5:'Limpieza y reemplazo de ductos', i6:'Reemplazo e instalación de extractores de cocina, baño y secadora', i7:'Reemplazo e instalación de calentadores de agua',
+      svcCall:'Llame y describa el problema', svcBook:'Agendar visita', jobTag:'En el trabajo', job1:'Calefacción', job2:'Ductos',
+      areaEyebrow:'Área de servicio', areaTitle:'Desde Indianápolis.<br><em>Cerca de usted.</em>',
+      areaLead:'Atendemos estas comunidades de Indiana. Llame con su dirección y confirmamos el horario para su zona.', homeBase:'Base',
+      bookEyebrow:'Agendar visita', bookTitle:'Revisemos<br><em>su sistema.</em>',
+      bookLead:'Solicite la visita de un técnico o una cotización. Díganos qué pasa y cuándo le conviene, y confirmamos la hora.',
+      langNote:'Se habla español. English spoken.',
+      fName:'Nombre', fPhone:'Teléfono', fCity:'Ciudad', fService:'Servicio', fChoose:'Elegir…', fOther:'Otra', fNotSure:'No estoy seguro, necesito una visita',
+      fDate:'Día preferido', fTime:'Horario', tAm:'Mañana', tPm:'Tarde', tAny:'Flexible',
+      fMsg:'¿Qué está pasando?', fMsgPh:'Ejemplo: el A/C prende pero no enfría arriba.', fSend:'Enviar solicitud por mensaje',
+      fNote:'Abre su app de mensajes con la solicitud lista, dirigida al (317) 937-6310. No se envía nada hasta que usted lo envíe.',
+      footSub:'Servicios de aire acondicionado y plomería', footLic:'Con licencia y seguro', footArea:'Indianápolis y comunidades cercanas de Indiana',
+      smsIntro:'Hola H. Cruz-Cruz, quisiera solicitar una visita.', smsName:'Nombre', smsPhone:'Teléfono', smsCity:'Ciudad', smsService:'Servicio', smsWhen:'Preferencia', smsDetails:'Detalles',
+      errFill:'Por favor agregue su nombre, teléfono, ciudad y servicio.'
+    }
+  };
+  let lang = 'en';
+  function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+  function read(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  function applyLang(l){
+    lang = I18N[l] ? l : 'en';
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.dataset.i18n; if (d[k] != null) el.textContent = d[k]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const k = el.dataset.i18nHtml; if (d[k] != null) el.innerHTML = d[k]; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => { const k = el.dataset.i18nPh; if (d[k] != null) el.placeholder = d[k]; });
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    store('hcc-lang', lang);
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
   }
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+  const saved = read('hcc-lang');
+  if (saved) applyLang(saved);
+  else if ((navigator.language || '').toLowerCase().startsWith('es')) applyLang('es');
 
-  let scrubEnabled = false;
+  const header = document.querySelector('.header');
+  const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
-    document.body.classList.remove('no-motion');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (window.gsap && window.ScrollTrigger && !reduce) {
     gsap.registerPlugin(ScrollTrigger);
+    document.documentElement.classList.add('motion');
+    const build = document.querySelector('.build');
+    const stages = gsap.utils.toArray('.stage');
+    const n = stages.length;
+    const railBtns = gsap.utils.toArray('.rail button');
+    const bar = document.querySelector('.progress i');
 
-    const armScrub = () => {
-      if (scrubEnabled || !scrubVideo.duration) return;
-      scrubEnabled = true;
-      scrubVideo.pause();
-      ScrollTrigger.create({
-        trigger: '#scrollVideo',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 0.5,
-        onUpdate(self) {
-          scrubVideo.currentTime = self.progress * scrubVideo.duration;
-          setActiveStage(Math.min(5, Math.floor(self.progress * 6)));
-        }
-      });
-    };
+    stages.forEach((s, i) => {
+      gsap.set(s, { zIndex: i + 1 });
+      if (i > 0) {
+        gsap.set(s, { yPercent: 100, rotateX: 22, scale: 0.8 });
+        gsap.set(s.querySelector('.stage-media img'), { scale: 1.22 });
+        gsap.set(s.querySelectorAll('.stage-copy > *'), { opacity: 0, y: 40 });
+      } else {
+        gsap.set(s.querySelector('.stage-media img'), { scale: 1.06 });
+      }
+    });
 
-    scrubVideo.addEventListener('loadedmetadata', armScrub);
-    if (scrubVideo.readyState >= 1) armScrub();
+    const tl = gsap.timeline({ defaults: { ease: 'none' } });
+    for (let i = 1; i < n; i++) {
+      const at = i - 1;
+      const cur = stages[i], prev = stages[i - 1];
+      tl.to(cur, { yPercent: 0, rotateX: 0, scale: 1, duration: 0.8, ease: 'power1.inOut' }, at)
+        .to(cur.querySelector('.stage-media img'), { scale: 1.04, duration: 1, ease: 'power1.out' }, at)
+        .to(prev, { scale: 0.86, yPercent: -6, rotateX: -8, duration: 0.8, ease: 'power1.inOut' }, at)
+        .to(prev.querySelector('.stage-dim'), { opacity: 0.65, duration: 0.8 }, at)
+        .to(prev.querySelectorAll('.stage-copy > *, .scroll-hint'), { opacity: 0, y: -24, duration: 0.3, stagger: 0.03 }, at)
+        .to(cur.querySelectorAll('.stage-copy > *'), { opacity: 1, y: 0, duration: 0.35, stagger: 0.06, ease: 'power2.out' }, at + 0.45);
+    }
+    tl.to({}, { duration: 0.35 });
 
-    // If the video can't be reached (e.g. a CDN hiccup), fall back to the
-    // autoplay/loop background with a static first caption rather than a
-    // scroll section with no visible motion at all.
-    setTimeout(() => { if (!scrubEnabled) setActiveStage(0); }, 4000);
-    scrubVideo.addEventListener('error', () => setActiveStage(0));
-  } else {
-    document.body.classList.add('no-motion');
-    setActiveStage(0);
+    const st = ScrollTrigger.create({
+      trigger: build,
+      start: 'top top',
+      end: () => '+=' + Math.round(window.innerHeight * (n - 1) * 0.95),
+      pin: true,
+      scrub: 0.7,
+      animation: tl,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onUpdate(self) {
+        const t = self.progress * tl.duration();
+        const idx = Math.max(0, Math.min(n - 1, Math.floor(t + 0.6)));
+        railBtns.forEach((b, i) => b.classList.toggle('on', i === idx));
+        bar.style.transform = 'scaleX(' + self.progress.toFixed(4) + ')';
+      }
+    });
+    railBtns[0].classList.add('on');
+    railBtns.forEach((b, i) => b.addEventListener('click', () => {
+      const t = i === 0 ? 0 : (i - 1) + 0.75;
+      const y = st.start + (st.end - st.start) * (t / tl.duration());
+      window.scrollTo({ top: Math.round(y), behavior: 'smooth' });
+    }));
+
+    gsap.utils.toArray('.rv').forEach(el => {
+      gsap.to(el, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } });
+    });
   }
 
-  const quoteForm = document.getElementById('quoteForm');
-  quoteForm.addEventListener('submit', (e) => {
+  const form = document.getElementById('quote');
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('qName').value.trim();
-    const phone = document.getElementById('qPhone').value.trim();
-    const city = document.getElementById('qCity').value.trim();
-    const job = document.getElementById('qJob').value.trim();
-    const body = `Quote request from ${name} (${phone}), ${city}. Need: ${job}`;
-    window.location.href = `sms:+13179376310?&body=${encodeURIComponent(body)}`;
+    const d = I18N[lang];
+    const v = id => document.getElementById(id).value.trim();
+    const sel = id => { const s = document.getElementById(id); return s.value ? s.options[s.selectedIndex].text : ''; };
+    const name = v('qName'), phone = v('qPhone'), city = sel('qCity'), service = sel('qService');
+    if (!name || !phone || !city || !service) { alert(d.errFill); return; }
+    const timeEl = form.querySelector('input[name="time"]:checked');
+    const timeTxt = timeEl ? timeEl.nextElementSibling.textContent : '';
+    const date = v('qDate');
+    const lines = [
+      d.smsIntro,
+      d.smsName + ': ' + name,
+      d.smsPhone + ': ' + phone,
+      d.smsCity + ': ' + city,
+      d.smsService + ': ' + service,
+      d.smsWhen + ': ' + [date, timeTxt].filter(Boolean).join(', ')
+    ];
+    const msg = v('qMsg'); if (msg) lines.push(d.smsDetails + ': ' + msg);
+    const ios = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    window.location.href = 'sms:+13179376310' + (ios ? '&' : '?') + 'body=' + encodeURIComponent(lines.join('\n'));
   });
+})();
 </script>
-
 </body>
 </html>
