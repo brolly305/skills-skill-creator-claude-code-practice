@@ -203,6 +203,43 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .area-note{margin-top:var(--s3);color:var(--cream-faint);font-size:14px}
 @media (max-width:860px){.cities{grid-template-columns:1fr 1fr}.city{padding:20px 16px}}
 
+/* work gallery */
+.work{background:var(--ink-2)}
+.gal{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--s2)}
+.gal-stack{display:grid;grid-template-rows:1fr 1fr;gap:var(--s2)}
+.tile{position:relative;display:block;width:100%;overflow:hidden;border-radius:20px;background:var(--panel);box-shadow:var(--shadow-1);text-align:left;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.tile.tall{aspect-ratio:3/4}
+button.tile{cursor:zoom-in}
+button.tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+button.tile:active{transform:translateY(-1px) scale(.99)}
+button.tile:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+button.tile:hover img{transform:scale(1.04)}
+.tile::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(184,146,107,.1);mix-blend-mode:multiply;pointer-events:none}
+.tile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,0) 46%);pointer-events:none}
+.tile .cap{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;line-height:1.35;color:var(--cream)}
+.tile .cap small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--tan);font-weight:700;margin-bottom:3px}
+.tile .live{position:absolute;top:16px;left:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(12,20,30,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tile .live i{width:7px;height:7px;border-radius:50%;background:var(--tan)}
+@media (max-width:760px){
+  .gal{grid-template-columns:1fr 1fr}
+  .gal-stack{grid-column:1/-1;grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .gal-stack .tile{aspect-ratio:4/3}
+  .tile .cap{left:12px;right:12px;bottom:12px;font-size:12.5px}
+}
+.lb{border:0;padding:0;background:transparent;color:var(--cream);max-width:min(94vw,1100px);max-height:94vh;margin:auto}
+.lb::backdrop{background:rgba(6,10,16,.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.lb img{display:block;max-width:100%;max-height:80vh;width:auto;height:auto;margin:0 auto;border-radius:16px;box-shadow:var(--shadow-2)}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);margin-top:var(--s2)}
+.lb-cap{font-family:'Manrope',sans-serif;font-weight:600;font-size:15px}
+.lb-btns{display:flex;gap:8px}
+.lb-btns button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(243,237,227,.1);box-shadow:inset 0 0 0 1px rgba(243,237,227,.2);transition:background-color .2s ease,transform .3s var(--ease)}
+.lb-btns button:hover{background:rgba(243,237,227,.18)}
+.lb-btns button:active{transform:scale(.94)}
+.lb-btns button:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+.lb-btns svg{width:18px;height:18px}
+
 /* book */
 .book{background:radial-gradient(1200px 600px at 85% 0%,rgba(217,171,124,.12),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(92,143,104,.12),transparent 60%),var(--ink-2)}
 .book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s6);align-items:start}
@@ -271,6 +308,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#work" data-i18n="navWork">Our work</a>
       <a href="#area" data-i18n="navArea">Service area</a>
       <a href="#book" data-i18n="navBook">Book a visit</a>
     </nav>
@@ -438,13 +476,58 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
             <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job1">Heating work</span></figcaption>
           </figure>
           <figure class="rv">
-            <img src="img/job-ductwork.jpg" alt="Basement ductwork with a new round duct connection along the ceiling joists." loading="lazy">
-            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job2">Ductwork</span></figcaption>
+            <img src="img/job-ladder.jpg" alt="A technician on a ladder working overhead in an unfinished basement." loading="lazy">
+            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job2">Basement install</span></figcaption>
           </figure>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="section work" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow rv" data-i18n="workEyebrow">Our work</div>
+          <h2 class="display rv" style="margin-top:20px" data-i18n-html="workTitle">Real jobs.<br><em>Real homes.</em></h2>
+        </div>
+        <p class="rv" data-i18n="workLead">Photos and video straight from H. Cruz-Cruz job sites.</p>
+      </div>
+      <div class="gal">
+        <div class="tile tall rv">
+          <video id="workClip" src="img/job-clip.mp4" poster="img/job-clip-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Video: a technician working overhead during a basement install."></video>
+          <span class="live"><i></i><span data-i18n="videoTag">Video</span></span>
+          <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w1">Basement install in progress</span></span>
+        </div>
+        <button type="button" class="tile tall rv" data-lb="0">
+          <img src="img/job-tie-in.jpg" alt="A new round duct section tied into the existing trunk line under the floor joists." loading="lazy">
+          <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w2">New duct tied into the trunk line</span></span>
+        </button>
+        <div class="gal-stack">
+          <button type="button" class="tile rv" data-lb="1">
+            <img src="img/job-staged.jpg" alt="New duct pipe and fittings staged on a table before installation." loading="lazy">
+            <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w3">Materials staged before the install</span></span>
+          </button>
+          <button type="button" class="tile rv" data-lb="2">
+            <img src="img/job-duct-run.jpg" alt="A new duct run between floor joists ending at a register." loading="lazy">
+            <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w4">New run between the joists to a register</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="lb" id="lightbox" aria-label="Photo viewer">
+    <img id="lbImg" src="" alt="">
+    <div class="lb-bar">
+      <span class="lb-cap" id="lbCap"></span>
+      <div class="lb-btns">
+        <button type="button" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button type="button" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        <button type="button" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+  </dialog>
 
   <section class="section area" id="area">
     <div class="wrap">
@@ -614,7 +697,9 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       g1:'Cooling & heating', g2:'Air & ventilation', g3:'Water heaters',
       i1:'Air conditioning installation', i2:'Central A/C systems', i3:'A/C tune-ups', i4:'All repairs & thermostats',
       i5:'Duct cleaning & replacement', i6:'Range, bath & dryer vent replacement and installation', i7:'Water heater replacement & installation',
-      svcCall:'Call and describe the issue', svcBook:'Book a visit', jobTag:'On the job', job1:'Heating work', job2:'Ductwork',
+      svcCall:'Call and describe the issue', svcBook:'Book a visit', jobTag:'On the job', job1:'Heating work', job2:'Basement install',
+      navWork:'Our work', workEyebrow:'Our work', workTitle:'Real jobs.<br><em>Real homes.</em>', workLead:'Photos and video straight from H. Cruz-Cruz job sites.', videoTag:'Video',
+      w1:'Basement install in progress', w2:'New duct tied into the trunk line', w3:'Materials staged before the install', w4:'New run between the joists to a register',
       areaEyebrow:'Service area', areaTitle:'Based in Indianapolis.<br><em>Close to home.</em>',
       areaLead:"Serving these Indiana communities. Call with your address and we'll confirm scheduling for your area.", homeBase:'Home base',
       bookEyebrow:'Book a visit', bookTitle:"Let's take a look<br><em>at your system.</em>",
@@ -647,7 +732,9 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       g1:'Aire y calefacción', g2:'Ductos y ventilación', g3:'Calentadores de agua',
       i1:'Instalación de aire acondicionado', i2:'Sistemas de A/C central', i3:'Mantenimiento de A/C', i4:'Todo tipo de reparaciones y termostatos',
       i5:'Limpieza y reemplazo de ductos', i6:'Reemplazo e instalación de extractores de cocina, baño y secadora', i7:'Reemplazo e instalación de calentadores de agua',
-      svcCall:'Llame y describa el problema', svcBook:'Agendar visita', jobTag:'En el trabajo', job1:'Calefacción', job2:'Ductos',
+      svcCall:'Llame y describa el problema', svcBook:'Agendar visita', jobTag:'En el trabajo', job1:'Calefacción', job2:'Instalación en sótano',
+      navWork:'Trabajos', workEyebrow:'Nuestro trabajo', workTitle:'Trabajos reales.<br><em>Hogares reales.</em>', workLead:'Fotos y video directamente de los trabajos de H. Cruz-Cruz.', videoTag:'Video',
+      w1:'Instalación en un sótano, en progreso', w2:'Ducto nuevo conectado a la línea principal', w3:'Material listo antes de instalar', w4:'Ducto nuevo entre las vigas hasta la rejilla',
       areaEyebrow:'Área de servicio', areaTitle:'Desde Indianápolis.<br><em>Cerca de usted.</em>',
       areaLead:'Atendemos estas comunidades de Indiana. Llame con su dirección y confirmamos el horario para su zona.', homeBase:'Base',
       bookEyebrow:'Agendar visita', bookTitle:'Revisemos<br><em>su sistema.</em>',
@@ -744,7 +831,33 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
 
     gsap.utils.toArray('.rv').forEach(el => {
       gsap.to(el, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } });
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
+        onComplete() { el.classList.remove('rv'); gsap.set(el, { clearProps: 'transform,opacity' }); } });
+    });
+  }
+
+  const clip = document.getElementById('workClip');
+  if (reduce) { clip.removeAttribute('autoplay'); clip.pause(); clip.controls = true; }
+
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+  const lbTiles = Array.from(document.querySelectorAll('[data-lb]'));
+  let lbIdx = 0;
+  function showLb(i) {
+    lbIdx = (i + lbTiles.length) % lbTiles.length;
+    const t = lbTiles[lbIdx], img = t.querySelector('img');
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lbCap.textContent = t.querySelector('.cap span').textContent;
+  }
+  if (typeof lb.showModal === 'function') {
+    lbTiles.forEach((t, i) => t.addEventListener('click', () => { showLb(i); lb.showModal(); }));
+    document.getElementById('lbPrev').addEventListener('click', () => showLb(lbIdx - 1));
+    document.getElementById('lbNext').addEventListener('click', () => showLb(lbIdx + 1));
+    document.getElementById('lbClose').addEventListener('click', () => lb.close());
+    lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+    lb.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') showLb(lbIdx - 1);
+      if (e.key === 'ArrowRight') showLb(lbIdx + 1);
     });
   }
 
