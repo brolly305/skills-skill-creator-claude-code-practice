@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H. Cruz-Cruz LLC | HVAC Heating &amp; Cooling, Indianapolis IN</title>
+<meta name="description" content="H. Cruz-Cruz LLC — licensed and insured HVAC heating, cooling and plumbing services around Indianapolis, Lebanon, Frankfort, Lafayette, West Lafayette, Marion, Anderson, Columbus and Seymour, Indiana. Se habla espanol.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#111c2b;
+    --navy-800:#1c2b3a;
+    --navy-700:#263a4d;
+    --tan-500:#b8926b;
+    --tan-400:#c9a683;
+    --cream-50:#f6f2ea;
+    --cream-100:#efe8db;
+    --leaf-600:#3f6b4a;
+    --leaf-500:#4f7e5a;
+    --ink-900:#1a1611;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--cream-50);
+    color:var(--ink-900);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    letter-spacing:-0.02em;
+    line-height:1.05;
+  }
+  .tracking-tightest{letter-spacing:-0.03em}
+  .scene{position:relative;height:100vh;overflow:hidden}
+  .scene-media{position:absolute;inset:0}
+  .scene-media img{
+    width:100%;height:100%;object-fit:cover;
+    transform:scale(1.14);
+    will-change:transform;
+  }
+  .scene-scrim{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(to top, rgba(17,28,43,.92) 0%, rgba(17,28,43,.55) 38%, rgba(17,28,43,.15) 65%, rgba(17,28,43,.35) 100%);
+  }
+  .scene-content{
+    position:relative;z-index:2;height:100%;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:2.5rem 1.5rem 4rem;
+    max-width:64rem;margin:0 auto;
+    opacity:0;transform:translateY(24px);
+  }
+  @media(min-width:768px){
+    .scene-content{padding:3rem 3rem 6rem}
+  }
+  .scene-num{
+    font-family:'Fraunces',serif;
+    font-variant-numeric:tabular-nums;
+    color:var(--tan-400);
+    font-size:.85rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:.75rem;
+  }
+  .no-motion .scene-content{opacity:1;transform:none}
+  .no-motion .scene-media img{transform:scale(1)}
+  @media (prefers-reduced-motion: reduce){
+    .scene-content{opacity:1 !important;transform:none !important}
+    .scene-media img{transform:scale(1) !important}
+  }
+
+  .shadow-soft{
+    box-shadow: 0 1px 2px rgba(26,22,17,.06), 0 12px 32px -12px rgba(26,22,17,.18), 0 2px 6px -2px rgba(63,107,74,.12);
+  }
+  .shadow-lift{
+    box-shadow: 0 2px 4px rgba(26,22,17,.08), 0 24px 48px -16px rgba(17,28,43,.35);
+  }
+  .btn{
+    transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1), background-color .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn:active{transform:translateY(0px) scale(.98)}
+  .btn:focus-visible{outline:2px solid var(--leaf-500);outline-offset:3px}
+
+  .card-float{transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s cubic-bezier(.16,1,.3,1)}
+  .card-float:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(26,22,17,.08), 0 30px 50px -18px rgba(17,28,43,.28)}
+
+  .grain{position:relative}
+  .grain::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .link-underline{position:relative}
+  .link-underline::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;
+    background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.16,1,.3,1);
+  }
+  .link-underline:hover::after,.link-underline:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+  input,textarea{
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  input:focus,textarea:focus{
+    outline:none;border-color:var(--leaf-600);box-shadow:0 0 0 3px rgba(79,126,90,.15);
+  }
+</style>
+</head>
+<body class="no-motion">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-[var(--cream-50)]/90 backdrop-blur-sm border-b border-[var(--tan-500)]/20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 24L24 8L42 24" stroke="var(--tan-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 20V40H37V20" stroke="var(--tan-500)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="20" y="26" width="5" height="5" stroke="var(--tan-500)" stroke-width="2"/>
+        <path d="M17 30C17 33 19.5 35.5 22.5 34.8C23.5 37.5 27 37.8 28.3 35.2C31 36 33 33.5 31.8 31" stroke="var(--leaf-600)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="font-semibold text-[var(--navy-900)] text-[15px] leading-tight">H. Cruz-Cruz <span class="text-[var(--leaf-600)]">LLC</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--navy-800)]">
+      <a href="#services" class="link-underline">Services</a>
+      <a href="#area" class="link-underline">Service Area</a>
+      <a href="#quote" class="link-underline">Request a Quote</a>
+    </nav>
+    <a href="tel:+13179376310" class="btn shadow-soft bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white text-sm font-semibold px-4 py-2.5 rounded-full">
+      (317) 937-6310
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="journey">
+    <section class="scene" data-scene="1">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_01f70138-7703-46de-9e66-b8a073f0dcb0.png" alt="Empty rooftop HVAC curb frame at sunset, foundation set before installation begins" loading="eager"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content">
+        <div class="scene-num">01 — Foundation</div>
+        <h1 class="text-white text-[2.5rem] md:text-6xl font-semibold tracking-tightest mb-3">Comfort, built<br>from the ground up.</h1>
+        <p class="text-white/85 text-base md:text-lg max-w-xl">H. Cruz-Cruz LLC. Licensed and insured HVAC heating, cooling and plumbing services around Indianapolis. Se habla espanol.</p>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="2">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001835_0dc201ca-0da2-4a99-ab1f-3d00f9c05653.png" alt="HVAC unit frame partially assembled on a rooftop at sunset" loading="lazy"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content">
+        <div class="scene-num">02 — The Build</div>
+        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Every install done right,<br>panel by panel.</h2>
+        <p class="text-white/85 text-base md:text-lg max-w-xl">Central A/C systems, installations and tune-ups, handled with the same care whether it's a small repair or a full system.</p>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="3">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_7d8f7c24-d7de-438b-98a4-134e7fc8b887.png" alt="Technician working inside an open HVAC electrical panel at sunset" loading="lazy"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content">
+        <div class="scene-num">03 — The Details</div>
+        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Wiring, thermostats,<br>and everything between.</h2>
+        <p class="text-white/85 text-base md:text-lg max-w-xl">Repairs, thermostats, duct cleaning and replacement — the detail work that keeps a system reliable for years.</p>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="4">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_e3142987-97dc-410b-86a4-abe4e169abf4.png" alt="Technician checking refrigerant pressure gauges on an HVAC unit" loading="lazy"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content">
+        <div class="scene-num">04 — The Check</div>
+        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Nothing leaves until<br>the numbers are right.</h2>
+        <p class="text-white/85 text-base md:text-lg max-w-xl">Pressure, airflow, and system performance checked before any job is called finished.</p>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="5">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_72f0bb31-3f1c-4ccb-a5f3-fd807d761577.png" alt="Two technicians fastening the final access panel onto a completed HVAC unit" loading="lazy"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content">
+        <div class="scene-num">05 — The Close-Out</div>
+        <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Range, bath, and dryer vents.<br>Water heaters, too.</h2>
+        <p class="text-white/85 text-base md:text-lg max-w-xl">Plumbing and venting work finished to the same standard as the HVAC systems we install.</p>
+      </div>
+    </section>
+
+    <section class="scene" data-scene="6">
+      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_a1b6d49a-f04e-4852-9a60-0fe4157b70ec.png" alt="Completed HVAC unit on a rooftop at sunset with a technician reviewing a checklist" loading="lazy"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-content items-center text-center">
+        <div class="scene-num">06 — Ready</div>
+        <h2 class="text-white text-3xl md:text-6xl font-semibold tracking-tightest mb-5">Ready for whatever<br>the season brings.</h2>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="tel:+13179376310" class="btn shadow-lift bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-3.5 rounded-full">Call (317) 937-6310</a>
+          <a href="#quote" class="btn shadow-lift bg-white/95 hover:bg-white text-[var(--navy-900)] font-semibold px-6 py-3.5 rounded-full">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="relative grain py-20 md:py-28 bg-[var(--cream-50)]">
+    <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
+      <div class="inline-flex items-center gap-2 text-[var(--leaf-600)] text-xs font-semibold tracking-[.18em] uppercase mb-4">
+        <span class="w-6 h-px bg-[var(--leaf-600)]"></span>H. Cruz-Cruz LLC<span class="w-6 h-px bg-[var(--leaf-600)]"></span>
+      </div>
+      <h2 class="display text-4xl md:text-6xl font-semibold tracking-tightest text-[var(--navy-900)] mb-6">
+        Air conditioning, heating,<br>and plumbing — <span class="italic text-[var(--leaf-600)]">bilingual, licensed, insured.</span>
+      </h2>
+      <p class="text-[var(--navy-800)]/75 text-lg max-w-2xl mx-auto">Se habla espanol and English. A family-run shop serving the Indianapolis area, built on word of mouth and work that holds up.</p>
+    </div>
+  </section>
+
+  <section id="services" class="relative py-20 md:py-28 bg-[var(--navy-950)]">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="mb-14 max-w-xl">
+        <div class="text-[var(--tan-400)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Services We Offer</div>
+        <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-white">Air conditioning, plumbing, and everything that keeps a home comfortable.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">Air Conditioning Installation</h3>
+          <p class="text-white/65 text-sm">New A/C systems installed and set up correctly from day one.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">Central A/C System</h3>
+          <p class="text-white/65 text-sm">Full central air conditioning systems for homes of any size.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">A/C Tune-Up</h3>
+          <p class="text-white/65 text-sm">Seasonal tune-ups to keep an existing system running efficiently.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">All Repairs &amp; Thermostats</h3>
+          <p class="text-white/65 text-sm">Diagnostics, repairs, and thermostat installation or replacement.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">Duct Cleaning &amp; Replacement</h3>
+          <p class="text-white/65 text-sm">Cleaning and replacing ductwork to keep airflow and air quality where it should be.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5">
+          <h3 class="text-white font-semibold text-lg mb-2">Range, Bath &amp; Dryer Vents</h3>
+          <p class="text-white/65 text-sm">Vent replacement and installation for ranges, bathrooms, and dryers.</p>
+        </div>
+        <div class="card-float shadow-soft bg-[var(--navy-800)] rounded-2xl p-7 border border-white/5 sm:col-span-2 lg:col-span-1">
+          <h3 class="text-white font-semibold text-lg mb-2">Water Heater Replacement</h3>
+          <p class="text-white/65 text-sm">Water heater replacement and installation, done right the first time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="relative py-20 md:py-28 bg-[var(--cream-100)]">
+    <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
+      <div class="text-[var(--leaf-600)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Service Area</div>
+      <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-[var(--navy-900)] mb-8">Centered in Indianapolis, serving the surrounding area.</h2>
+      <div class="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Indianapolis</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Lebanon</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Frankfort</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Lafayette</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">West Lafayette</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Marion</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Anderson</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Columbus</span>
+        <span class="shadow-soft bg-white px-4 py-2 rounded-full text-sm font-medium text-[var(--navy-800)]">Seymour</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" class="relative grain py-20 md:py-28 bg-[var(--navy-950)]">
+    <div class="max-w-5xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div>
+          <div class="text-[var(--tan-400)] text-xs font-semibold tracking-[.18em] uppercase mb-3">Book a Visit</div>
+          <h2 class="display text-3xl md:text-5xl font-semibold tracking-tightest text-white mb-5">Request a quote, or call to schedule a technician.</h2>
+          <p class="text-white/70 mb-8">Call or text (317) 937-6310 directly, or send the details below and we'll text you back to confirm a time. Licensed and insured. Se habla espanol.</p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+13179376310" class="btn shadow-lift bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-4 rounded-xl text-center">Call (317) 937-6310</a>
+            <a href="sms:+13179376310" class="btn shadow-soft bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-4 rounded-xl text-center">Text Us Instead</a>
+          </div>
+        </div>
+        <form id="quoteForm" class="shadow-lift bg-[var(--cream-50)] rounded-2xl p-7 md:p-8 flex flex-col gap-4">
+          <div>
+            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qName">Name</label>
+            <input id="qName" required type="text" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="Your name">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qPhone">Phone</label>
+            <input id="qPhone" required type="tel" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="(317) 555-0123">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qCity">City</label>
+            <input id="qCity" required type="text" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white" placeholder="Indianapolis, Lafayette, etc.">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-[var(--navy-800)] mb-1.5" for="qJob">What do you need looked at?</label>
+            <textarea id="qJob" required rows="3" class="w-full rounded-lg border border-[var(--navy-800)]/15 px-4 py-3 text-sm bg-white resize-none" placeholder="A/C not cooling, tune-up, water heater, etc."></textarea>
+          </div>
+          <button type="submit" class="btn shadow-soft bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-3.5 rounded-xl mt-1">Send Request by Text</button>
+          <p class="text-xs text-[var(--navy-800)]/60 -mt-1">Opens your messaging app with these details pre-filled, sent directly to (317) 937-6310.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[var(--navy-950)] border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-white/55 text-sm">
+      <div class="flex items-center gap-2.5">
+        <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 24L24 8L42 24" stroke="var(--tan-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11 20V40H37V20" stroke="var(--tan-400)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>H. Cruz-Cruz LLC — Licensed &amp; Insured</span>
+      </div>
+      <div>(317) 937-6310 · Se habla espanol · Indianapolis, IN area</div>
+    </div>
+  </footer>
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "H. Cruz-Cruz LLC",
+  "telephone": "+1-317-937-6310",
+  "description": "Licensed and insured HVAC heating, cooling and plumbing services, bilingual (English and Spanish), serving the Indianapolis, Indiana area.",
+  "areaServed": [
+    {"@type": "City", "name": "Indianapolis, IN"},
+    {"@type": "City", "name": "Lebanon, IN"},
+    {"@type": "City", "name": "Frankfort, IN"},
+    {"@type": "City", "name": "Lafayette, IN"},
+    {"@type": "City", "name": "West Lafayette, IN"},
+    {"@type": "City", "name": "Marion, IN"},
+    {"@type": "City", "name": "Anderson, IN"},
+    {"@type": "City", "name": "Columbus, IN"},
+    {"@type": "City", "name": "Seymour, IN"}
+  ],
+  "knowsLanguage": ["en", "es"],
+  "priceRange": "$$",
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Air Conditioning Installation"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Central A/C System"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "A/C Tune-Up"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Repairs & Thermostats"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Duct Cleaning & Replacement"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Range, Bath & Dryer Vent Replacement and Installation"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Water Heater Replacement and Installation"}}
+  ]
+}
+</script>
+
+<script>
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+    document.body.classList.remove('no-motion');
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll('.scene').forEach((scene) => {
+      const img = scene.querySelector('.scene-media img');
+      const content = scene.querySelector('.scene-content');
+
+      gsap.to(img, {
+        scale: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: scene,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+
+      gsap.to(content, {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: scene,
+          start: 'top 70%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+  } else {
+    document.body.classList.add('no-motion');
+  }
+
+  const quoteForm = document.getElementById('quoteForm');
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('qName').value.trim();
+    const phone = document.getElementById('qPhone').value.trim();
+    const city = document.getElementById('qCity').value.trim();
+    const job = document.getElementById('qJob').value.trim();
+    const body = `Quote request from ${name} (${phone}), ${city}. Need: ${job}`;
+    window.location.href = `sms:+13179376310?&body=${encodeURIComponent(body)}`;
+  });
+</script>
+
+</body>
+</html>
