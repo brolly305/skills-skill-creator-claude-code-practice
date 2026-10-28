@@ -77,6 +77,28 @@
     .scene-media img{transform:scale(1) !important}
   }
 
+  .scrub-section{position:relative;height:600vh}
+  .scrub-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+  .scrub-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .stage-caption{
+    position:absolute;inset:0;z-index:2;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:2.5rem 1.5rem 4rem;max-width:64rem;margin:0 auto;
+    opacity:0;transition:opacity .5s ease;pointer-events:none;
+  }
+  .stage-caption.active{opacity:1}
+  .stage-caption.center{align-items:center;text-align:center}
+  @media(min-width:768px){
+    .stage-caption{padding:3rem 3rem 6rem}
+  }
+  .stage-dots{position:absolute;right:1.25rem;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:.6rem}
+  .stage-dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.3);transition:background .3s ease,transform .3s ease}
+  .stage-dot.active{background:var(--tan-400);transform:scale(1.5)}
+  @media (prefers-reduced-motion: reduce){
+    .stage-caption{transition:none}
+    .stage-caption:first-child{opacity:1}
+  }
+
   .shadow-soft{
     box-shadow: 0 1px 2px rgba(26,22,17,.06), 0 12px 32px -12px rgba(26,22,17,.18), 0 2px 6px -2px rgba(63,107,74,.12);
   }
@@ -140,70 +162,60 @@
 
 <main id="top">
 
-  <div class="journey">
-    <section class="scene" data-scene="1">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_01f70138-7703-46de-9e66-b8a073f0dcb0.png" alt="Empty rooftop HVAC curb frame at sunset, foundation set before installation begins" loading="eager"></div>
+  <section class="scrub-section" id="scrollVideo">
+    <div class="scrub-sticky">
+      <video id="scrubVideo" class="scrub-video" src="SCRUB_VIDEO_URL" poster="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_01f70138-7703-46de-9e66-b8a073f0dcb0.png" muted autoplay loop playsinline preload="auto"></video>
       <div class="scene-scrim"></div>
-      <div class="scene-content">
+
+      <div class="stage-caption active" data-stage="0">
         <div class="scene-num">01 — Foundation</div>
         <h1 class="text-white text-[2.5rem] md:text-6xl font-semibold tracking-tightest mb-3">Comfort, built<br>from the ground up.</h1>
         <p class="text-white/85 text-base md:text-lg max-w-xl">H. Cruz-Cruz LLC. Licensed and insured HVAC heating, cooling and plumbing services around Indianapolis. Se habla espanol.</p>
       </div>
-    </section>
 
-    <section class="scene" data-scene="2">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001835_0dc201ca-0da2-4a99-ab1f-3d00f9c05653.png" alt="HVAC unit frame partially assembled on a rooftop at sunset" loading="lazy"></div>
-      <div class="scene-scrim"></div>
-      <div class="scene-content">
+      <div class="stage-caption" data-stage="1">
         <div class="scene-num">02 — The Build</div>
         <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Every install done right,<br>panel by panel.</h2>
         <p class="text-white/85 text-base md:text-lg max-w-xl">Central A/C systems, installations and tune-ups, handled with the same care whether it's a small repair or a full system.</p>
       </div>
-    </section>
 
-    <section class="scene" data-scene="3">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_7d8f7c24-d7de-438b-98a4-134e7fc8b887.png" alt="Technician working inside an open HVAC electrical panel at sunset" loading="lazy"></div>
-      <div class="scene-scrim"></div>
-      <div class="scene-content">
+      <div class="stage-caption" data-stage="2">
         <div class="scene-num">03 — The Details</div>
         <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Wiring, thermostats,<br>and everything between.</h2>
         <p class="text-white/85 text-base md:text-lg max-w-xl">Repairs, thermostats, duct cleaning and replacement — the detail work that keeps a system reliable for years.</p>
       </div>
-    </section>
 
-    <section class="scene" data-scene="4">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_e3142987-97dc-410b-86a4-abe4e169abf4.png" alt="Technician checking refrigerant pressure gauges on an HVAC unit" loading="lazy"></div>
-      <div class="scene-scrim"></div>
-      <div class="scene-content">
+      <div class="stage-caption" data-stage="3">
         <div class="scene-num">04 — The Check</div>
         <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Nothing leaves until<br>the numbers are right.</h2>
         <p class="text-white/85 text-base md:text-lg max-w-xl">Pressure, airflow, and system performance checked before any job is called finished.</p>
       </div>
-    </section>
 
-    <section class="scene" data-scene="5">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_72f0bb31-3f1c-4ccb-a5f3-fd807d761577.png" alt="Two technicians fastening the final access panel onto a completed HVAC unit" loading="lazy"></div>
-      <div class="scene-scrim"></div>
-      <div class="scene-content">
+      <div class="stage-caption" data-stage="4">
         <div class="scene-num">05 — The Close-Out</div>
         <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tightest mb-3">Range, bath, and dryer vents.<br>Water heaters, too.</h2>
         <p class="text-white/85 text-base md:text-lg max-w-xl">Plumbing and venting work finished to the same standard as the HVAC systems we install.</p>
       </div>
-    </section>
 
-    <section class="scene" data-scene="6">
-      <div class="scene-media"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EL6oNVV1tTsxDOFg9e7Fl9dGiZ/hf_20261028_001834_a1b6d49a-f04e-4852-9a60-0fe4157b70ec.png" alt="Completed HVAC unit on a rooftop at sunset with a technician reviewing a checklist" loading="lazy"></div>
-      <div class="scene-scrim"></div>
-      <div class="scene-content items-center text-center">
+      <div class="stage-caption center" data-stage="5">
         <div class="scene-num">06 — Ready</div>
         <h2 class="text-white text-3xl md:text-6xl font-semibold tracking-tightest mb-5">Ready for whatever<br>the season brings.</h2>
-        <div class="flex flex-wrap gap-3 justify-center">
+        <div class="flex flex-wrap gap-3 justify-center" style="pointer-events:auto">
           <a href="tel:+13179376310" class="btn shadow-lift bg-[var(--leaf-600)] hover:bg-[var(--leaf-500)] text-white font-semibold px-6 py-3.5 rounded-full">Call (317) 937-6310</a>
           <a href="#quote" class="btn shadow-lift bg-white/95 hover:bg-white text-[var(--navy-900)] font-semibold px-6 py-3.5 rounded-full">Request a Quote</a>
         </div>
       </div>
-    </section>
-  </div>
+
+      <div class="stage-dots" aria-hidden="true">
+        <span class="stage-dot active" data-dot="0"></span>
+        <span class="stage-dot" data-dot="1"></span>
+        <span class="stage-dot" data-dot="2"></span>
+        <span class="stage-dot" data-dot="3"></span>
+        <span class="stage-dot" data-dot="4"></span>
+        <span class="stage-dot" data-dot="5"></span>
+      </div>
+    </div>
+  </section>
 
   <section class="relative grain py-20 md:py-28 bg-[var(--cream-50)]">
     <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
@@ -359,40 +371,48 @@
 
 <script>
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const scrubVideo = document.getElementById('scrubVideo');
+  const captions = document.querySelectorAll('.stage-caption');
+  const dots = document.querySelectorAll('.stage-dot');
+
+  function setActiveStage(i) {
+    captions.forEach((c, idx) => c.classList.toggle('active', idx === i));
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+  }
+
+  let scrubEnabled = false;
 
   if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
     document.body.classList.remove('no-motion');
     gsap.registerPlugin(ScrollTrigger);
 
-    document.querySelectorAll('.scene').forEach((scene) => {
-      const img = scene.querySelector('.scene-media img');
-      const content = scene.querySelector('.scene-content');
-
-      gsap.to(img, {
-        scale: 1,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: scene,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
+    const armScrub = () => {
+      if (scrubEnabled || !scrubVideo.duration) return;
+      scrubEnabled = true;
+      scrubVideo.pause();
+      ScrollTrigger.create({
+        trigger: '#scrollVideo',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 0.5,
+        onUpdate(self) {
+          scrubVideo.currentTime = self.progress * scrubVideo.duration;
+          setActiveStage(Math.min(5, Math.floor(self.progress * 6)));
         }
       });
+    };
 
-      gsap.to(content, {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: scene,
-          start: 'top 70%',
-          toggleActions: 'play none none reverse'
-        }
-      });
-    });
+    scrubVideo.addEventListener('loadedmetadata', armScrub);
+    if (scrubVideo.readyState >= 1) armScrub();
+
+    // If the video can't be reached (e.g. a CDN hiccup), fall back to the
+    // autoplay/loop background with a static first caption rather than a
+    // scroll section with no visible motion at all.
+    setTimeout(() => { if (!scrubEnabled) setActiveStage(0); }, 4000);
+    scrubVideo.addEventListener('error', () => setActiveStage(0));
   } else {
     document.body.classList.add('no-motion');
+    setActiveStage(0);
   }
 
   const quoteForm = document.getElementById('quoteForm');
