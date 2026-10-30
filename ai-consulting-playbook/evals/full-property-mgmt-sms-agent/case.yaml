@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: full-property-mgmt-sms-agent
+expected_outcome: |
+  Full-track set of eight documents in clients/brightline/. Governance has a permission matrix, tenant data handling, an emergency/safety escalation path with named owners, and numbered rules that are cross-referenced in the build spec and eval plan. The cost model works per conversation with dated prices or confirm markers, shows today/3x/10x volumes, and has payback math with a sensitivity line. Facts not supplied by the user (ticket volumes, AppFolio API access, current costs) are marked for confirmation rather than invented.

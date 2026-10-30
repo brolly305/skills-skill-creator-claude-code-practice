@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: lite-hvac-website-booking
+expected_outcome: |
+  Lite-track deliverables for a two-person HVAC shop saved in clients/cruz-hvac/: an executive summary, discovery audit with a scored opportunity list, and an SOW with a plain-language section on data, testing and running costs, plus a short handoff. No invented call volumes, revenue or reviews: unknowns are marked for confirmation. Price options are anchored to the stated budget with visible math.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cost-question-junk-removal-chat
+expected_outcome: |
+  A single focused cost and ROI answer in clients/junk-chat/cost-answer.md, not a full 8-document packet. It gives a per-chat cost with dated sources or confirm markers on vendor prices, monthly cost at today/3x/10x volume, a value calculation using the stated 400 chats and 20% close rate with the missing average job value marked for confirmation, and payback with a sensitivity line.
