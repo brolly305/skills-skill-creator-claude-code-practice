@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>H. Cruz-Cruz LLC | Heating, Cooling &amp; Plumbing</title>
 <meta name="description" content="H. Cruz-Cruz LLC: licensed and insured heating, air conditioning and plumbing services for homes in Indianapolis and 11 surrounding Indiana cities. Se habla español.">
+<meta name="theme-color" content="#0c141e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="H. Cruz-Cruz LLC | Heating, Cooling &amp; Plumbing">
+<meta property="og:description" content="Heating, air conditioning and plumbing for homes in Indianapolis and 11 nearby Indiana cities. Se habla español.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
@@ -57,7 +61,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .btn svg{width:18px;height:18px;flex:none}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(0) scale(.97)}
-.btn:focus-visible,.link:focus-visible,.rail button:focus-visible,.lang button:focus-visible,.nav a:focus-visible,.card:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+.btn:focus-visible,.link:focus-visible,.rail button:focus-visible,.lang button:focus-visible,.nav a:focus-visible,.tile:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
 .btn-primary{background:var(--tan);color:#1a1209;box-shadow:0 10px 30px -10px rgba(217,171,124,.55),0 2px 6px rgba(0,0,0,.25)}
 .btn-primary:hover{background:#e4b98c;box-shadow:0 16px 40px -12px rgba(217,171,124,.65),0 2px 6px rgba(0,0,0,.25)}
 .btn-ghost{background:rgba(243,237,227,.08);color:var(--cream);box-shadow:inset 0 0 0 1px rgba(243,237,227,.22)}
@@ -169,31 +173,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .section-head p{color:var(--cream-dim);max-width:460px;justify-self:end}
 @media (max-width:860px){.section{padding:var(--s7) 0}.section-head{grid-template-columns:1fr;gap:var(--s3)}.section-head p{justify-self:start}}
 
-/* services */
-.services{background:linear-gradient(180deg,var(--ink-2),var(--ink))}
-.svc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s5);align-items:start}
-.svc-list{display:flex;flex-direction:column;gap:var(--s2)}
-.card{position:relative;background:linear-gradient(180deg,var(--panel-2),var(--panel));border-radius:20px;padding:var(--s4);box-shadow:var(--shadow-1);
-  transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
-.card-top{display:flex;align-items:baseline;gap:var(--s2);margin-bottom:var(--s2)}
-.card-top .k{font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;color:var(--tan)}
-.card h3{font-family:'Manrope',sans-serif;font-weight:600;font-size:clamp(20px,1.9vw,24px);letter-spacing:-.02em;line-height:1.2}
-.card ul{list-style:none;display:grid;gap:10px;margin-top:var(--s2)}
-.card li{display:flex;gap:12px;color:var(--cream-dim);font-size:15.5px;line-height:1.5}
-.card li::before{content:"";flex:none;width:14px;height:1px;background:var(--tan);margin-top:11px}
-.job{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);align-items:start}
-.job figure{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-2);background:var(--panel)}
-.job figure:first-child{margin-top:var(--s6)}
-.job img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--ease)}
-.job figure:hover img{transform:scale(1.04)}
-.job figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 45%);pointer-events:none}
-.job figure::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(184,146,107,.12);mix-blend-mode:multiply;pointer-events:none}
-.job figcaption{position:absolute;left:var(--s2);right:var(--s2);bottom:var(--s2);z-index:2;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;letter-spacing:.02em}
-.job figcaption small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--tan);font-weight:700;margin-bottom:2px}
-.svc-foot{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center;color:var(--cream-dim);font-size:15px}
-@media (max-width:960px){.svc-grid{grid-template-columns:1fr}.job figure:first-child{margin-top:0}}
-
 /* area */
 .area{background:var(--ink)}
 .cities{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -271,6 +250,165 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
 @media (max-width:960px){.book-grid{grid-template-columns:1fr}}
 @media (max-width:560px){form.quote{grid-template-columns:1fr}}
 
+/* house tour (services) */
+.tour{position:relative;padding:var(--s8) 0;background:radial-gradient(900px 520px at 30% 40%,rgba(217,171,124,.07),transparent 65%),linear-gradient(180deg,var(--ink-2),var(--ink))}
+.tour-grid{display:grid;grid-template-columns:1fr;gap:var(--s5)}
+.tour .wrap{max-width:1480px}
+.tour-art{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#0f1925,#0c141e);box-shadow:var(--shadow-2);max-width:980px;width:100%;margin:0 auto}
+.house{display:block;width:100%;height:auto}
+.house .sys,.house .h-struct,.house .hs{transition:opacity .55s ease}
+.house[data-active] .h-struct{opacity:.5}
+.house[data-active] .sys{opacity:.22}
+.house[data-active] .sys.on{opacity:1;filter:drop-shadow(0 0 8px rgba(217,171,124,.55))}
+.house .flow{opacity:0;transition:opacity .4s ease}
+.house .sys.on .flow{opacity:1}
+.house .sys.on .flow > *{animation:flowp 1.6s ease-in-out infinite}
+.house .sys.on .flow > :nth-child(2){animation-delay:.16s}.house .sys.on .flow > :nth-child(3){animation-delay:.32s}
+.house .sys.on .flow > :nth-child(4){animation-delay:.48s}.house .sys.on .flow > :nth-child(5){animation-delay:.64s}
+.house .sys.on .flow > :nth-child(6){animation-delay:.8s}.house .sys.on .flow > :nth-child(7){animation-delay:.96s}
+.house .sys.on .flow > :nth-child(8){animation-delay:1.12s}.house .sys.on .flow > :nth-child(9){animation-delay:1.28s}
+@keyframes flowp{0%,100%{opacity:.15}50%{opacity:1}}
+.hs{cursor:pointer;outline:none}
+.hs-dot{fill:var(--tan);transition:fill .2s ease}
+.hs text{fill:#1a1209;pointer-events:none}
+.hs-ring{fill:none;stroke:var(--tan);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 2.4s var(--ease) infinite}
+.hs:nth-child(2) .hs-ring{animation-delay:.3s}.hs:nth-child(3) .hs-ring{animation-delay:.6s}.hs:nth-child(4) .hs-ring{animation-delay:.9s}.hs:nth-child(5) .hs-ring{animation-delay:1.2s}.hs:nth-child(6) .hs-ring{animation-delay:1.5s}
+@keyframes ring{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2);opacity:0}}
+.hs:hover .hs-dot{fill:#f0cfa9}
+.hs:active .hs-dot{fill:#c99868}
+.hs:focus-visible .hs-dot{stroke:#f3ede3;stroke-width:3}
+.house[data-active] .hs{opacity:.3}
+.house[data-active] .hs.on{opacity:1}
+.tour-hint{position:absolute;left:18px;bottom:14px;font-family:'Manrope',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint)}
+.tour-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:var(--s2)}
+.tcard{background:linear-gradient(180deg,var(--panel-2),var(--panel));border-radius:20px;padding:var(--s4);box-shadow:var(--shadow-1)}
+.tcard[data-stop="0"]{grid-column:1/-1;background:none;box-shadow:none;padding:0 0 var(--s2)}
+.tcard h2{font-size:clamp(36px,4.4vw,62px);margin-top:18px}
+.tcard h3{font-size:clamp(26px,2.6vw,40px)}
+.tcard p{margin-top:var(--s2);color:var(--cream-dim);max-width:480px}
+.tnum{display:flex;align-items:center;gap:12px;margin-bottom:var(--s2);font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim)}
+.tnum b{color:var(--tan)}
+.tnum i{width:28px;height:1px;background:rgba(243,237,227,.3)}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:var(--s3) 0}
+.chips li{padding:8px 13px;border-radius:999px;background:rgba(243,237,227,.06);box-shadow:inset 0 0 0 1px var(--line);font-size:14px;line-height:1.35}
+.btn-sm{padding:12px 20px;font-size:14px}
+.tour-legend{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:10px 22px;margin-top:var(--s4);font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;color:var(--cream-dim)}
+.tour-legend b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--tan);color:#1a1209;font-size:12px;margin-right:6px}
+.tour-nav{display:none;align-items:center;gap:10px;margin-top:var(--s4)}
+.tdots{display:flex;gap:6px}
+.tdot,.tarrow{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:var(--cream-dim);box-shadow:inset 0 0 0 1px rgba(243,237,227,.18);transition:background-color .2s ease,color .2s ease,transform .3s var(--ease)}
+.tdot svg,.tarrow svg{width:16px;height:16px}
+.tdot:hover,.tarrow:hover{background:rgba(243,237,227,.1);color:var(--cream)}
+.tdot:active,.tarrow:active{transform:scale(.92)}
+.tdot:focus-visible,.tarrow:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+.tdot.on{background:var(--tan);color:#1a1209;box-shadow:none}
+.motion .tour{height:100svh;min-height:620px;padding:92px 0 28px;display:flex;align-items:center}
+.motion .tour-grid{grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:clamp(32px,4vw,64px);align-items:center;width:100%}
+.motion .tour-art{max-width:calc((100svh - 140px) * 1.4634)}
+.motion .tour-art{margin:0}
+.motion .tour-cards{display:grid;grid-template-columns:1fr}
+.motion .tcard{grid-area:1/1;background:none;box-shadow:none;padding:0;opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .45s ease,transform .7s var(--ease)}
+.motion .tcard.on{opacity:1;transform:none;pointer-events:auto}
+.motion .tour-nav{display:flex}
+@media (max-width:900px){
+  .motion .tour{padding:84px 0 104px;align-items:flex-start}
+  .motion .tour-grid{grid-template-columns:1fr;gap:18px}
+  .tour-art{border-radius:20px}
+  .tour-hint{display:none}
+  .tcard h2{font-size:34px}
+  .tcard h3{font-size:26px}
+  .tcard p{font-size:15px;line-height:1.55;margin-top:10px}
+  .chips{margin:14px 0}
+  .chips li{font-size:13px;padding:6px 11px}
+  .tour-legend{grid-template-columns:repeat(2,auto);font-size:13px;margin-top:var(--s3)}
+  .tour-nav{margin-top:18px}
+  .tdot,.tarrow{width:34px;height:34px}
+}
+@media (max-width:380px){.motion .tour-nav .tarrow{display:none}}
+
+/* work gallery CTA tile */
+.tile.cta{display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s4);background:radial-gradient(420px 320px at 80% 10%,rgba(217,171,124,.32),transparent 60%),linear-gradient(160deg,#1f3045,#152132)}
+.tile.cta::before,.tile.cta::after{display:none}
+.tile.cta h3{font-family:'Manrope',sans-serif;font-weight:600;font-size:clamp(24px,2.2vw,32px);letter-spacing:-.025em;line-height:1.1}
+.tile.cta p{margin:12px 0 22px;color:var(--cream-dim);font-size:15px;line-height:1.5}
+a.tile.cta:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+a.tile.cta:active{transform:translateY(-1px) scale(.99)}
+a.tile.cta:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+.tile.cta .go{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:12px 18px;border-radius:999px;background:var(--tan);color:#1a1209;font-family:'Manrope',sans-serif;font-weight:700;font-size:14px}
+.gal-row2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--s2);margin-top:var(--s2)}
+@media (max-width:760px){.gal-row2{grid-template-columns:1fr 1fr}.gal-row2 .cta{grid-column:1/-1;aspect-ratio:auto;min-height:260px}}
+
+/* how it works */
+.how{list-style:none;margin-top:var(--s4);display:grid;gap:14px;counter-reset:how}
+.how li{display:grid;grid-template-columns:34px 1fr;gap:14px;color:var(--cream-dim);font-size:15px;line-height:1.5}
+.how li::before{counter-increment:how;content:counter(how);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(217,171,124,.14);color:var(--tan);font-family:'Manrope',sans-serif;font-weight:700;font-size:13px}
+.how b{display:block;color:var(--cream);font-weight:600;margin-bottom:2px}
+
+/* quote wizard */
+.wiz{background:linear-gradient(180deg,rgba(27,42,62,.94),rgba(21,33,50,.94));border-radius:24px;padding:clamp(22px,3vw,40px);box-shadow:var(--shadow-2)}
+.wiz-top{display:flex;align-items:center;gap:16px;margin-bottom:var(--s3)}
+.wiz-step{font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);white-space:nowrap}
+.wiz-bar{flex:1;height:3px;background:rgba(243,237,227,.12);border-radius:3px;overflow:hidden}
+.wiz-bar i{display:block;height:100%;background:var(--tan);transform-origin:left;transform:scaleX(.25);transition:transform .5s var(--ease)}
+.wstep{border:0;min-width:0;display:none}
+.wstep.on{display:block;animation:stepin .5s var(--ease)}
+@keyframes stepin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.wq{font-family:'Manrope',sans-serif;font-weight:600;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.02em;line-height:1.2;margin-bottom:18px;padding:0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opts.one{grid-template-columns:1fr}
+.opt{position:relative;cursor:pointer;display:block}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt > span{display:flex;align-items:center;gap:12px;min-height:58px;padding:12px 16px;border-radius:14px;background:rgba(12,20,30,.45);box-shadow:inset 0 0 0 1px rgba(243,237,227,.14);transition:background-color .2s ease,box-shadow .2s ease,transform .3s var(--ease)}
+.opt b{font-weight:500;font-size:15px;line-height:1.3}
+.opt svg{width:22px;height:22px;color:var(--tan);flex:none}
+.opt:hover > span{box-shadow:inset 0 0 0 1px rgba(243,237,227,.34)}
+.opt:active > span{transform:scale(.98)}
+.opt input:checked + span{background:rgba(217,171,124,.14);box-shadow:inset 0 0 0 1.5px var(--tan)}
+.opt input:focus-visible + span{outline:2px solid var(--tan);outline-offset:2px}
+.urgent{margin-top:14px;padding:14px 16px;border-radius:14px;background:rgba(240,162,92,.12);box-shadow:inset 0 0 0 1px rgba(240,162,92,.38);display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:15px}
+.urgent[hidden]{display:none}
+.wiz-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wiz-err{color:#f3b38a;font-size:14px;margin-top:14px;min-height:20px}
+.wiz-nav{display:flex;justify-content:flex-end;gap:12px;margin-top:6px}
+.wiz-nav #wizBack{margin-right:auto}
+.wiz-nav [hidden]{display:none}
+.wiz-note{margin-top:16px;font-size:13px;color:var(--cream-faint);line-height:1.5}
+@media (max-width:560px){.wiz-fields{grid-template-columns:1fr}.opt > span{padding:10px 12px;gap:10px;min-height:54px}.opt b{font-size:14px}}
+@media (max-width:340px){.opts{grid-template-columns:1fr}}
+
+/* before you call */
+.help{background:var(--ink)}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.faq details{background:linear-gradient(180deg,var(--panel-2),var(--panel));border-radius:16px;box-shadow:var(--shadow-1)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Manrope',sans-serif;font-weight:600;font-size:17px;letter-spacing:-.01em;border-radius:16px;transition:color .2s ease}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;color:var(--tan);font-size:24px;font-weight:400;line-height:1;transition:transform .35s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--tan)}
+.faq summary:active{opacity:.75}
+.faq summary:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+.faq .a{padding:0 22px 22px;color:var(--cream-dim);font-size:15.5px;line-height:1.65}
+.faq .warn{box-shadow:var(--shadow-1),inset 3px 0 0 #f0a25c}
+.faq .warn summary{color:#f6c89f}
+@media (max-width:860px){.faq{grid-template-columns:1fr}}
+
+/* mobile action bar */
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;padding:6px;border-radius:999px;background:rgba(17,27,40,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 14px 40px -10px rgba(0,0,0,.65),inset 0 0 0 1px var(--line)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;transition:transform .3s var(--ease),background-color .2s ease}
+  .mbar a:hover{background:rgba(243,237,227,.08)}
+  .mbar a:active{transform:scale(.95)}
+  .mbar a:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+  .mbar .q{background:var(--tan);color:#1a1209}
+  .mbar .q:hover{background:#e4b98c}
+  .mbar svg{width:18px;height:18px}
+  body{padding-bottom:86px}
+  .stage-copy{padding-bottom:116px}
+  .illus-note{bottom:90px}
+}
+picture{display:contents}
+
 /* footer */
 .footer{border-top:1px solid var(--line);padding:var(--s6) 0 var(--s5);background:var(--ink)}
 .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s4);align-items:flex-start}
@@ -310,6 +448,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       <a href="#services" data-i18n="navServices">Services</a>
       <a href="#work" data-i18n="navWork">Our work</a>
       <a href="#area" data-i18n="navArea">Service area</a>
+      <a href="#help" data-i18n="navHelp">Help</a>
       <a href="#book" data-i18n="navBook">Book a visit</a>
     </nav>
     <div class="head-right">
@@ -330,7 +469,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     <div class="stack">
 
       <article class="stage" data-stage="0">
-        <div class="stage-media"><img src="img/stage-1.jpg" alt="An empty galvanized equipment curb on a rooftop at sunrise, ready for a new unit." fetchpriority="high"></div>
+        <div class="stage-media"><picture><source srcset="img/stage-1.webp" type="image/webp"><img src="img/stage-1.jpg" alt="An empty galvanized equipment curb on a rooftop at sunrise, ready for a new unit." fetchpriority="high"></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">Licensed &amp; insured · English &amp; Español</span></div>
@@ -349,7 +488,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </article>
 
       <article class="stage" data-stage="1">
-        <div class="stage-media"><img src="img/stage-2.jpg" alt="A steel HVAC unit frame assembled on the rooftop curb."></div>
+        <div class="stage-media"><picture><source srcset="img/stage-2.webp" type="image/webp"><img src="img/stage-2.jpg" alt="A steel HVAC unit frame assembled on the rooftop curb."></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="stage-num"><span class="n">02</span><span class="bar"></span><span class="eyebrow" data-i18n="s2Eyebrow">Structure</span></div>
@@ -360,7 +499,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </article>
 
       <article class="stage" data-stage="2">
-        <div class="stage-media"><img src="img/stage-3.jpg" alt="Two technicians installing coils and compressors inside the unit frame."></div>
+        <div class="stage-media"><picture><source srcset="img/stage-3.webp" type="image/webp"><img src="img/stage-3.jpg" alt="Two technicians installing coils and compressors inside the unit frame."></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="stage-num"><span class="n">03</span><span class="bar"></span><span class="eyebrow" data-i18n="s3Eyebrow">The heart</span></div>
@@ -371,7 +510,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </article>
 
       <article class="stage" data-stage="3">
-        <div class="stage-media"><img src="img/stage-4.jpg" alt="A technician working on the unit's open electrical and control panel."></div>
+        <div class="stage-media"><picture><source srcset="img/stage-4.webp" type="image/webp"><img src="img/stage-4.jpg" alt="A technician working on the unit's open electrical and control panel."></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="stage-num"><span class="n">04</span><span class="bar"></span><span class="eyebrow" data-i18n="s4Eyebrow">Controls</span></div>
@@ -382,7 +521,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </article>
 
       <article class="stage" data-stage="4">
-        <div class="stage-media"><img src="img/stage-5.jpg" alt="A technician reading refrigerant pressure gauges beside a diagnostic laptop."></div>
+        <div class="stage-media"><picture><source srcset="img/stage-5.webp" type="image/webp"><img src="img/stage-5.jpg" alt="A technician reading refrigerant pressure gauges beside a diagnostic laptop."></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="stage-num"><span class="n">05</span><span class="bar"></span><span class="eyebrow" data-i18n="s5Eyebrow">Tune-ups</span></div>
@@ -393,7 +532,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </article>
 
       <article class="stage" data-stage="5">
-        <div class="stage-media"><img src="img/stage-6.jpg" alt="A finished rooftop unit with a technician reviewing a checklist at sunset."></div>
+        <div class="stage-media"><picture><source srcset="img/stage-6.webp" type="image/webp"><img src="img/stage-6.jpg" alt="A finished rooftop unit with a technician reviewing a checklist at sunset."></picture></div>
         <div class="stage-scrim"></div>
         <div class="stage-copy">
           <div class="stage-num"><span class="n">06</span><span class="bar"></span><span class="eyebrow" data-i18n="s6Eyebrow">Ready</span></div>
@@ -430,55 +569,297 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     </div>
   </div>
 
-  <section class="section services grain" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow rv" data-i18n="svcEyebrow">What we do</div>
-          <h2 class="display rv" style="margin-top:20px" data-i18n-html="svcTitle">Seven services.<br><em>One call.</em></h2>
-        </div>
-        <p class="rv" data-i18n="svcLead">Not sure which one fits? Call and describe what's going on. We'll help you figure out the right next step.</p>
+  <section class="tour grain" id="services" aria-label="Services, system by system">
+    <div class="wrap tour-grid">
+      <div class="tour-art">
+        <svg class="house" viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="houseTitle">
+          <title id="houseTitle">Cutaway illustration of a home showing the outdoor A/C unit, furnace, thermostat, ductwork, kitchen, bathroom and dryer vents, and water heater.</title>
+          <defs>
+            <radialGradient id="hLamp" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#f0b77c" stop-opacity=".38"/>
+              <stop offset="1" stop-color="#f0b77c" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="hGlow" cx="50%" cy="45%" r="55%">
+              <stop offset="0" stop-color="#d9ab7c" stop-opacity=".10"/>
+              <stop offset="1" stop-color="#d9ab7c" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hSoil" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#18222f"/>
+              <stop offset="1" stop-color="#0f1722"/>
+            </linearGradient>
+            <linearGradient id="hRoof" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7d5f47"/>
+              <stop offset="1" stop-color="#5e4635"/>
+            </linearGradient>
+            <linearGradient id="hMetal" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8496ad"/>
+              <stop offset="1" stop-color="#5f7189"/>
+            </linearGradient>
+            <linearGradient id="hUnit" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#55698a"/>
+              <stop offset="1" stop-color="#3f5170"/>
+            </linearGradient>
+            <linearGradient id="hRoomA" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1e2c40"/>
+              <stop offset="1" stop-color="#243449"/>
+            </linearGradient>
+            <linearGradient id="hRoomB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#202f44"/>
+              <stop offset="1" stop-color="#27384e"/>
+            </linearGradient>
+            <linearGradient id="hBase" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1a2638"/>
+              <stop offset="1" stop-color="#162131"/>
+            </linearGradient>
+          </defs>
+        
+          <g id="scene">
+            <rect x="0" y="0" width="1200" height="820" fill="url(#hGlow)"/>
+            <g class="h-struct" fill="#f3ede3">
+              <circle cx="120" cy="120" r="1.4" opacity=".5"/><circle cx="260" cy="70" r="1.1" opacity=".4"/><circle cx="410" cy="150" r="1.2" opacity=".35"/>
+              <circle cx="760" cy="90" r="1.3" opacity=".45"/><circle cx="980" cy="160" r="1.1" opacity=".4"/><circle cx="1110" cy="80" r="1.5" opacity=".5"/>
+              <circle cx="1040" cy="300" r="1" opacity=".3"/><circle cx="70" cy="300" r="1" opacity=".3"/>
+              <path d="M1046 110a26 26 0 1 0 22 40a21 21 0 1 1-22-40z" fill="#e8dcc6" opacity=".55"/>
+            </g>
+        
+            <!-- tree -->
+            <g class="h-struct">
+              <rect x="140" y="496" width="12" height="100" rx="3" fill="#3d3127"/>
+              <circle cx="116" cy="490" r="32" fill="#2c533a"/>
+              <circle cx="180" cy="486" r="34" fill="#2c533a"/>
+              <circle cx="146" cy="460" r="48" fill="#3a6a49"/>
+              <circle cx="132" cy="446" r="18" fill="#457a55" opacity=".7"/>
+            </g>
+        
+            <!-- ground -->
+            <g class="h-struct">
+              <rect x="0" y="600" width="1200" height="220" fill="url(#hSoil)"/>
+              <rect x="0" y="593" width="1200" height="8" fill="#3f6b4a"/>
+              <g fill="#223044">
+                <circle cx="90" cy="660" r="3"/><circle cx="170" cy="720" r="2.5"/><circle cx="60" cy="760" r="2"/>
+                <circle cx="930" cy="680" r="3"/><circle cx="1010" cy="740" r="2.5"/><circle cx="1120" cy="660" r="2"/>
+                <circle cx="210" cy="780" r="2"/><circle cx="1090" cy="790" r="3"/>
+              </g>
+            </g>
+        
+            <!-- house shell -->
+            <g class="h-struct">
+              <polygon points="254,300 560,150 866,300" fill="#172232"/>
+              <polyline points="290,288 320,276 350,288 380,276 410,288 440,276 470,288 500,276 530,288 560,276 590,288 620,276 650,288 680,276 710,288 740,276 770,288 800,276 830,288" fill="none" stroke="#d9ab7c" stroke-opacity=".18" stroke-width="2"/>
+              <rect x="274" y="300" width="572" height="136" fill="url(#hRoomA)"/>
+              <rect x="274" y="448" width="572" height="140" fill="url(#hRoomB)"/>
+              <rect x="274" y="600" width="572" height="150" fill="url(#hBase)"/>
+              <!-- windows -->
+              <g>
+                <rect x="372" y="326" width="80" height="58" rx="3" fill="#24425c"/>
+                <path d="M412 326v58M372 355h80" stroke="#1a2d40" stroke-width="3"/>
+                <rect x="430" y="470" width="82" height="60" rx="3" fill="#24425c"/>
+                <path d="M471 470v60M430 500h82" stroke="#1a2d40" stroke-width="3"/>
+                <rect x="752" y="610" width="50" height="22" rx="2" fill="#1f3a52"/>
+              </g>
+              <!-- walls & slabs -->
+              <rect x="600" y="300" width="10" height="136" fill="#2b3b53"/>
+              <rect x="560" y="448" width="10" height="140" fill="#2b3b53"/>
+              <rect x="250" y="288" width="620" height="12" fill="#34475f"/>
+              <rect x="260" y="436" width="600" height="12" fill="#34475f"/>
+              <rect x="260" y="588" width="600" height="12" fill="#34475f"/>
+              <rect x="260" y="750" width="600" height="14" fill="#2c3d54"/>
+              <rect x="260" y="288" width="14" height="312" fill="#2f4058"/>
+              <rect x="846" y="288" width="14" height="312" fill="#2f4058"/>
+              <rect x="260" y="600" width="14" height="164" fill="#26354a"/>
+              <rect x="846" y="600" width="14" height="164" fill="#26354a"/>
+              <!-- chimney (behind roof) -->
+              <rect x="798" y="194" width="32" height="80" fill="#5a4336"/>
+              <path d="M798 210h32M798 226h32M798 242h32M814 194v16M806 210v16M822 210v16M814 226v16" stroke="#7a5c48" stroke-width="1.5"/>
+              <rect x="792" y="187" width="44" height="9" rx="2" fill="#6b5241"/>
+              <!-- roof -->
+              <polygon points="228,304 560,126 892,304 866,304 560,150 254,304" fill="url(#hRoof)"/>
+              <polyline points="228,304 560,126 892,304" fill="none" stroke="#d9ab7c" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+        
+            <!-- warm interior light -->
+            <g class="h-struct">
+              <ellipse cx="452" cy="530" rx="90" ry="60" fill="url(#hLamp)"/>
+              <ellipse cx="652" cy="520" rx="70" ry="60" fill="url(#hLamp)"/>
+              <ellipse cx="490" cy="392" rx="60" ry="48" fill="url(#hLamp)"/>
+              <path d="M452 588V512" stroke="#4b5f7c" stroke-width="3"/><path d="M440 512h24l-4-14h-16z" fill="#f0c48f"/>
+              <path d="M652 448v14" stroke="#4b5f7c" stroke-width="2"/><path d="M640 474h24l-4-12h-16z" fill="#f0c48f"/>
+              <rect x="478" y="414" width="22" height="22" rx="3" fill="#33475f"/><path d="M482 414h14l-3-10h-8z" fill="#f0c48f"/>
+            </g>
+        
+            <!-- furniture -->
+            <g class="h-struct" fill="#33475f">
+              <rect x="296" y="400" width="176" height="36" rx="6"/>
+              <rect x="296" y="378" width="12" height="58" rx="3"/>
+              <rect x="312" y="392" width="42" height="14" rx="5" fill="#3e5574"/>
+              <rect x="740" y="402" width="104" height="34" rx="10"/>
+              <rect x="648" y="402" width="30" height="34" rx="6"/>
+              <rect x="652" y="380" width="22" height="26" rx="4"/>
+              <rect x="632" y="330" width="56" height="40" rx="4" fill="#2a3d55"/>
+              <rect x="298" y="552" width="118" height="36" rx="8"/>
+              <rect x="292" y="540" width="22" height="48" rx="6"/>
+              <rect x="400" y="540" width="22" height="48" rx="6"/>
+              <rect x="600" y="548" width="246" height="40" fill="#2f4259"/>
+              <rect x="600" y="472" width="92" height="30" rx="2" fill="#2f4259"/>
+              <rect x="770" y="472" width="76" height="30" rx="2" fill="#2f4259"/>
+              <rect x="700" y="548" width="60" height="40" fill="#43587a"/>
+              <path d="M708 552h18M734 552h18" stroke="#1f2c3e" stroke-width="3" stroke-linecap="round"/>
+            </g>
+        
+            <!-- 4. DUCTS -->
+            <g class="sys" id="sys-ducts">
+              <rect x="400" y="606" width="262" height="22" rx="3" fill="url(#hMetal)"/>
+              <path d="M440 606v22M480 606v22M520 606v22M600 606v22M640 606v22" stroke="#4d5e75" stroke-width="1.5"/>
+              <rect x="555" y="440" width="15" height="168" fill="url(#hMetal)"/>
+              <rect x="425" y="598" width="14" height="10" fill="#6f8299"/>
+              <rect x="623" y="598" width="14" height="10" fill="#6f8299"/>
+              <g fill="#14202e"><rect x="410" y="585" width="44" height="5" rx="1"/><rect x="608" y="585" width="44" height="5" rx="1"/><rect x="540" y="433" width="44" height="5" rx="1"/></g>
+              <g class="flow" fill="none" stroke="#9fd3f0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M470 611l6 6-6 6"/><path d="M500 611l6 6-6 6"/><path d="M590 611l6 6-6 6"/><path d="M620 611l6 6-6 6"/>
+                <path d="M557 570l5-6 5 6"/><path d="M557 530l5-6 5 6"/><path d="M557 490l5-6 5 6"/>
+                <path d="M424 578q8-8 16 0"/><path d="M622 578q8-8 16 0"/><path d="M554 426q8-8 16 0"/>
+              </g>
+            </g>
+        
+            <!-- 3. THERMOSTAT -->
+            <g class="sys" id="sys-thermo">
+              <path d="M524 524V626" stroke="#d9ab7c" stroke-width="2" stroke-dasharray="4 4" opacity=".55"/>
+              <rect x="513" y="494" width="22" height="30" rx="4" fill="#c9d3df"/>
+              <rect x="517" y="499" width="14" height="10" rx="1.5" fill="#1d2b3d"/>
+              <circle cx="524" cy="516" r="3" fill="#8ea0b5"/>
+              <g class="flow"><rect x="519" y="501" width="10" height="6" rx="1" fill="#d9ab7c"/></g>
+            </g>
+        
+            <!-- 2. FURNACE -->
+            <g class="sys" id="sys-heat">
+              <rect x="504" y="628" width="70" height="34" rx="2" fill="#5a6e8e"/>
+              <path d="M508 636h62M508 646h62M508 656h62" stroke="#43577a" stroke-width="1.2"/>
+              <rect x="500" y="660" width="78" height="90" rx="4" fill="url(#hUnit)" stroke="#8ea0b5" stroke-width="1.5"/>
+              <rect x="510" y="670" width="58" height="34" rx="2" fill="#3a4c69"/>
+              <rect x="510" y="710" width="58" height="32" rx="2" fill="#3a4c69"/>
+              <rect x="530" y="684" width="18" height="8" rx="2" fill="#1b2738"/>
+              <g class="flow"><rect x="532" y="685.5" width="14" height="5" rx="1.5" fill="#f0a25c"/><path d="M533 700q6-10 12 0" stroke="#f0a25c" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+            </g>
+        
+            <!-- 1. COOLING -->
+            <g class="sys" id="sys-cool">
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M918 564H872V594H600V640H574" stroke="#c58a5b" stroke-width="5"/>
+                <path d="M918 574H880V598H606V650H574" stroke="#d9a07a" stroke-width="2.5"/>
+              </g>
+              <rect x="908" y="590" width="128" height="9" rx="2" fill="#3a4b62"/>
+              <rect x="918" y="508" width="108" height="84" rx="7" fill="url(#hUnit)" stroke="#8ea0b5" stroke-width="1.5"/>
+              <path d="M928 524h88M928 532h88M928 540h88M928 548h88M928 556h88M928 564h88M928 572h88M928 580h88" stroke="#30405a" stroke-width="2"/>
+              <ellipse cx="972" cy="507" rx="46" ry="6" fill="#30405a" stroke="#8ea0b5" stroke-width="1.2"/>
+              <g class="flow" fill="none" stroke="#d9ab7c" stroke-width="2" stroke-linecap="round">
+                <path d="M950 494q4-8 0-16"/><path d="M972 492q4-8 0-16"/><path d="M994 494q4-8 0-16"/>
+              </g>
+            </g>
+        
+            <!-- 5. VENTS -->
+            <g class="sys" id="sys-vents">
+              <path d="M322 688V592H246" fill="none" stroke="#7d8fa6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="290" y="688" width="64" height="62" rx="6" fill="#c9d3df"/>
+              <circle cx="322" cy="721" r="17" fill="#8ea0b5" stroke="#5f7189" stroke-width="3"/>
+              <rect x="236" y="582" width="14" height="22" rx="2" fill="#8ea0b5"/>
+              <polygon points="700,502 760,502 748,482 712,482" fill="#8ea0b5"/>
+              <path d="M730 482V462H862" fill="none" stroke="#7d8fa6" stroke-width="10" stroke-linejoin="round"/>
+              <rect x="862" y="452" width="14" height="20" rx="2" fill="#8ea0b5"/>
+              <rect x="700" y="300" width="40" height="7" rx="1.5" fill="#8ea0b5"/>
+              <path d="M720 300V214" stroke="#7d8fa6" stroke-width="9"/>
+              <path d="M708 214h24l-4-10h-16z" fill="#8ea0b5"/>
+              <g class="flow" fill="none" stroke="#c9d3df" stroke-width="2" stroke-linecap="round">
+                <path d="M230 588q-8 4-14 0"/><path d="M228 598q-10 4-18 0"/>
+                <path d="M882 458q8 4 14 0"/><path d="M884 468q10 4 18 0"/>
+                <path d="M716 196q4-6 0-12"/><path d="M726 194q4-6 0-12"/>
+              </g>
+            </g>
+        
+            <!-- 6. WATER HEATER -->
+            <g class="sys" id="sys-water">
+              <path d="M716 652V640H814V276" fill="none" stroke="#56687f" stroke-width="7" stroke-linejoin="round"/>
+              <path d="M702 652V602" stroke="#7cb4dc" stroke-width="4"/>
+              <path d="M730 652V602" stroke="#e39a6a" stroke-width="4"/>
+              <rect x="690" y="650" width="54" height="100" rx="14" fill="url(#hUnit)" stroke="#8ea0b5" stroke-width="1.5"/>
+              <rect x="708" y="722" width="18" height="10" rx="2" fill="#1b2738"/>
+              <g class="flow"><rect x="710" y="724" width="14" height="6" rx="1.5" fill="#f0a25c"/><path d="M730 640v-0" /></g>
+            </g>
+        
+            <!-- hotspots -->
+            <g id="hotspots" font-family="Manrope, sans-serif" font-weight="700" font-size="13" text-anchor="middle">
+              <g class="hs" data-stop="1" transform="translate(972 552)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">1</text></g></g>
+              <g class="hs" data-stop="2" transform="translate(539 727)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">2</text></g></g>
+              <g class="hs" data-stop="3" transform="translate(524 474)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">3</text></g></g>
+              <g class="hs" data-stop="4" transform="translate(470 650)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">4</text></g></g>
+              <g class="hs" data-stop="5" transform="translate(730 520)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">5</text></g></g>
+              <g class="hs" data-stop="6" transform="translate(717 700)"><g class="hs-in"><circle class="hs-ring" r="16"/><circle class="hs-dot" r="13"/><text y="4.5">6</text></g></g>
+            </g>
+          </g>
+        </svg>
+        <span class="tour-hint" data-i18n="tourHint">Tap a number</span>
       </div>
-
-      <div class="svc-grid">
-        <div class="svc-list">
-          <div class="card rv">
-            <div class="card-top"><span class="k">01</span><h3 data-i18n="g1">Cooling &amp; heating</h3></div>
-            <ul>
-              <li data-i18n="i1">Air conditioning installation</li>
-              <li data-i18n="i2">Central A/C systems</li>
-              <li data-i18n="i3">A/C tune-ups</li>
-              <li data-i18n="i4">All repairs &amp; thermostats</li>
-            </ul>
-          </div>
-          <div class="card rv">
-            <div class="card-top"><span class="k">02</span><h3 data-i18n="g2">Air &amp; ventilation</h3></div>
-            <ul>
-              <li data-i18n="i5">Duct cleaning &amp; replacement</li>
-              <li data-i18n="i6">Range, bath &amp; dryer vent replacement and installation</li>
-            </ul>
-          </div>
-          <div class="card rv">
-            <div class="card-top"><span class="k">03</span><h3 data-i18n="g3">Water heaters</h3></div>
-            <ul>
-              <li data-i18n="i7">Water heater replacement &amp; installation</li>
-            </ul>
-          </div>
-          <div class="svc-foot rv">
-            <a class="link" href="tel:+13179376310"><span data-i18n="svcCall">Call and describe the issue</span> <span aria-hidden="true">→</span></a>
-            <a class="link" href="#book"><span data-i18n="svcBook">Book a visit</span> <span aria-hidden="true">→</span></a>
-          </div>
+      <div class="tour-panel">
+        <div class="tour-cards" aria-live="polite">
+          <article class="tcard" data-stop="0">
+            <div class="eyebrow" data-i18n="svcEyebrow">What we do</div>
+            <h2 class="display" data-i18n-html="c0Title">Your home,<br><em>system by system.</em></h2>
+            <p data-i18n="c0Body">Everything we work on, from the unit outside to the water heater in the basement. Keep scrolling for the tour, or tap a number.</p>
+            <div class="tour-legend">
+              <span><b>1</b> <span data-i18n="c1Tag">Cooling</span></span><span><b>2</b> <span data-i18n="c2Tag">Heating</span></span><span><b>3</b> <span data-i18n="c3Tag">Thermostats</span></span>
+              <span><b>4</b> <span data-i18n="c4Tag">Ductwork</span></span><span><b>5</b> <span data-i18n="c5Tag">Vents</span></span><span><b>6</b> <span data-i18n="c6Tag">Water heaters</span></span>
+            </div>
+          </article>
+          <article class="tcard" data-stop="1">
+            <div class="tnum"><b>01</b><i></i><span data-i18n="c1Tag">Cooling</span></div>
+            <h3 class="display" data-i18n-html="c1Title">The unit outside,<br><em>and what it feeds.</em></h3>
+            <p data-i18n="c1Body">New systems installed and set up right, and seasonal tune-ups that keep an existing one running efficiently.</p>
+            <ul class="chips"><li data-i18n="i1">Air conditioning installation</li><li data-i18n="i2">Central A/C systems</li><li data-i18n="i3">A/C tune-ups</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="nocool"><span data-i18n="cReq">Request this service</span></a>
+          </article>
+          <article class="tcard" data-stop="2">
+            <div class="tnum"><b>02</b><i></i><span data-i18n="c2Tag">Heating</span></div>
+            <h3 class="display" data-i18n-html="c2Title">The furnace that gets you<br><em>through winter.</em></h3>
+            <p data-i18n="c2Body">When the house won't warm up, the furnace short-cycles, or something just sounds wrong, we diagnose and repair it.</p>
+            <ul class="chips"><li data-i18n="i4">All repairs &amp; thermostats</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="noheat"><span data-i18n="cReq">Request this service</span></a>
+          </article>
+          <article class="tcard" data-stop="3">
+            <div class="tnum"><b>03</b><i></i><span data-i18n="c3Tag">Thermostats</span></div>
+            <h3 class="display" data-i18n-html="c3Title">Where a lot of<br><em>problems start.</em></h3>
+            <p data-i18n="c3Body">A system that won't turn on or won't hold temperature is often a thermostat or wiring issue. We repair and replace them.</p>
+            <ul class="chips"><li data-i18n="i4">All repairs &amp; thermostats</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="thermo"><span data-i18n="cReq">Request this service</span></a>
+          </article>
+          <article class="tcard" data-stop="4">
+            <div class="tnum"><b>04</b><i></i><span data-i18n="c4Tag">Ductwork</span></div>
+            <h3 class="display" data-i18n-html="c4Title">Every room depends<br><em>on the ducts.</em></h3>
+            <p data-i18n="c4Body">Dirty, leaking or crushed ducts leave rooms at the end of the line too hot or too cold. We clean and replace them.</p>
+            <ul class="chips"><li data-i18n="i5">Duct cleaning &amp; replacement</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="ducts"><span data-i18n="cReq">Request this service</span></a>
+          </article>
+          <article class="tcard" data-stop="5">
+            <div class="tnum"><b>05</b><i></i><span data-i18n="c5Tag">Vents</span></div>
+            <h3 class="display" data-i18n-html="c5Title">Moisture, heat and lint,<br><em>out of the house.</em></h3>
+            <p data-i18n="c5Body">Kitchen range hoods, bathroom fans and dryer vents, replaced and installed so they vent outside the way they should.</p>
+            <ul class="chips"><li data-i18n="i6">Range, bath &amp; dryer vent replacement and installation</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="ducts"><span data-i18n="cReq">Request this service</span></a>
+          </article>
+          <article class="tcard" data-stop="6">
+            <div class="tnum"><b>06</b><i></i><span data-i18n="c6Tag">Water heaters</span></div>
+            <h3 class="display" data-i18n-html="c6Title">Hot water,<br><em>back on.</em></h3>
+            <p data-i18n="c6Body">No hot water, a leak at the base, or a tank at the end of its life. We replace and install water heaters.</p>
+            <ul class="chips"><li data-i18n="i7">Water heater replacement &amp; installation</li></ul>
+            <a class="btn btn-primary btn-sm" href="#book" data-need="water"><span data-i18n="cReq">Request this service</span></a>
+          </article>
         </div>
-
-        <div class="job">
-          <figure class="rv">
-            <img src="img/job-furnace.jpg" alt="An open residential furnace during service, wiring and burner assembly visible." loading="lazy">
-            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job1">Heating work</span></figcaption>
-          </figure>
-          <figure class="rv">
-            <img src="img/job-ladder.jpg" alt="A technician on a ladder working overhead in an unfinished basement." loading="lazy">
-            <figcaption><small data-i18n="jobTag">On the job</small><span data-i18n="job2">Basement install</span></figcaption>
-          </figure>
+        <div class="tour-nav" aria-label="Tour stops">
+          <button type="button" class="tarrow" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <div class="tdots">
+            <button type="button" class="tdot" data-go="0" aria-label="Overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z"/></svg></button>
+            <button type="button" class="tdot" data-go="1">1</button><button type="button" class="tdot" data-go="2">2</button><button type="button" class="tdot" data-go="3">3</button>
+            <button type="button" class="tdot" data-go="4">4</button><button type="button" class="tdot" data-go="5">5</button><button type="button" class="tdot" data-go="6">6</button>
+          </div>
+          <button type="button" class="tarrow" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
         </div>
       </div>
     </div>
@@ -495,24 +876,39 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       </div>
       <div class="gal">
         <div class="tile tall rv">
-          <video id="workClip" src="img/job-clip.mp4" poster="img/job-clip-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Video: a technician working overhead during a basement install."></video>
+          <video id="workClip" src="img/job-clip.mp4" poster="img/job-clip-poster.webp" muted loop playsinline autoplay preload="metadata" aria-label="Video: a technician working overhead during a basement install."></video>
           <span class="live"><i></i><span data-i18n="videoTag">Video</span></span>
           <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w1">Basement install in progress</span></span>
         </div>
         <button type="button" class="tile tall rv" data-lb="0">
-          <img src="img/job-tie-in.jpg" alt="A new round duct section tied into the existing trunk line under the floor joists." loading="lazy">
+          <picture><source srcset="img/job-tie-in.webp" type="image/webp"><img src="img/job-tie-in.jpg" alt="A new round duct section tied into the existing trunk line under the floor joists." loading="lazy"></picture>
           <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w2">New duct tied into the trunk line</span></span>
         </button>
         <div class="gal-stack">
           <button type="button" class="tile rv" data-lb="1">
-            <img src="img/job-staged.jpg" alt="New duct pipe and fittings staged on a table before installation." loading="lazy">
+            <picture><source srcset="img/job-staged.webp" type="image/webp"><img src="img/job-staged.jpg" alt="New duct pipe and fittings staged on a table before installation." loading="lazy"></picture>
             <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w3">Materials staged before the install</span></span>
           </button>
           <button type="button" class="tile rv" data-lb="2">
-            <img src="img/job-duct-run.jpg" alt="A new duct run between floor joists ending at a register." loading="lazy">
+            <picture><source srcset="img/job-duct-run.webp" type="image/webp"><img src="img/job-duct-run.jpg" alt="A new duct run between floor joists ending at a register." loading="lazy"></picture>
             <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="w4">New run between the joists to a register</span></span>
           </button>
         </div>
+      </div>
+      <div class="gal-row2">
+        <button type="button" class="tile tall rv" data-lb="3">
+          <picture><source srcset="img/job-furnace.webp" type="image/webp"><img src="img/job-furnace.jpg" alt="An open residential furnace during service, wiring and burner assembly visible." loading="lazy"></picture>
+          <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="job1">Heating work</span></span>
+        </button>
+        <button type="button" class="tile tall rv" data-lb="4">
+          <picture><source srcset="img/job-ladder.webp" type="image/webp"><img src="img/job-ladder.jpg" alt="A technician on a ladder working overhead in an unfinished basement." loading="lazy"></picture>
+          <span class="cap"><small data-i18n="jobTag">On the job</small><span data-i18n="job2">Basement install</span></span>
+        </button>
+        <a class="tile tall cta rv" href="#book">
+          <h3 data-i18n="ctaTile">Your home could be next.</h3>
+          <p data-i18n="ctaTileBody">Tell us what is going on and we will set up a visit.</p>
+          <span class="go"><span data-i18n="ctaTileGo">Get a quote</span> <span aria-hidden="true">→</span></span>
+        </a>
       </div>
     </div>
   </section>
@@ -561,6 +957,11 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
         <div class="eyebrow rv" data-i18n="bookEyebrow">Book a visit</div>
         <h2 class="display rv" style="margin-top:20px" data-i18n-html="bookTitle">Let's take a look<br><em>at your system.</em></h2>
         <p class="book-lead rv" data-i18n="bookLead">Request a technician visit or a quote. Tell us what's happening and when works for you, and we'll confirm a time.</p>
+        <ol class="how rv">
+          <li><span><b data-i18n="how1t">Tell us what is going on</b><span data-i18n="how1">Call, text or use the form, in English or Spanish.</span></span></li>
+          <li><span><b data-i18n="how2t">We set a time</b><span data-i18n="how2">We confirm a visit that works for your schedule.</span></span></li>
+          <li><span><b data-i18n="how3t">We take care of it</b><span data-i18n="how3">We explain what we find and get your system working.</span></span></li>
+        </ol>
         <a class="big-phone rv" href="tel:+13179376310">(317) 937-6310</a>
         <div class="book-actions rv">
           <a class="btn btn-primary" href="tel:+13179376310" data-i18n="ctaCallShort">Call now</a>
@@ -569,49 +970,120 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
         <p class="lang-note rv" data-i18n="langNote">Se habla español. English spoken.</p>
       </div>
 
-      <form class="quote rv" id="quote" novalidate>
-        <div class="field"><label for="qName" data-i18n="fName">Name</label><input id="qName" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="qPhone" data-i18n="fPhone">Phone</label><input id="qPhone" name="phone" type="tel" autocomplete="tel" required></div>
-        <div class="field">
-          <label for="qCity" data-i18n="fCity">City</label>
-          <select id="qCity" name="city" required>
-            <option value="" data-i18n="fChoose">Choose…</option>
-            <option>Indianapolis</option><option>Anderson</option><option>Marion</option><option>Kokomo</option>
-            <option>Frankfort</option><option>Colfax</option><option>Lebanon</option><option>Lafayette</option>
-            <option>West Lafayette</option><option>Bloomington</option><option>Columbus</option><option>Seymour</option>
-            <option value="other" data-i18n="fOther">Other</option>
-          </select>
+      <form class="wiz rv" id="quote" novalidate>
+        <div class="wiz-top">
+          <span class="wiz-step" id="wizStep">Step 1 of 4</span>
+          <div class="wiz-bar"><i id="wizBar"></i></div>
         </div>
-        <div class="field">
-          <label for="qService" data-i18n="fService">Service</label>
-          <select id="qService" name="service" required>
-            <option value="" data-i18n="fChoose">Choose…</option>
-            <option data-i18n="i1">Air conditioning installation</option>
-            <option data-i18n="i2">Central A/C systems</option>
-            <option data-i18n="i3">A/C tune-ups</option>
-            <option data-i18n="i4">All repairs &amp; thermostats</option>
-            <option data-i18n="i5">Duct cleaning &amp; replacement</option>
-            <option data-i18n="i6">Range, bath &amp; dryer vent replacement and installation</option>
-            <option data-i18n="i7">Water heater replacement &amp; installation</option>
-            <option data-i18n="fNotSure">Not sure, need a visit</option>
-          </select>
-        </div>
-        <div class="field"><label for="qDate" data-i18n="fDate">Preferred day</label><input id="qDate" name="date" type="date"></div>
-        <div class="field">
-          <span class="sr-only" id="timeLbl" data-i18n="fTime">Time of day</span>
-          <label aria-hidden="true" data-i18n="fTime">Time of day</label>
-          <div class="seg" role="radiogroup" aria-labelledby="timeLbl">
-            <label><input type="radio" name="time" value="am" checked><span data-i18n="tAm">Morning</span></label>
-            <label><input type="radio" name="time" value="pm"><span data-i18n="tPm">Afternoon</span></label>
-            <label><input type="radio" name="time" value="any"><span data-i18n="tAny">Flexible</span></label>
+
+        <fieldset class="wstep on" data-step="0">
+          <legend class="wq" data-i18n="q1">What do you need help with?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="need" value="nocool"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7 4 17M9 3l3 2 3-2M9 21l3-2 3 2"/></svg><b data-i18n="n1">A/C not cooling</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="noheat"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7Z"/></svg><b data-i18n="n2">No heat</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="newac"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M6 10h12M6 13h12M6 16h12M8 6V4h8v2"/></svg><b data-i18n="n3">New A/C system</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="tuneup"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><b data-i18n="n4">A/C tune-up</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="thermo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M12 12v5"/><circle cx="12" cy="17" r="1.5"/></svg><b data-i18n="n5">Thermostat or repair</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="ducts"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8h12a3 3 0 0 1 3 3v10M3 14h8a3 3 0 0 1 3 3v4"/></svg><b data-i18n="n6">Ducts or vents</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="water"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg><b data-i18n="n7">Water heater</b></span></label>
+            <label class="opt"><input type="radio" name="need" value="other"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"/></svg><b data-i18n="n8">Something else</b></span></label>
           </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="1">
+          <legend class="wq" data-i18n="q2">How soon do you need us?</legend>
+          <div class="opts one">
+            <label class="opt"><input type="radio" name="when" value="urgent"><span><b data-i18n="u1">Today, it's urgent</b></span></label>
+            <label class="opt"><input type="radio" name="when" value="week"><span><b data-i18n="u2">Sometime this week</b></span></label>
+            <label class="opt"><input type="radio" name="when" value="plan"><span><b data-i18n="u3">Just planning, I'd like a quote</b></span></label>
+          </div>
+          <div class="urgent" id="urgentNote" hidden>
+            <span data-i18n="uNote">Urgent? Calling is the fastest way to reach us.</span>
+            <a class="btn btn-primary btn-sm" href="tel:+13179376310"><span data-i18n="ctaCall">Call (317) 937-6310</span></a>
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="2">
+          <legend class="wq" data-i18n="q3">Where and when?</legend>
+          <div class="wiz-fields">
+            <div class="field full">
+              <label for="qCity" data-i18n="fCity">City</label>
+              <select id="qCity" name="city">
+                <option value="" data-i18n="fChoose">Choose…</option>
+                <option>Indianapolis</option><option>Anderson</option><option>Marion</option><option>Kokomo</option>
+                <option>Frankfort</option><option>Colfax</option><option>Lebanon</option><option>Lafayette</option>
+                <option>West Lafayette</option><option>Bloomington</option><option>Columbus</option><option>Seymour</option>
+                <option value="other" data-i18n="fOther">Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="qDate" data-i18n="fDate">Preferred day</label><input id="qDate" name="date" type="date"></div>
+            <div class="field">
+              <span class="sr-only" id="timeLbl" data-i18n="fTime">Time of day</span>
+              <label aria-hidden="true" data-i18n="fTime">Time of day</label>
+              <div class="seg" role="radiogroup" aria-labelledby="timeLbl">
+                <label><input type="radio" name="time" value="am" checked><span data-i18n="tAm">Morning</span></label>
+                <label><input type="radio" name="time" value="pm"><span data-i18n="tPm">Afternoon</span></label>
+                <label><input type="radio" name="time" value="any"><span data-i18n="tAny">Flexible</span></label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="3">
+          <legend class="wq" data-i18n="q4">How can we reach you?</legend>
+          <div class="wiz-fields">
+            <div class="field"><label for="qName" data-i18n="fName">Name</label><input id="qName" name="name" autocomplete="name"></div>
+            <div class="field"><label for="qPhone" data-i18n="fPhone">Phone</label><input id="qPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+            <div class="field full"><label for="qMsg" data-i18n="fMsg">Anything else we should know?</label><textarea id="qMsg" name="msg" data-i18n-ph="fMsgPh" placeholder="Example: A/C runs but upstairs stays warm."></textarea></div>
+          </div>
+        </fieldset>
+
+        <p class="wiz-err" id="wizErr" role="alert"></p>
+        <div class="wiz-nav">
+          <button type="button" class="btn btn-ghost" id="wizBack" hidden><span data-i18n="wBack">Back</span></button>
+          <button type="button" class="btn btn-primary" id="wizNext"><span data-i18n="wNext">Next</span></button>
+          <button type="submit" class="btn btn-primary" id="wizSend" hidden><span data-i18n="fSend">Send request by text</span></button>
         </div>
-        <div class="field full"><label for="qMsg" data-i18n="fMsg">What's going on?</label><textarea id="qMsg" name="msg" data-i18n-ph="fMsgPh" placeholder="Example: A/C running but not cooling upstairs."></textarea></div>
-        <div class="form-foot">
-          <button class="btn btn-primary" type="submit" data-i18n="fSend">Send request by text</button>
-          <p data-i18n="fNote">Opens your messaging app with your request filled in, addressed to (317) 937-6310. Nothing sends until you press send.</p>
-        </div>
+        <p class="wiz-note" data-i18n="fNote">Opens your messaging app with your request filled in, addressed to (317) 937-6310. Nothing sends until you press send.</p>
       </form>
+    </div>
+  </section>
+
+  <section class="section help" id="help">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow rv" data-i18n="helpEyebrow">Before you call</div>
+          <h2 class="display rv" style="margin-top:20px" data-i18n-html="helpTitle">Quick checks that<br><em>might save a visit.</em></h2>
+        </div>
+        <p class="rv" data-i18n="helpLead">Sometimes it's a setting or a breaker. If these don't fix it, call or text and we'll take it from there.</p>
+      </div>
+      <div class="faq">
+        <details class="rv">
+          <summary data-i18n="h1q">A/C is running but not cooling</summary>
+          <div class="a" data-i18n="h1a">Make sure the thermostat is set to Cool and below the room temperature. Replace the air filter if it's dirty. Check that the outdoor unit's breaker is on and nothing is blocking the unit. If you see ice on the lines or the indoor coil, turn the system off and call us.</div>
+        </details>
+        <details class="rv">
+          <summary data-i18n="h2q">No heat from the furnace</summary>
+          <div class="a" data-i18n="h2a">Check that the thermostat is set to Heat, and replace its batteries if the screen is blank. Make sure the furnace power switch (it looks like a light switch, on or near the furnace) is on, and the furnace door is closed tight. A badly clogged filter can also shut a furnace down.</div>
+        </details>
+        <details class="rv">
+          <summary data-i18n="h3q">No hot water, or the water heater is leaking</summary>
+          <div class="a" data-i18n="h3a">For a leak, close the cold-water valve on top of the heater and turn off its power or gas, then call. With no hot water, an electric heater may have a tripped breaker; on a gas heater the pilot may be out. Follow the instructions on the tank's label.</div>
+        </details>
+        <details class="rv warn">
+          <summary data-i18n="h4q">I smell gas</summary>
+          <div class="a" data-i18n="h4a">Leave the house right away. Don't turn lights or appliances on or off, and don't use your phone inside. Once you're outside, call your gas company's emergency line or 911.</div>
+        </details>
+        <details class="rv">
+          <summary data-i18n="h5q">Do you speak Spanish?</summary>
+          <div class="a" data-i18n="h5a">Yes. Se habla español. Call, text or fill out the form in English or Spanish.</div>
+        </details>
+        <details class="rv">
+          <summary data-i18n="h6q">Which areas do you serve?</summary>
+          <div class="a"><span data-i18n="h6a">Indianapolis and nearby Indiana communities:</span> Anderson, Marion, Kokomo, Frankfort, Colfax, Lebanon, Lafayette, West Lafayette, Bloomington, Columbus and Seymour.</div>
+        </details>
+      </div>
     </div>
   </section>
 </main>
@@ -631,6 +1103,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       <div class="foot-meta">
         <a href="#services" data-i18n="navServices">Services</a><br>
         <a href="#area" data-i18n="navArea">Service area</a><br>
+        <a href="#help" data-i18n="navHelp">Help</a><br>
         <a href="#book" data-i18n="navBook">Book a visit</a>
       </div>
     </div>
@@ -640,6 +1113,12 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     </div>
   </div>
 </footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a href="tel:+13179376310"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-i18n="mCall">Call</span></a>
+  <a href="sms:+13179376310"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg><span data-i18n="mText">Text</span></a>
+  <a class="q" href="#book"><span data-i18n="mQuote">Get a quote</span></a>
+</nav>
 
 <script type="application/ld+json">
 {
@@ -671,6 +1150,63 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Duct Cleaning & Replacement"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Range, Bath & Dryer Vent Replacement and Installation"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Water Heater Replacement and Installation"}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "My A/C is running but not cooling. What should I check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure the thermostat is set to Cool and below the room temperature, replace a dirty air filter, and check that the outdoor unit's breaker is on and nothing is blocking the unit. If you see ice on the lines or the indoor coil, turn the system off and call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My furnace is not heating. What should I check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check that the thermostat is set to Heat and has working batteries, that the furnace power switch is on, and that the furnace door is closed tight. A badly clogged filter can also shut a furnace down."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if my water heater is leaking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Close the cold-water valve on top of the heater and turn off its power or gas, then call for service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if I smell gas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leave the house right away without switching anything on or off or using your phone inside. Once outside, call your gas company's emergency line or 911."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you speak Spanish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Se habla español. Call, text or use the form in English or Spanish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas does H. Cruz-Cruz LLC serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indianapolis and nearby Indiana communities: Anderson, Marion, Kokomo, Frankfort, Colfax, Lebanon, Lafayette, West Lafayette, Bloomington, Columbus and Seymour."
+      }
+    }
   ]
 }
 </script>
@@ -711,7 +1247,29 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       fNote:'Opens your messaging app with your request filled in, addressed to (317) 937-6310. Nothing sends until you press send.',
       footSub:'Air conditioning & plumbing services', footLic:'Licensed & insured', footArea:'Indianapolis and surrounding Indiana communities',
       smsIntro:'Hi H. Cruz-Cruz, I would like to request a visit.', smsName:'Name', smsPhone:'Phone', smsCity:'City', smsService:'Service', smsWhen:'Preferred', smsDetails:'Details',
-      errFill:'Please add your name, phone, city and service.'
+      errFill:'Please add your name, phone, city and service.',
+      ctaBook:'Get a quote', tourHint:'Tap a number', c0Title:'Your home,<br><em>system by system.</em>', c0Body:'Everything we work on, from the unit outside to the water heater in the basement. Keep scrolling for the tour, or tap a number.',
+      c1Tag:'Cooling', c2Tag:'Heating', c3Tag:'Thermostats', c4Tag:'Ductwork', c5Tag:'Vents', c6Tag:'Water heaters', cReq:'Request this service',
+      c1Title:'The unit outside,<br><em>and what it feeds.</em>', c1Body:'New systems installed and set up right, and seasonal tune-ups that keep an existing one running efficiently.',
+      c2Title:'The furnace that gets you<br><em>through winter.</em>', c2Body:"When the house won't warm up, the furnace short-cycles, or something just sounds wrong, we diagnose and repair it.",
+      c3Title:'Where a lot of<br><em>problems start.</em>', c3Body:"A system that won't turn on or won't hold temperature is often a thermostat or wiring issue. We repair and replace them.",
+      c4Title:'Every room depends<br><em>on the ducts.</em>', c4Body:'Dirty, leaking or crushed ducts leave rooms at the end of the line too hot or too cold. We clean and replace them.',
+      c5Title:'Moisture, heat and lint,<br><em>out of the house.</em>', c5Body:'Kitchen range hoods, bathroom fans and dryer vents, replaced and installed so they vent outside the way they should.',
+      c6Title:'Hot water,<br><em>back on.</em>', c6Body:'No hot water, a leak at the base, or a tank at the end of its life. We replace and install water heaters.',
+      navHelp:'Help', ctaTile:'Your home could be next.', ctaTileBody:'Tell us what is going on and we will set up a visit.', ctaTileGo:'Get a quote', job2:'Basement install',
+      how1t:'Tell us what is going on', how1:'Call, text or use the form, in English or Spanish.', how2t:'We set a time', how2:'We confirm a visit that works for your schedule.', how3t:'We take care of it', how3:'We explain what we find and get your system working.',
+      wizStepOf:'Step {n} of 4', q1:'What do you need help with?', n1:'A/C not cooling', n2:'No heat', n3:'New A/C system', n4:'A/C tune-up', n5:'Thermostat or repair', n6:'Ducts or vents', n7:'Water heater', n8:'Something else',
+      q2:'How soon do you need us?', u1:"Today, it's urgent", u2:'Sometime this week', u3:"Just planning, I'd like a quote", uNote:'Urgent? Calling is the fastest way to reach us.',
+      q3:'Where and when?', q4:'How can we reach you?', wBack:'Back', wNext:'Next', fMsg:'Anything else we should know?', fMsgPh:'Example: A/C runs but upstairs stays warm.',
+      e1:'Pick the option closest to what you need.', e2:'Let us know how soon you need us.', e3:'Choose your city.', e4:'Add your name and a phone number we can text.',
+      smsNeed:'Need', smsUrg:'How soon',
+      helpEyebrow:'Before you call', helpTitle:'Quick checks that<br><em>might save a visit.</em>', helpLead:"Sometimes it's a setting or a breaker. If these don't fix it, call or text and we'll take it from there.",
+      h1q:'A/C is running but not cooling', h1a:"Make sure the thermostat is set to Cool and below the room temperature. Replace the air filter if it's dirty. Check that the outdoor unit's breaker is on and nothing is blocking the unit. If you see ice on the lines or the indoor coil, turn the system off and call us.",
+      h2q:'No heat from the furnace', h2a:'Check that the thermostat is set to Heat, and replace its batteries if the screen is blank. Make sure the furnace power switch (it looks like a light switch, on or near the furnace) is on, and the furnace door is closed tight. A badly clogged filter can also shut a furnace down.',
+      h3q:'No hot water, or the water heater is leaking', h3a:"For a leak, close the cold-water valve on top of the heater and turn off its power or gas, then call. With no hot water, an electric heater may have a tripped breaker; on a gas heater the pilot may be out. Follow the instructions on the tank's label.",
+      h4q:'I smell gas', h4a:"Leave the house right away. Don't turn lights or appliances on or off, and don't use your phone inside. Once you're outside, call your gas company's emergency line or 911.",
+      h5q:'Do you speak Spanish?', h5a:'Yes. Se habla español. Call, text or fill out the form in English or Spanish.', h6q:'Which areas do you serve?', h6a:'Indianapolis and nearby Indiana communities:',
+      mCall:'Call', mText:'Text', mQuote:'Get a quote'
     },
     es: {
       brandSub:'LLC · Calefacción · Aire · Plomería', navServices:'Servicios', navArea:'Área de servicio', navBook:'Agendar visita',
@@ -746,12 +1304,35 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       fNote:'Abre su app de mensajes con la solicitud lista, dirigida al (317) 937-6310. No se envía nada hasta que usted lo envíe.',
       footSub:'Servicios de aire acondicionado y plomería', footLic:'Con licencia y seguro', footArea:'Indianápolis y comunidades cercanas de Indiana',
       smsIntro:'Hola H. Cruz-Cruz, quisiera solicitar una visita.', smsName:'Nombre', smsPhone:'Teléfono', smsCity:'Ciudad', smsService:'Servicio', smsWhen:'Preferencia', smsDetails:'Detalles',
-      errFill:'Por favor agregue su nombre, teléfono, ciudad y servicio.'
+      errFill:'Por favor agregue su nombre, teléfono, ciudad y servicio.',
+      ctaBook:'Pedir cotización', tourHint:'Toque un número', c0Title:'Su hogar,<br><em>sistema por sistema.</em>', c0Body:'Todo lo que atendemos, desde la unidad de afuera hasta el calentador en el sótano. Siga deslizando para el recorrido o toque un número.',
+      c1Tag:'Aire acondicionado', c2Tag:'Calefacción', c3Tag:'Termostatos', c4Tag:'Ductos', c5Tag:'Extractores', c6Tag:'Calentadores de agua', cReq:'Solicitar este servicio',
+      c1Title:'La unidad de afuera,<br><em>y todo lo que alimenta.</em>', c1Body:'Sistemas nuevos instalados como se debe, y mantenimiento de temporada para que el suyo siga funcionando bien.',
+      c2Title:'El calefactor que lo lleva<br><em>por el invierno.</em>', c2Body:'Si la casa no calienta, el calefactor se prende y se apaga, o algo suena mal, lo diagnosticamos y lo reparamos.',
+      c3Title:'Donde empiezan<br><em>muchos problemas.</em>', c3Body:'Un sistema que no prende o no mantiene la temperatura muchas veces es el termostato o el cableado. Los reparamos y reemplazamos.',
+      c4Title:'Cada cuarto depende<br><em>de los ductos.</em>', c4Body:'Ductos sucios, con fugas o aplastados dejan los cuartos del final muy calientes o muy fríos. Los limpiamos y reemplazamos.',
+      c5Title:'Humedad, calor y pelusa,<br><em>fuera de la casa.</em>', c5Body:'Extractores de cocina, ventiladores de baño y ductos de secadora, reemplazados e instalados para que saquen el aire afuera como deben.',
+      c6Title:'Agua caliente,<br><em>otra vez.</em>', c6Body:'Sin agua caliente, una fuga en la base o un tanque al final de su vida útil. Reemplazamos e instalamos calentadores de agua.',
+      navHelp:'Ayuda', ctaTile:'Su hogar podría ser el siguiente.', ctaTileBody:'Cuéntenos qué está pasando y agendamos una visita.', ctaTileGo:'Pedir cotización', job2:'Instalación en sótano',
+      how1t:'Cuéntenos qué pasa', how1:'Llame, envíe un mensaje o use el formulario, en español o inglés.', how2t:'Agendamos la visita', how2:'Confirmamos una visita que le funcione.', how3t:'Nos encargamos', how3:'Le explicamos lo que encontramos y dejamos su sistema funcionando.',
+      wizStepOf:'Paso {n} de 4', q1:'¿Con qué necesita ayuda?', n1:'El A/C no enfría', n2:'No hay calefacción', n3:'A/C nuevo', n4:'Mantenimiento de A/C', n5:'Termostato o reparación', n6:'Ductos o extractores', n7:'Calentador de agua', n8:'Otra cosa',
+      q2:'¿Para cuándo nos necesita?', u1:'Hoy, es urgente', u2:'Esta semana', u3:'Solo planeando, quiero una cotización', uNote:'¿Es urgente? Llamar es la forma más rápida de comunicarse.',
+      q3:'¿Dónde y cuándo?', q4:'¿Cómo lo contactamos?', wBack:'Atrás', wNext:'Siguiente', fMsg:'¿Algo más que debamos saber?', fMsgPh:'Ejemplo: el A/C prende pero arriba sigue caliente.',
+      e1:'Elija la opción más cercana a lo que necesita.', e2:'Díganos para cuándo nos necesita.', e3:'Elija su ciudad.', e4:'Agregue su nombre y un teléfono donde le podamos escribir.',
+      smsNeed:'Necesito', smsUrg:'Para cuándo',
+      helpEyebrow:'Antes de llamar', helpTitle:'Revisiones rápidas que<br><em>pueden ahorrarle una visita.</em>', helpLead:'A veces es un ajuste o un breaker. Si esto no lo resuelve, llame o escriba y nosotros seguimos.',
+      h1q:'El A/C funciona pero no enfría', h1a:'Revise que el termostato esté en Cool y más bajo que la temperatura del cuarto. Cambie el filtro de aire si está sucio. Revise que el breaker de la unidad de afuera esté encendido y que nada la bloquee. Si ve hielo en las líneas o en el serpentín, apague el sistema y llámenos.',
+      h2q:'El calefactor no calienta', h2a:'Revise que el termostato esté en Heat y cambie sus baterías si la pantalla está apagada. Asegúrese de que el interruptor del calefactor (parece un interruptor de luz, en o cerca del calefactor) esté encendido y que la puerta del calefactor esté bien cerrada. Un filtro muy tapado también puede apagarlo.',
+      h3q:'No hay agua caliente o el calentador tiene una fuga', h3a:'Si hay una fuga, cierre la válvula de agua fría arriba del calentador y apague la electricidad o el gas, y luego llame. Sin agua caliente, un calentador eléctrico puede tener el breaker botado; en uno de gas, el piloto puede estar apagado. Siga las instrucciones de la etiqueta del tanque.',
+      h4q:'Huele a gas', h4a:'Salga de la casa de inmediato. No prenda ni apague luces ni aparatos, y no use su teléfono adentro. Ya afuera, llame a la línea de emergencias de su compañía de gas o al 911.',
+      h5q:'¿Hablan español?', h5a:'Sí. Se habla español. Llame, escriba o llene el formulario en español o inglés.', h6q:'¿Qué áreas atienden?', h6a:'Indianápolis y comunidades cercanas de Indiana:',
+      mCall:'Llamar', mText:'Mensaje', mQuote:'Cotizar'
     }
   };
   let lang = 'en';
   function store(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
   function read(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+  let onLang = () => {};
   function applyLang(l){
     lang = I18N[l] ? l : 'en';
     const d = I18N[lang];
@@ -761,18 +1342,53 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     document.querySelectorAll('[data-i18n-ph]').forEach(el => { const k = el.dataset.i18nPh; if (d[k] != null) el.placeholder = d[k]; });
     document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     store('hcc-lang', lang);
+    onLang();
     if (window.ScrollTrigger) ScrollTrigger.refresh();
   }
   document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
-  const saved = read('hcc-lang');
-  if (saved) applyLang(saved);
-  else if ((navigator.language || '').toLowerCase().startsWith('es')) applyLang('es');
 
   const header = document.querySelector('.header');
   const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- house tour ---------- */
+  const tour = document.getElementById('services');
+  const house = tour.querySelector('.house');
+  const scene = house.querySelector('#scene');
+  const tcards = Array.from(tour.querySelectorAll('.tcard'));
+  const tdots = Array.from(tour.querySelectorAll('.tdot'));
+  const hspots = Array.from(house.querySelectorAll('.hs'));
+  const SYS = [null, 'sys-cool', 'sys-heat', 'sys-thermo', 'sys-ducts', 'sys-vents', 'sys-water'];
+  const BOX = [[40,96,1120,724],[836,446,256,190],[446,590,230,180],[410,436,240,200],[262,414,640,330],[186,168,724,604],[636,594,236,172]];
+  function cam(i) {
+    const [x, y, w, h] = BOX[i];
+    const s = Math.min(1200 / w, 820 / h, 2.8);
+    return { tx: 600 - (x + w / 2) * s, ty: 410 - (y + h / 2) * s, s };
+  }
+  const camState = cam(0);
+  const hsIn = Array.from(house.querySelectorAll('.hs-in'));
+  function applyCam() {
+    scene.setAttribute('transform', 'translate(' + camState.tx.toFixed(2) + ' ' + camState.ty.toFixed(2) + ') scale(' + camState.s.toFixed(4) + ')');
+    const artScale = (house.getBoundingClientRect().width || 800) / 1200;
+    const target = artScale < 0.45 ? 10.5 : 12.5;
+    const k = Math.max(0.4, Math.min(4, target / (13 * camState.s * artScale)));
+    hsIn.forEach(g => g.setAttribute('transform', 'scale(' + k.toFixed(3) + ')'));
+  }
+  window.addEventListener('resize', applyCam);
+  applyCam();
+  let tIdx = -1;
+  function setStop(i) {
+    if (i === tIdx) return;
+    tIdx = i;
+    tcards.forEach((c, k) => c.classList.toggle('on', k === i));
+    tdots.forEach((d, k) => { d.classList.toggle('on', k === i); d.setAttribute('aria-current', k === i ? 'step' : 'false'); });
+    if (i === 0) house.removeAttribute('data-active'); else house.setAttribute('data-active', SYS[i]);
+    house.querySelectorAll('.sys').forEach(g => g.classList.toggle('on', g.id === SYS[i]));
+    hspots.forEach(h => h.classList.toggle('on', +h.dataset.stop === i));
+  }
+  let goStop = (i) => { const c = tour.querySelector('.tcard[data-stop="' + i + '"]'); if (c) c.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); };
   if (window.gsap && window.ScrollTrigger && !reduce) {
     gsap.registerPlugin(ScrollTrigger);
     document.documentElement.classList.add('motion');
@@ -829,6 +1445,25 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
       window.scrollTo({ top: Math.round(y), behavior: 'smooth' });
     }));
 
+    const ttl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
+    for (let i = 1; i < 7; i++) ttl.to(camState, Object.assign(cam(i), { duration: 0.6, onUpdate: applyCam }), (i - 1) + 0.15);
+    ttl.to({}, { duration: 0.35 });
+    const tst = ScrollTrigger.create({
+      trigger: tour,
+      start: 'top top',
+      end: () => '+=' + Math.round(window.innerHeight * 6 * 0.75),
+      pin: true,
+      scrub: 0.6,
+      animation: ttl,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onUpdate(self) { setStop(Math.max(0, Math.min(6, Math.floor(self.progress * ttl.duration() + 0.55)))); }
+    });
+    goStop = (i) => {
+      const t = i <= 0 ? 0 : Math.min(ttl.duration(), (i - 1) + 0.92);
+      window.scrollTo({ top: Math.round(tst.start + (tst.end - tst.start) * (t / ttl.duration())), behavior: 'smooth' });
+    };
+
     gsap.utils.toArray('.rv').forEach(el => {
       gsap.to(el, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
         scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
@@ -846,7 +1481,7 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
   function showLb(i) {
     lbIdx = (i + lbTiles.length) % lbTiles.length;
     const t = lbTiles[lbIdx], img = t.querySelector('img');
-    lbImg.src = img.src; lbImg.alt = img.alt;
+    lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt;
     lbCap.textContent = t.querySelector('.cap span').textContent;
   }
   if (typeof lb.showModal === 'function') {
@@ -861,29 +1496,85 @@ form.quote{background:linear-gradient(180deg,rgba(27,42,62,.92),rgba(21,33,50,.9
     });
   }
 
-  const form = document.getElementById('quote');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  setStop(0);
+  hspots.forEach(h => {
+    h.setAttribute('tabindex', '0'); h.setAttribute('role', 'button');
+    h.addEventListener('click', () => goStop(+h.dataset.stop));
+    h.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goStop(+h.dataset.stop); } });
+  });
+  tdots.forEach(d => d.addEventListener('click', () => goStop(+d.dataset.go)));
+  tour.querySelectorAll('.tarrow').forEach(a => a.addEventListener('click', () => goStop(Math.max(0, Math.min(6, tIdx + +a.dataset.dir)))));
+
+  /* ---------- quote wizard ---------- */
+  const wiz = document.getElementById('quote');
+  const wsteps = Array.from(wiz.querySelectorAll('.wstep'));
+  const wBack = document.getElementById('wizBack'), wNext = document.getElementById('wizNext'), wSend = document.getElementById('wizSend');
+  const wErr = document.getElementById('wizErr'), wLbl = document.getElementById('wizStep'), wBar = document.getElementById('wizBar');
+  const urgentNote = document.getElementById('urgentNote');
+  let wStep = 0;
+  function wizLabel() { wLbl.textContent = I18N[lang].wizStepOf.replace('{n}', wStep + 1); }
+  function goWiz(i, focus) {
+    wStep = i;
+    wsteps.forEach((s, k) => s.classList.toggle('on', k === i));
+    wBack.hidden = i === 0; wNext.hidden = i === wsteps.length - 1; wSend.hidden = i !== wsteps.length - 1;
+    wBar.style.transform = 'scaleX(' + ((i + 1) / wsteps.length) + ')';
+    wErr.textContent = ''; wizLabel();
+    if (focus) { const f = wsteps[i].querySelector('input:checked, input:not([type=radio]), select, input'); if (f) f.focus({ preventScroll: true }); }
+  }
+  const checked = n => wiz.querySelector('input[name="' + n + '"]:checked');
+  function valid(i) {
     const d = I18N[lang];
-    const v = id => document.getElementById(id).value.trim();
-    const sel = id => { const s = document.getElementById(id); return s.value ? s.options[s.selectedIndex].text : ''; };
-    const name = v('qName'), phone = v('qPhone'), city = sel('qCity'), service = sel('qService');
-    if (!name || !phone || !city || !service) { alert(d.errFill); return; }
-    const timeEl = form.querySelector('input[name="time"]:checked');
-    const timeTxt = timeEl ? timeEl.nextElementSibling.textContent : '';
-    const date = v('qDate');
+    if (i === 0 && !checked('need')) return d.e1;
+    if (i === 1 && !checked('when')) return d.e2;
+    if (i === 2 && !document.getElementById('qCity').value) return d.e3;
+    if (i === 3) {
+      const ph = document.getElementById('qPhone').value.replace(/\D/g, '');
+      if (!document.getElementById('qName').value.trim() || ph.length < 7) return d.e4;
+    }
+    return '';
+  }
+  function next() { const e = valid(wStep); if (e) { wErr.textContent = e; return; } goWiz(wStep + 1, true); }
+  wNext.addEventListener('click', next);
+  wBack.addEventListener('click', () => goWiz(wStep - 1, true));
+  wiz.addEventListener('change', e => {
+    if (e.target.name === 'need') setTimeout(() => { if (wStep === 0) next(); }, 260);
+    if (e.target.name === 'when') {
+      const urgent = e.target.value === 'urgent';
+      urgentNote.hidden = !urgent;
+      if (!urgent) setTimeout(() => { if (wStep === 1) next(); }, 260);
+    }
+  });
+  wiz.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && wStep < wsteps.length - 1) { e.preventDefault(); next(); } });
+  document.querySelectorAll('[data-need]').forEach(a => a.addEventListener('click', () => {
+    const r = wiz.querySelector('input[name="need"][value="' + a.dataset.need + '"]');
+    if (r) { r.checked = true; goWiz(1); }
+  }));
+  wiz.addEventListener('submit', e => {
+    e.preventDefault();
+    const er = valid(3); if (er) { wErr.textContent = er; return; }
+    const d = I18N[lang];
+    const lbl = n => { const c = checked(n); return c ? c.nextElementSibling.textContent.trim() : ''; };
+    const city = document.getElementById('qCity'); const date = document.getElementById('qDate').value;
     const lines = [
       d.smsIntro,
-      d.smsName + ': ' + name,
-      d.smsPhone + ': ' + phone,
-      d.smsCity + ': ' + city,
-      d.smsService + ': ' + service,
-      d.smsWhen + ': ' + [date, timeTxt].filter(Boolean).join(', ')
+      d.smsNeed + ': ' + lbl('need'),
+      d.smsUrg + ': ' + lbl('when'),
+      d.smsCity + ': ' + city.options[city.selectedIndex].text,
+      d.smsWhen + ': ' + [date, lbl('time')].filter(Boolean).join(', '),
+      d.smsName + ': ' + document.getElementById('qName').value.trim(),
+      d.smsPhone + ': ' + document.getElementById('qPhone').value.trim()
     ];
-    const msg = v('qMsg'); if (msg) lines.push(d.smsDetails + ': ' + msg);
+    const msg = document.getElementById('qMsg').value.trim(); if (msg) lines.push(d.smsDetails + ': ' + msg);
     const ios = /iPad|iPhone|iPod/.test(navigator.userAgent);
     window.location.href = 'sms:+13179376310' + (ios ? '&' : '?') + 'body=' + encodeURIComponent(lines.join('\n'));
   });
+  goWiz(0);
+  onLang = () => { wizLabel(); hspots.forEach(h => { const k = 'c' + h.dataset.stop + 'Tag'; h.setAttribute('aria-label', h.dataset.stop + ': ' + I18N[lang][k]); }); };
+  onLang();
+
+  const saved = read('hcc-lang');
+  if (saved) applyLang(saved);
+  else if ((navigator.language || '').toLowerCase().startsWith('es')) applyLang('es');
 })();
 </script>
 </body>
