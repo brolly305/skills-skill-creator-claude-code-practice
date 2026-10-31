@@ -40,6 +40,7 @@ If unsure, ask the user one question: who signs, and roughly what budget. Do not
 ## Ground rules (why they matter)
 
 1. **Only real facts.** Client names, call volumes, revenue, close rates, licenses, review counts, years in business: use only what the user or client supplied. Where a number is needed but unknown, write `[CONFIRM: what you need and who can answer]` and keep going. Invented numbers in an SOW destroy trust the first time the client checks one, and fabricated reviews or credentials can be illegal.
+   **But still answer the question.** A page of blanks doesn't answer "what will this cost me?" or "is it worth it?" When the client asks a direct question, give a best-estimate range built from clearly labeled assumptions ("Assuming a typical $300-$500 job, which we'll replace with your number..."), then the `[CONFIRM]` list that would narrow it. The rule is about labeling, not about refusing to estimate.
 2. **Their numbers, not your activities.** Outcomes are stated as the client measures them ("missed after-hours calls answered", "quotes sent within 1 hour"), not as tasks ("build chatbot").
 3. **Show the math.** Every price, cost, and ROI figure shows its inputs and formula, with assumptions in a table. A finance person trusts a visible calculation over a confident total.
 4. **Vendor prices are dated.** Model, API, and SaaS prices change. Look them up if you can and cite the date and source; otherwise mark them `[CONFIRM: current price]`. Never present a remembered price as current.
@@ -117,6 +118,9 @@ Goal: answer the finance question with a model they can change themselves.
 2. **Volume scenarios:** today, 3x, and 10x, so they see how cost scales, and where a different tier or architecture becomes cheaper.
 3. **Value side:** what the outcome is worth per month using the client's own numbers (hours saved x loaded rate, recovered leads x close rate x average job value).
 4. **Payback and break-even**, with the formula visible, and a sensitivity line ("if close rate is half what we assumed, payback moves from X to Y months"). Conservative is more persuasive than optimistic.
+5. **One all-in number up front:** total monthly cost as a range ("about $150-$300/month, all-in") before the line items, including every line, even ones still marked `[CONFIRM]` (estimate those and say so). This is the sentence the owner will remember.
+
+If the user only asks the cost question, answer it with this pillar alone in one file; don't produce the whole packet.
 
 ### Pillar 7: Adoption & Enablement -> `07-adoption-and-handoff.md`
 
