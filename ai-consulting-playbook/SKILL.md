@@ -11,7 +11,9 @@ Small builders lose bigger deals not because they can't build, but because they 
 - **Finance:** "What does this cost to run, today and at scale, and what do we get back?"
 - **Operations / procurement:** "How do we know it works, and what happens when it doesn't?"
 
-This playbook produces documents that answer all three, in the client's numbers, before anyone has to ask. It runs in four phases and seven pillars. Pillars 1-5 follow the common consulting arc (audit, engagement design, build architecture, governance, evals); Pillars 6-7 (cost model, handoff) are this playbook's own way of covering the Deliver & Sustain phase.
+There is a fourth question that decides whether a project becomes a retainer: **"Is anyone actually using it?"** Systems that work but never get adopted get cancelled.
+
+This playbook produces documents that answer all four, in the client's numbers, before anyone has to ask. It runs in four phases and seven pillars.
 
 | Phase | Pillar | Output file |
 |---|---|---|
@@ -21,7 +23,7 @@ This playbook produces documents that answer all three, in the client's numbers,
 | | 4. Governance | `04-governance.md` |
 | 3. Evaluate & Iterate | 5. Evals | `05-eval-plan.md` |
 | 4. Deliver & Sustain | 6. Cost & ROI Model | `06-cost-model.md` |
-| | 7. Handoff & Sustain | `07-handoff-runbook.md` |
+| | 7. Adoption & Enablement | `07-adoption-and-handoff.md` |
 | (all) | Buyer answers | `00-executive-summary.md` (written last) |
 
 Templates for every file are in `assets/templates/`. Copy the template, then fill it. The templates hold the structure so this file can focus on judgment.
@@ -30,7 +32,7 @@ Templates for every file are in `assets/templates/`. Copy the template, then fil
 
 A 40-page packet handed to a two-person HVAC shop loses the deal just as surely as a napkin quote handed to a 200-person company. Pick the track first and say which one you picked and why.
 
-- **Lite track:** owner-operated business, one decision-maker, roughly under $5K or a one-off project (site, booking form, simple automation). Produce `00`, `01`, `02` and a short `07`. Fold governance, evals, and cost into a one-page "How we protect you" section inside the SOW (data handled, what we test before launch, monthly running cost). Plain language, no jargon.
+- **Lite track:** owner-operated business, one decision-maker, roughly under $5K or a one-off project (site, booking form, simple automation). Produce `00`, `01`, `02` and a short `07` (sections 5-8 only: what to do when something breaks, who owns what, content upkeep, and a one-line monthly check-in). Fold governance, evals, and cost into a one-page "How we protect you" section inside the SOW (data handled, what we test before launch, monthly running cost). Plain language, no jargon.
 - **Full track:** growing or larger company, multiple stakeholders (owner + ops + finance or legal), $10K+ or a monthly retainer, or any system where AI reads customer data or acts on its own (sends messages, books, quotes, updates records). Produce all eight files.
 
 If unsure, ask the user one question: who signs, and roughly what budget. Do not guess the budget.
@@ -116,19 +118,22 @@ Goal: answer the finance question with a model they can change themselves.
 3. **Value side:** what the outcome is worth per month using the client's own numbers (hours saved x loaded rate, recovered leads x close rate x average job value).
 4. **Payback and break-even**, with the formula visible, and a sensitivity line ("if close rate is half what we assumed, payback moves from X to Y months"). Conservative is more persuasive than optimistic.
 
-### Pillar 7: Handoff & Sustain -> `07-handoff-runbook.md`
+### Pillar 7: Adoption & Enablement -> `07-adoption-and-handoff.md`
 
-Goal: the client can run it without you, and wants to keep paying you anyway.
+Goal: people actually use it, the client can run it without you, and the monthly report gives them a reason to keep paying you.
 
-1. What normal looks like (expected volumes, response times, costs), and what each alert means.
-2. Common failures with step-by-step fixes a non-technical person can follow, and when to call you.
-3. Owners, logins, and where everything lives (accounts in the client's name, not yours).
-4. Content upkeep: who updates prices, hours, services, and photos, and how.
-5. **Retainer menu:** monitoring and monthly eval re-runs, improvements from the Later list, new opportunities. This is where one-off projects become retainers.
+Plan adoption from the start, not at the end. A system that passes every eval but that staff route around is a failed project, and it's usually the first thing cut when budgets tighten.
+
+1. **Who it changes:** for each affected role, what they do today, what changes, and what they might lose or fear (status, control, their job, a familiar routine). Name a champion on the client side. Resistance you don't plan for shows up as quiet workarounds.
+2. **Rollout:** pilot with the champion or one team first, fix what it surfaces, then roll out, then decide when the old way is switched off or kept as a backup.
+3. **Training and enablement**, sized to the audience: a two-minute video or one-page guide for daily users, a short walkthrough for the owner on reading the usage report and using the kill switch. Training goes in the language the users work in.
+4. **Runbook:** what normal looks like, common failures with step-by-step fixes a non-technical person can follow, when to call you, the kill switch, who owns which accounts (in the client's name, not yours), and who keeps content current.
+5. **Monthly usage report:** usage, adoption (share of work going through the new system versus the old way), quality (eval pass rate, escalations), and the SOW outcome measure, ending in a one-sentence answer to "is it being used and holding up?" plus one recommended next step.
+6. **Retainer menu:** monitoring (the monthly report and eval re-runs), improvements from the Later list, new opportunities. The usage report is what makes the retainer easy to keep paying for.
 
 ## Last: `00-executive-summary.md`
 
-One page for the decision-maker: the problem in their words, the recommendation, the price options, and three short paragraphs titled exactly "What it's allowed to do with your data", "What it costs to run", and "How we know it works", each pointing to the detailed file. Write it last, because it summarizes decisions made in the others.
+One page for the decision-maker: the problem in their words, the recommendation, the price options, and four short paragraphs titled exactly "What it's allowed to do with your data", "What it costs to run", "How we know it works", and "How your team will use it", each pointing to the detailed file. Write it last, because it summarizes decisions made in the others.
 
 ## Before delivering
 

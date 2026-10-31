@@ -24,6 +24,9 @@ Prepared for: [decision-maker name, role]  ·  Prepared by: [your name / agency]
 ## How we know it works
 [One paragraph: the measurable acceptance criteria and what we keep checking after launch. Details: 05-eval-plan.md.]
 
+## How your team will use it
+[One paragraph: who uses it day to day, how they get trained, the pilot, and the monthly report that shows whether it's being used. Details: 07-adoption-and-handoff.md.]
+
 ## Next step
 [One action: sign option X / schedule a 20-minute review / send the items below.]
 
